@@ -1,12 +1,21 @@
 import React from 'react';
-import logo from './assets/logo.svg';
+import Navbar from './components/Navbar/Navbar';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Contact from './pages/Contact/Contact';
+import Blog from './pages/Blog/Blog';
 
 function App() {
   return (
-    <div className="flex items-center gap-2 text-refubookBlue hover:text-refubookRed font-roboto p-4">
-      <img src={logo} alt="" className="" />
-      <h2 className="text-refubookBlue font-semibold"> Refubook</h2>
-    </div>
+    
+    <>
+      <Navbar />
+      <Home />
+      <About />
+      <Contact />
+      <Blog />
+    </>
+    
   );
 }
 
