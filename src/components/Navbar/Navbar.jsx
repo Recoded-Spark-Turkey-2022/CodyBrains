@@ -3,36 +3,36 @@ function Navbar() {
 
   return (
 
-    <div className="z-10 flex flex-col md:flex-row items-center justify-center md:justify-between flex-wrap bg-transparent p-4">
+    <div className=" flex items-center justify-center flex-wrap bg-transparent p-5">
 
-      <div className="mx-auto mt-4 md:mt-1 mb-4 md:mb-1 px-16 flex justify-center items-center flex-shrink-0 text-white justify-center">
-        <div className="text-blue-400 font-bold text-xl tracking-tight" to="/">
+      <div className="px-16 flex justify-center items-center justify-center">
+        <div className="text-refubookBlue font-bold text-xl tracking-tight" to="/">
           Refubook
         </div>
       </div>
 
-      <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+      <div className="flex-grow flex items-center">
         <ul className="flex justify-center">
           <li className="mr-6">
-            <div className="text-gray-500 hover:text-blue-400 font-medium" to="/">
+            <div className="text-refubookGray hover:text-refubookActiveNav font-medium" to="/">
               Home
             </div>
           </li>
 
           <li className="mr-6">
-            <div className="text-gray-500 hover:text-blue-400 font-medium" to="/about">
+            <div className="text-refubookGray hover:text-refubookActiveNav font-medium" to="/about">
               About
             </div>
           </li>
 
           <li className="mr-6">
-            <div className="text-gray-500 hover:text-blue-400 font-medium" to="/blog">
+            <div className="text-refubookGray hover:text-refubookActiveNav font-medium" to="/blog">
               Blog
             </div>
           </li>
 
           <li className="mr-6">
-            <div className="text-gray-500 hover:text-blue-400 font-medium" to="/contact">
+            <div className="text-refubookGray hover:text-refubookActiveNav font-medium" to="/contact">
               Contact
             </div>
           </li>
