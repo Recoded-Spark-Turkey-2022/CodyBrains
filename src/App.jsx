@@ -8,6 +8,7 @@ import Contact from './pages/Contact/Contact';
 
 function App() {
   return (
+
     <div className="w-full  flex flex-col gap-2 ">
       <Navbar />
       <Routes>
