@@ -10,8 +10,10 @@ module.exports = {
       refubookLightBlue: '#9DAFBD',
       refubookYellow: '#FEDB9B',
       refubookBlack: '#000000',
+      refubookLightBlack: '#3F3B3B',
       refubookWhite: '#FFFFFF',
       refubookGray: '#8B8F9C',
+      refubookAboutBlue: '#E5FAFF',
     },
     fontFamily: {
       roboto: ['Roboto', 'sans-serif'],
