@@ -1,3 +1,7 @@
+// This file contains the data for the features section of the home page.
+// The featuresData array is a collection of objects representing the features of RefuBook.
+// Each object has an id, a title, and some text.
+
 const featuresData = [
   {
     id: 1,
