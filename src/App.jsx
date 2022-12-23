@@ -4,21 +4,21 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
-import Contact from './pages/Contact/Contact';
 import Blog from './pages/Blog/Blog';
+import Contact from './pages/Contact/Contact';
 
 function App() {
   return (
-    <>
+    <div className="w-full  flex flex-col gap-2 ">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="about" element={<About />} />
+        <Route path="blog" element={<Blog />} />
+        <Route path="contact" element={<Contact />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 }
 
