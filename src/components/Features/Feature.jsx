@@ -7,11 +7,11 @@ const Feature = ({ item }) => {
       <div className="flex items-center justify-start w-full gap-4">
         <img src={star} alt="" />
         <h4 className="text-lg text-refubookLightBlack text-left font-bold">
-          {item.title}
+          {item?.title}
         </h4>
       </div>
       <p className="text-md text-refubookLightBlack font-medium text-left">
-        {item.text}
+        {item?.text}
       </p>
     </div>
   );

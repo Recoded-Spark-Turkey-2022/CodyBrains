@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
-import illustration from '../../assets/features-illustration.svg';
-import Slider from './Slider';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper';
 import featuresData from '../../data/featuresData';
 import Feature from './Feature';
+import illustration from '../../assets/features-illustration.svg';
+import star from '../../assets/star.svg';
 
 // The Features component is a functional component that displays information about RefuBook.
 const Features = () => {
@@ -23,24 +25,54 @@ const Features = () => {
           journey as a refugee.
         </p>
         {/* The first section also contains a button with a link to the "about" page. */}
-        <button
-          type="button"
-          className=" py-1 px-3 md:py-2 md:px-9 bg-refubookBlue text-refubookWhite font-bold text-lg md:text-xl  rounded-full shadow-lg hover:bg-refubookWhite hover:text-refubookBlack transition duration-500 ease-in-out"
-        >
-          <Link to="about">Learn More</Link>
-        </button>
+        <Link to="about">
+          <button
+            type="button"
+            className=" py-1 px-3 md:py-2 md:px-9 bg-refubookBlue text-refubookWhite font-bold text-lg md:text-xl  rounded-full shadow-lg hover:bg-refubookWhite hover:text-refubookBlack transition duration-500 ease-in-out"
+          >
+            Learn More
+          </button>
+        </Link>
       </div>
       <div className="w-full flex flex-col items-center md:flex-row-reverse justify-center 2xl:justify-evenly gap-4 py-5">
         {/* The second section contains an illustration and a list of features. */}
         <img src={illustration} alt="" />
         {/* The Slider component is used to display the list of features on smaller screens. */}
         <div className="block md:hidden w-full max-w-sm">
-          <Slider />
+          {/*   The Swiper component is wrapped around the content that we want to display as slides.
+    We pass in the pagination prop and set clickable to true to enable pagination for the Swiper.
+    We also pass in the Pagination module to enable pagination functionality. */}
+          <Swiper
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+          >
+            {/* We map over the featuresData array to render a SwiperSlide for each item in the array. */}
+            {featuresData?.map((item) => {
+              return (
+                // The SwiperSlide component is used to wrap the content that we want to display as a slide.
+                // We pass a unique key prop to each SwiperSlide to help with rendering performance.
+                <SwiperSlide key={item.id}>
+                  {/* The content for each slide is a div containing an image, a title, and some text. */}
+                  <div className=" flex flex-col items-center justify-center gap-5 py-5">
+                    <img src={star} alt="" />
+                    <p className="text-md  text-refubookLightBlack font-medium text-center">
+                      {item.title}
+                    </p>
+                    <p className="text-md  text-refubookLightBlack font-medium text-center mb-4">
+                      {item.text}
+                    </p>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </div>
         {/* On larger screens, the features are displayed in a grid using the Feature component. */}
         <div className="hidden md:grid grid-cols-2 grid-rows-2 gap-2 justify-start px-10">
           {/* We map over the featuresData array to render a Feature component for each item in the array. */}
-          {featuresData.map((item) => {
+          {featuresData?.map((item) => {
             return <Feature key={item.id} item={item} />;
           })}
         </div>
