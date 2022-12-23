@@ -1,16 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
-import ar from '../../assets/ar.png';
-import en from '../../assets/en.png';
+import DropdownComponent from '../DropdownComponent/DropdownComponent';
 
 const Footer = () => {
   return (
 
     <div className="flex items-center justify-center bg-transparent p-5">
 
-        <div className="items-center justify-center">
-            <Link to="/" className="text-refubookBlue font-bold text-xl tracking-tight" >
+        <div className="items-center justify-center mr-6">
+            <Link to="/" className="text-refubookBlue font-bold text-xl tracking-tight " >
             <img src={logo} alt="logo" />
             </Link>
         </div>
@@ -32,14 +31,14 @@ const Footer = () => {
                 </li>
 
                 <li className="mr-6">
-                    <Link to="/blog" className="text-refubookGray hover:text-refubookActiveNav font-medium" >
-                    Blog
+                    <Link to="/contact" className="text-refubookGray hover:text-refubookActiveNav font-medium" >
+                    Contact
                     </Link>
                 </li>
 
                 <li className="mr-6">
-                    <Link to="/contact" className="text-refubookGray hover:text-refubookActiveNav font-medium" >
-                    Contact
+                    <Link to="/blog" className="text-refubookGray hover:text-refubookActiveNav font-medium" >
+                    Blog
                     </Link>
                 </li>
 
@@ -47,24 +46,7 @@ const Footer = () => {
 
         </div>
 
-        <div className="justify-center">
-
-            <div className="flex justify-between">
-
-                <div className="flex justify-between items-center">
-                    <button type="button" className="text-refubookGray hover:text-refubookActiveNav p-5" >
-                        <img src={ar} alt="arabic" /> العربية
-                    </button>
-                </div>
-
-                <div className="flex justify-between items-center">
-                    <button type="button" className="text-refubookGray hover:text-refubookActiveNav p-5 " >
-                        <img src={en} alt="english" /> English
-                    </button>
-                </div>
-
-            </div>
-        </div>
+        <DropdownComponent />
     </div>
   );
 };
