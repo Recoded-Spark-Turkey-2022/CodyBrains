@@ -4,18 +4,6 @@ import { render } from '@testing-library/react';
 import Features from '../Features';
 import Feature from '../Feature';
 
-/*
-
-jest.mock('react-router-dom', () => ({ Link: 'Link', })); -
-jest.mock('swiper/react', () => ({ Swiper: 'Swiper', SwiperSlide: 'SwiperSlide', })); - 
-jest.mock('swiper', () => ({ Pagination: 'Pagination', })); - 
-describe('Features', () => { ... }); - 
-it('renders correctly', () => { ... }); - This block creates a test case using Jest's it function. The test case
-const { container } = render(<Features />); - This line renders the Features component and destructures the container element from the returned object.
-expect(container).toMatchSnapshot(); - Thisß line uses Jest's toMatchSnapshot function to create a snapshot of the rendered element and compare it to a previously saved snapshot. If the snapshots do not match, the test will fail.
-it('renders Feature component with props passed', () => { ... }); - This block creates another test case using Jest's it function. The test case checks that the Feature component renders correctly when passed a mock item prop by taking a snapshot of the rendered element and comparing it to a previously saved snapshot.
-const { feature } = render(<Feature key={1} item={{ title: 'Test Title', text: 'Test Text' }} />); - This line renders the Feature component and passes in a mock item prop. The feature element is destructured from the returned
-*/
 
 /*  This line mocks the react-router-dom library using the jest.mock function. 
 This is necessary because the Features and Feature components are dependent on this library, but we don't want to actually include it in the test. 
