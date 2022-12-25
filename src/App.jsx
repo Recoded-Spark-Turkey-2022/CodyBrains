@@ -1,12 +1,23 @@
-import React from 'react';
-import logo from './assets/logo.svg';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Home";
+import Login from "./Login";
+import SignUp from "./Signup";
+import { AuthProvider } from "./AuthProvider";
 
 function App() {
   return (
-    <div className="flex items-center gap-2 text-refubookBlue hover:text-refubookRed font-roboto p-4">
-      <img src={logo} alt="" className="" />
-      <h2 className="text-refubookBlue font-semibold"> Refubook</h2>
-    </div>
+    <AuthProvider>
+      <div className="app">
+        <BrowserRouter>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/login" element={<Login />} />
+            <Route exact path="/signup" element={<SignUp />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </AuthProvider>
   );
 }
 
