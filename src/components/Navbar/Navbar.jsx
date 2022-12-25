@@ -54,6 +54,14 @@ function Navbar() {
               Contact
             </Link>
           </li>
+          <li className="mr-6">
+            <Link
+              to="/sign up"
+              className="text-refubookGray hover:text-refubookActiveNav font-medium"
+            >
+             Sign up 
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
