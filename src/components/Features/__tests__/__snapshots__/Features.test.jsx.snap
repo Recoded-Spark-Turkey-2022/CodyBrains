@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Features renders Feature component with props passed 1`] = `undefined`;
+
+exports[`Features renders correctly 1`] = `
+<div>
+  <div
+    class="w-full flex flex-col items-center justify-center bg-refubookAboutBlue py-4 mt-5"
+  >
+    <div
+      class=" w-3/4  md:w-2/3 flex flex-col items-center gap-4 justify-center py-5"
+    >
+      <h1
+        class="text-4xl md:text-3xl xl:text-4xl   text-refubookBlue font-bold text-center"
+      >
+        About
+      </h1>
+      <p
+        class="text-md leading-relaxed md:text-lg  text-refubookLightBlack font-medium text-justify md:text-center"
+      >
+        RefuBook is a website dedicated to helping refugees navigate their new surroundings and feel connected to their community. We offer a platform for sharing knowledge and experiences, and strive to be a comprehensive and reliable source of information. Thank you for visiting and we hope you find the resources here helpful in your journey as a refugee.
+      </p>
+      <link
+        to="about"
+      >
+        <button
+          class=" py-1 px-3 md:py-2 md:px-9 bg-refubookBlue text-refubookWhite font-bold text-lg md:text-xl  rounded-full shadow-lg hover:bg-refubookWhite hover:text-refubookBlack transition duration-500 ease-in-out"
+          type="button"
+        >
+          Learn More
+        </button>
+      </link>
+    </div>
+    <div
+      class="w-full flex flex-col items-center md:flex-row-reverse justify-center 2xl:justify-evenly gap-4 py-5"
+    >
+      <img
+        alt=""
+        src="features-illustration.svg"
+      />
+      <div
+        class="block md:hidden w-full max-w-sm"
+      >
+        <swiper
+          modules="Pagination"
+          pagination="[object Object]"
+        >
+          <swiperslide>
+            <div
+              class=" flex flex-col items-center justify-center gap-5 py-5"
+            >
+              <img
+                alt=""
+                src="star.svg"
+              />
+              <p
+                class="text-md  text-refubookLightBlack font-medium text-center"
+              >
+                Reliability
+              </p>
+              <p
+                class="text-md  text-refubookLightBlack font-medium text-center mb-4"
+              >
+                At RefuBook, we prioritize accuracy and up-to-date information to be a dependable source for refugees. Trustworthiness is crucial for us.
+              </p>
+            </div>
+          </swiperslide>
+          <swiperslide>
+            <div
+              class=" flex flex-col items-center justify-center gap-5 py-5"
+            >
+              <img
+                alt=""
+                src="star.svg"
+              />
+              <p
+                class="text-md  text-refubookLightBlack font-medium text-center"
+              >
+                Motivation
+              </p>
+              <p
+                class="text-md  text-refubookLightBlack font-medium text-center mb-4"
+              >
+                Our goal is to help refugees feel connected to their community and succeed in their new home. We are dedicated to providing the necessary resources and support.
+              </p>
+            </div>
+          </swiperslide>
+          <swiperslide>
+            <div
+              class=" flex flex-col items-center justify-center gap-5 py-5"
+            >
+              <img
+                alt=""
+                src="star.svg"
+              />
+              <p
+                class="text-md  text-refubookLightBlack font-medium text-center"
+              >
+                Efficiency
+              </p>
+              <p
+                class="text-md  text-refubookLightBlack font-medium text-center mb-4"
+              >
+                We value efficiency and strive to make our website user-friendly for refugees to easily access the information and resources they need.
+              </p>
+            </div>
+          </swiperslide>
+          <swiperslide>
+            <div
+              class=" flex flex-col items-center justify-center gap-5 py-5"
+            >
+              <img
+                alt=""
+                src="star.svg"
+              />
+              <p
+                class="text-md  text-refubookLightBlack font-medium text-center"
+              >
+                Creativity
+              </p>
+              <p
+                class="text-md  text-refubookLightBlack font-medium text-center mb-4"
+              >
+                Creativity is essential for finding innovative solutions to the challenges refugees face. We encourage users to share their unique perspectives and ideas on our platform.
+              </p>
+            </div>
+          </swiperslide>
+        </swiper>
+      </div>
+      <div
+        class="hidden md:grid grid-cols-2 grid-rows-2 gap-2 justify-start px-10"
+      >
+        <div
+          class=" max-w-sm flex flex-col items-center   gap-4 py-5"
+        >
+          <div
+            class="flex items-center justify-start w-full gap-4"
+          >
+            <img
+              alt=""
+              src="star.svg"
+            />
+            <h4
+              class="text-lg text-refubookLightBlack text-left font-bold"
+            >
+              Reliability
+            </h4>
+          </div>
+          <p
+            class="text-md text-refubookLightBlack font-medium text-left"
+          >
+            At RefuBook, we prioritize accuracy and up-to-date information to be a dependable source for refugees. Trustworthiness is crucial for us.
+          </p>
+        </div>
+        <div
+          class=" max-w-sm flex flex-col items-center   gap-4 py-5"
+        >
+          <div
+            class="flex items-center justify-start w-full gap-4"
+          >
+            <img
+              alt=""
+              src="star.svg"
+            />
+            <h4
+              class="text-lg text-refubookLightBlack text-left font-bold"
+            >
+              Motivation
+            </h4>
+          </div>
+          <p
+            class="text-md text-refubookLightBlack font-medium text-left"
+          >
+            Our goal is to help refugees feel connected to their community and succeed in their new home. We are dedicated to providing the necessary resources and support.
+          </p>
+        </div>
+        <div
+          class=" max-w-sm flex flex-col items-center   gap-4 py-5"
+        >
+          <div
+            class="flex items-center justify-start w-full gap-4"
+          >
+            <img
+              alt=""
+              src="star.svg"
+            />
+            <h4
+              class="text-lg text-refubookLightBlack text-left font-bold"
+            >
+              Efficiency
+            </h4>
+          </div>
+          <p
+            class="text-md text-refubookLightBlack font-medium text-left"
+          >
+            We value efficiency and strive to make our website user-friendly for refugees to easily access the information and resources they need.
+          </p>
+        </div>
+        <div
+          class=" max-w-sm flex flex-col items-center   gap-4 py-5"
+        >
+          <div
+            class="flex items-center justify-start w-full gap-4"
+          >
+            <img
+              alt=""
+              src="star.svg"
+            />
+            <h4
+              class="text-lg text-refubookLightBlack text-left font-bold"
+            >
+              Creativity
+            </h4>
+          </div>
+          <p
+            class="text-md text-refubookLightBlack font-medium text-left"
+          >
+            Creativity is essential for finding innovative solutions to the challenges refugees face. We encourage users to share their unique perspectives and ideas on our platform.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
