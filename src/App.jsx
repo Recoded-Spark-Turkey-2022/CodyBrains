@@ -5,7 +5,7 @@ import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Blog from './pages/Blog/Blog';
 import Contact from './pages/Contact/Contact';
-import Signup from './pages/signup/signup';
+import Register from './pages/Register/Register';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="blog" element={<Blog />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="sign up" element={<Signup />} />
+        <Route path="register" element={<Register />} />
       </Routes>
     </div>
   );

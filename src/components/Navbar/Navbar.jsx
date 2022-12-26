@@ -56,10 +56,10 @@ function Navbar() {
           </li>
           <li className="mr-6">
             <Link
-              to="/sign up"
+              to="/register"
               className="text-refubookGray hover:text-refubookActiveNav font-medium"
             >
-             Sign up 
+              Sign up
             </Link>
           </li>
         </ul>
