@@ -1,161 +1,65 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { v4 as uuidv4 } from 'uuid';
-import Swal from 'sweetalert2';
-import { registerUser } from '../../features/userSlice';
-import logo from '../../assets/logo.svg';
-import avatar from '../../assets/avatar.svg';
-import validationSchema from '../../utils/validation';
+import { Link, useLocation } from 'react-router-dom';
+
+import Providers from '../Providers/Providers';
+import blueVector from '../../assets/blue-baloon.svg';
 
 const Register = () => {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+  const location = useLocation();
 
-  const [picture, setPicture] = useState(avatar);
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    resolver: yupResolver(validationSchema),
-    mode: 'all',
-  });
-
-  const onSubmit = (data) => {
-    dispatch(
-      registerUser({
-        uid: uuidv4(),
-        email: data.email,
-        password: data.password,
-        displayName: data.displayName,
-        photoURL: picture,
-      })
-    );
-    if (data) {
-      Swal.fire({
-        title: 'Success!',
-        text: 'You have successfully registered! Redirecting to home page...',
-        timer: 2000,
-        timerProgressBar: true,
-        icon: 'success',
-        showConfirmButton: false,
-      });
-      setTimeout(() => {
-        navigate('/');
-      }, 2000);
-    }
-  };
   return (
-    <div className="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 ">
-      <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-        <div className="w-full max-w-md space-y-8">
-          <div>
-            <img className="mx-auto h-12 w-auto" src={logo} alt="Refubook" />
-
-            <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
-              Create an account
-            </h2>
-            <div className="mt-2 text-center text-sm text-gray-600">
-              Or{' '}
-              <Link
-                to="/login"
-                className="font-medium text-refubookBlue hover:text-refubookLightBlue"
-              >
-                Log in to your account
-              </Link>
-            </div>
-          </div>
-
-          <form
-            className="flex flex-col gap-2 "
-            onSubmit={handleSubmit(onSubmit)}
-          >
-            <div className="form-group">
-              <label htmlFor="displayName">
-                Username
-                <input
-                  type="text"
-                  id="displayName"
-                  placeholder="Enter username"
-                  className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 focus:outline-none focus:border-refubookBlue mb-3 "
-                  {...register('displayName')}
-                />
-              </label>
-              <p>{errors.displayName?.message}</p>
-            </div>
-            <div className="form-group">
-              <label htmlFor="email">
-                Email address
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 focus:outline-none focus:border-refubookBlue mb-3 "
-                  {...register('email')}
-                />
-              </label>
-              <p>{errors.email?.message}</p>
-            </div>
-            <div className="form-group">
-              <label htmlFor="password">
-                Password
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  placeholder="Password"
-                  className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 focus:outline-none focus:border-refubookBlue mb-3 "
-                  {...register('password')}
-                />
-              </label>
-              <p>{errors.password?.message}</p>
-            </div>
-            <div className="form-group">
-              <label htmlFor="password2">
-                Confirm Password
-                <input
-                  type="password"
-                  id="password2"
-                  name="password2"
-                  placeholder="Confirm Password"
-                  className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 focus:outline-none focus:border-refubookBlue mb-3 "
-                  {...register('password2')}
-                />
-              </label>
-              <p>{errors.password2?.message}</p>
-            </div>
-            <div className="form-group">
-              <label htmlFor="photoURL">
-                Avatar (optional)
-                <input
-                  type="file"
-                  name="photoURL"
-                  id="photoURL"
-                  onChange={(e) =>
-                    setPicture(URL.createObjectURL(e.target.files[0]))
-                  }
-                  placeholder="Avatar"
-                  className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 focus:outline-none focus:border-refubookBlue mb-3 "
-                  {...register('photoURL')}
-                />
-              </label>
-            </div>
-            <button
-              type="submit"
-              className=" className='group relative flex w-full justify-center rounded-md border border-transparent bg-refubookBlue py-2 px-4 text-sm font-medium mt-4 text-white hover:bg-refubookLightBlue focus:outline-none focus:ring-2 focus:ring-[#331416] focus:ring-offset-2'"
-            >
-              Submit
-            </button>
-          </form>
+    <section className="flex flex-col md:justify-center gap-10 items-center h-screen w-full ">
+      <div className=" mx-auto w-full h-full flex items-center mt-10 md:mt-0 flex-col justify-evenly  bg-white rounded-3xl max-w-xs max-h-96 max  md:max-w-xl md:max-h-96 p-6 space-y-4 bg-refubookWhite z-10 shadow-2xl ">
+        <div className="mb-4 text-center">
+          <h3 className="text-refubookBlue text-2xl font-bold tracking-tight  text-center">
+            {location.pathname === '/register'
+              ? 'SIGN UP WITH'
+              : 'SIGN IN WITH'}
+          </h3>
+        </div>
+        <div className="flex flex-col items-center justify-center w-full ">
+          <Providers />
+        </div>
+        <div className=" hidden md:block mx-auto text-center mt-8">
+          <p className="hidden md:flex gap-2 text-lg font-semibold items-center justify-center text-refubookAuthBlue">
+            Already a member?{' '}
+            <span className="text-refubookBlue hover:text-refubookLightBlue">
+              <Link to="/login">Sign in</Link>
+            </span>
+          </p>
         </div>
       </div>
-    </div>
+
+      <div className="  flex flex-col md:hidden mx-auto text-center z-10">
+        <p className=" md:flex gap-2 text-lg font-semibold items-center justify-center text-refubookAuthBlue">
+          Already a member?{' '}
+        </p>
+        <button
+          type="button"
+          className="bg-refubookBlue text-refubookWhite rounded-full hover:text-refubookLightBlue p-2"
+        >
+          <Link to="/login">Sign in</Link>
+        </button>
+      </div>
+
+      <img
+        src={blueVector}
+        alt="blueVector"
+        className="absolute hidden md:block top-0 left-0 h-screen"
+      />
+      <img
+        src={blueVector}
+        alt="blueVector"
+        className="absolute md:hidden bottom-0 h-screen   -rotate-90  "
+      />
+    </section>
   );
 };
 
 export default Register;
+
+/*
+
+
+
+
+      */

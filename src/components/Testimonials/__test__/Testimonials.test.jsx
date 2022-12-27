@@ -4,16 +4,20 @@ import Testimonials from '../Testimonials';
 
 // Mocking Swiper and SwiperSlide to avoid errors in tests
 
+const mockedSwiper = jest.fn();
+const mockedSwiperSlide = jest.fn();
+const mockedPagination = jest.fn();
+
 jest.mock('swiper/react', () => ({
-  Swiper: 'Swiper',
-  SwiperSlide: 'SwiperSlide',
+  ...jest.requireActual('swiper/react'),
+  Swiper: mockedSwiper,
+  SwiperSlide: mockedSwiperSlide,
 }));
 
-// Mocking Pagination module
 jest.mock('swiper', () => ({
-  Pagination: 'Pagination',
+  ...jest.requireActual('swiper'),
+  Pagination: mockedPagination,
 }));
-
 // Mocking testimonialsData to avoid errors in tests and to make sure the snapshot is consistent
 jest.mock('../../../data/testimonialsData', () => [
   {

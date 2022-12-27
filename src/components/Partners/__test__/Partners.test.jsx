@@ -4,16 +4,18 @@ import Partners from '../Partners';
 
 // Mocking Swiper and SwiperSlide to avoid errors in tests
 
+jest.mock('react-router-dom', () => ({
+  Link: 'Link',
+}));
+
 jest.mock('swiper/react', () => ({
   Swiper: 'Swiper',
   SwiperSlide: 'SwiperSlide',
 }));
 
-// Mocking Pagination module
 jest.mock('swiper', () => ({
   Pagination: 'Pagination',
 }));
-
 // Mocking images because jest can't handle images
 
 jest.mock('../../../assets/companies/recoded.png', () => 'recoded');

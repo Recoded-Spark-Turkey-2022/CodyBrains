@@ -1,0 +1,238 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register renders correctly 1`] = `
+<div>
+  <div
+    class="w-full flex flex-wrap p-6 md:p-0 md:py-5"
+  >
+    <div
+      class="w-full md:w-1/2 flex flex-col items-center justify-center"
+    >
+      <div
+        class="flex flex-col justify-center md:justify-start "
+      >
+        <div
+          class="text-center"
+        >
+          <h2
+            class="text-center text-3xl font-bold tracking-tight text-gray-900"
+          >
+            Create an account
+          </h2>
+          <div
+            class="mt-2 text-center text-sm text-gray-600"
+          >
+            Or
+             
+            <div>
+              Link
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col mb-2"
+        >
+          <div
+            class="flex items-center justify-center  px-4 sm:px-6 lg:px-8 "
+          >
+            <div
+              class="flex min-h-full items-center justify-center  px-4 sm:px-6 lg:px-8"
+            >
+              <div
+                class="w-full max-w-md "
+              >
+                <div>
+                  <h2
+                    class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900"
+                  >
+                    Sign in with
+                  </h2>
+                  <div
+                    class="mt-6 grid grid-cols-2 gap-3"
+                  >
+                    <button
+                      class="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-refubookBlue hover:bg-refubookLightBlue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                      type="button"
+                    >
+                      <svg
+                        class="mr-2"
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 512 512"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+                        />
+                      </svg>
+                      Facebook
+                    </button>
+                    <button
+                      class="w-full inline-flex items-center justify-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                      type="button"
+                    >
+                      <svg
+                        class="mr-2"
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 488 512"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
+                        />
+                      </svg>
+                      Google
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form
+          class="flex flex-col pt-3 md:pt-8  "
+        >
+          <div
+            class="grid grid-cols-2 items-center justify-center gap-2"
+          >
+            <div
+              class="text-center"
+            >
+              <label
+                for="displayName"
+              >
+                Username
+                <input
+                  class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 focus:outline-none focus:border-refubookBlue mb-3 "
+                  id="displayName"
+                  placeholder="Enter username"
+                  type="text"
+                />
+              </label>
+              <p />
+            </div>
+            <div
+              class="text-center"
+            >
+              <label
+                for="email"
+              >
+                Email address
+                <input
+                  class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 focus:outline-none focus:border-refubookBlue mb-3 "
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  type="email"
+                />
+              </label>
+              <p />
+            </div>
+            <div
+              class="text-center"
+            >
+              <label
+                for="password"
+              >
+                Password
+                <input
+                  class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 focus:outline-none focus:border-refubookBlue mb-3 "
+                  id="password"
+                  name="password"
+                  placeholder="Password"
+                  type="password"
+                />
+              </label>
+              <p />
+            </div>
+            <div
+              class="text-center"
+            >
+              <label
+                for="password2"
+              >
+                Confirm Password
+                <input
+                  class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 focus:outline-none focus:border-refubookBlue mb-3 "
+                  id="password2"
+                  name="password2"
+                  placeholder="Confirm Password"
+                  type="password"
+                />
+              </label>
+              <p />
+            </div>
+            <div
+              class="text-center flex items-center justify-center"
+            >
+              <img
+                alt=""
+                class="w-32 h-32 rounded-full"
+                src="https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"
+              />
+            </div>
+            <div
+              class="flex flex-row-reverse w-full items-center justify-center gap-4"
+            >
+              <label
+                class="flex flex-col-reverse items-center gap-2"
+                for="photoURL"
+              >
+                Please upload a profile picture
+                <svg
+                  class="text-5xl text-refubookBlue"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                  <path
+                    d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10zM8 13.01l1.41 1.41L11 12.84V17h2v-4.16l1.59 1.59L16 13.01 12.01 9 8 13.01z"
+                  />
+                </svg>
+                <input
+                  class="hidden"
+                  id="photoURL"
+                  name="photoURL"
+                  type="file"
+                />
+              </label>
+            </div>
+            <p />
+          </div>
+          <button
+            class=" className='group relative flex w-full justify-center rounded-md border border-transparent bg-refubookBlue py-2 px-4 text-sm font-medium mt-8 text-white hover:bg-refubookLightBlue focus:outline-none focus:ring-2 focus:ring-[#331416] focus:ring-offset-2'"
+            type="submit"
+          >
+            Register
+          </button>
+        </form>
+      </div>
+    </div>
+    <div
+      class="w-1/2 shadow-2xl"
+    >
+      <img
+        alt="Refubook"
+        class=" object-cover w-full h-screen hidden md:block"
+        loading="lazy"
+        src="registerImg.jpg"
+      />
+    </div>
+  </div>
+</div>
+`;

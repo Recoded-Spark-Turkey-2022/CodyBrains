@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RegisterForm should render correctly 1`] = `
+<form
+  className="flex flex-col pt-3 md:pt-8  "
+  onSubmit={[Function]}
+>
+  <div
+    className="grid grid-cols-2 items-center justify-center gap-2"
+  >
+    <div
+      className="text-center"
+    >
+      <label
+        htmlFor="displayName"
+      >
+        Username
+        <input
+          className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 focus:outline-none focus:border-refubookBlue mb-3 "
+          id="displayName"
+          name="displayName"
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder="Enter username"
+          type="text"
+        />
+      </label>
+      <p />
+    </div>
+    <div
+      className="text-center"
+    >
+      <label
+        htmlFor="email"
+      >
+        Email address
+        <input
+          className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 focus:outline-none focus:border-refubookBlue mb-3 "
+          id="email"
+          name="email"
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder="Enter your email"
+          type="email"
+        />
+      </label>
+      <p />
+    </div>
+    <div
+      className="text-center"
+    >
+      <label
+        htmlFor="password"
+      >
+        Password
+        <input
+          className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 focus:outline-none focus:border-refubookBlue mb-3 "
+          id="password"
+          name="password"
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder="Password"
+          type="password"
+        />
+      </label>
+      <p />
+    </div>
+    <div
+      className="text-center"
+    >
+      <label
+        htmlFor="password2"
+      >
+        Confirm Password
+        <input
+          className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 focus:outline-none focus:border-refubookBlue mb-3 "
+          id="password2"
+          name="password2"
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder="Confirm Password"
+          type="password"
+        />
+      </label>
+      <p />
+    </div>
+    <div
+      className="text-center flex items-center justify-center"
+    >
+      <img
+        alt=""
+        className="w-32 h-32 rounded-full"
+        src="https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"
+      />
+    </div>
+    <div
+      className="flex flex-row-reverse w-full items-center justify-center gap-4"
+    >
+      <label
+        className="flex flex-col-reverse items-center gap-2"
+        htmlFor="photoURL"
+      >
+        Please upload a profile picture
+        <svg
+          className="text-5xl text-refubookBlue"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+          <path
+            d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10zM8 13.01l1.41 1.41L11 12.84V17h2v-4.16l1.59 1.59L16 13.01 12.01 9 8 13.01z"
+          />
+        </svg>
+        <input
+          className="hidden"
+          id="photoURL"
+          name="photoURL"
+          onBlur={[Function]}
+          type="file"
+        />
+      </label>
+    </div>
+    <p />
+  </div>
+  <button
+    className=" className='group relative flex w-full justify-center rounded-md border border-transparent bg-refubookBlue py-2 px-4 text-sm font-medium mt-8 text-white hover:bg-refubookLightBlue focus:outline-none focus:ring-2 focus:ring-[#331416] focus:ring-offset-2'"
+    type="submit"
+  >
+    Register
+  </button>
+</form>
+`;
