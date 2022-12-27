@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Partners renders correctly 1`] = `
+<div>
+  <div
+    class="flex flex-col items-center justify-center w-full bg-refubookWhite px-8 py-4"
+  >
+    <h1
+      class="text-3xl text-refubookBlack font-bold text-center"
+    >
+      Our Partners
+    </h1>
+    <swiper
+      breakpoints="[object Object]"
+      class="w-full "
+      loop=""
+      modules="Pagination"
+      pagination="[object Object]"
+      spacebetween="5"
+    >
+      <swiperslide
+        class="flex items-center justify-center "
+      >
+        <img
+          alt="logo"
+          class=" block w-40 h-40 object-contain  "
+          src="recoded"
+        />
+      </swiperslide>
+      <swiperslide
+        class="flex items-center justify-center "
+      >
+        <img
+          alt="logo"
+          class=" block w-40 h-40 object-contain  "
+          src="spark"
+        />
+      </swiperslide>
+      <swiperslide
+        class="flex items-center justify-center "
+      >
+        <img
+          alt="logo"
+          class=" block w-40 h-40 object-contain  "
+          src="flatiron"
+        />
+      </swiperslide>
+      <swiperslide
+        class="flex items-center justify-center "
+      >
+        <img
+          alt="logo"
+          class=" block w-40 h-40 object-contain  "
+          src="children"
+        />
+      </swiperslide>
+      <swiperslide
+        class="flex items-center justify-center "
+      >
+        <img
+          alt="logo"
+          class=" block w-40 h-40 object-contain  "
+          src="unhcr"
+        />
+      </swiperslide>
+      <swiperslide
+        class="flex items-center justify-center "
+      >
+        <img
+          alt="logo"
+          class=" block w-40 h-40 object-contain  "
+          src="amnesty"
+        />
+      </swiperslide>
+      <swiperslide
+        class="flex items-center justify-center "
+      >
+        <img
+          alt="logo"
+          class=" block w-40 h-40 object-contain  "
+          src="oxfam"
+        />
+      </swiperslide>
+      <swiperslide
+        class="flex items-center justify-center "
+      >
+        <img
+          alt="logo"
+          class=" block w-40 h-40 object-contain  "
+          src="giz"
+        />
+      </swiperslide>
+      <swiperslide
+        class="flex items-center justify-center "
+      >
+        <img
+          alt="logo"
+          class=" block w-40 h-40 object-contain  "
+          src="unicef"
+        />
+      </swiperslide>
+    </swiper>
+  </div>
+</div>
+`;
