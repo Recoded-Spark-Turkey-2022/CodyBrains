@@ -13,7 +13,7 @@ exports[`Auth renders correctly 1`] = `
       <h3
         className="text-refubookBlue text-2xl font-bold tracking-tight  text-center"
       >
-        SIGN UP WITH
+        SIGN IN WITH
       </h3>
     </div>
     <div
