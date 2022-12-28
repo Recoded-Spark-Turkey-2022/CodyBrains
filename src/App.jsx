@@ -16,11 +16,11 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="blog" element={<Blog />} />
         <Route path="contact" element={<Contact />} />
-        {['login', 'register'].map((path) => (
+        {['signin', 'signup'].map((path) => (
           <Route
             key={path}
             path={path}
-            element={<Auth isLogin={path === 'login'} />}
+            element={<Auth isLogin={path === 'sigmin'} />}
           />
         ))}
       </Routes>

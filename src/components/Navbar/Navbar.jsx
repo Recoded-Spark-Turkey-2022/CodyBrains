@@ -1,26 +1,22 @@
 import React, { Fragment } from 'react';
-import Swal from 'sweetalert2';
 import { Menu, Transition } from '@headlessui/react';
 import { Link, useLocation } from 'react-router-dom';
-import { signOut } from 'firebase/auth';
 import { useSelector, useDispatch } from 'react-redux';
 import { BsChevronDown } from 'react-icons/bs';
 import logo from '../../assets/logo.svg';
 import { logout } from '../../features/userSlice';
-import { auth } from '../../services/firebase.config';
+import { logoutUser } from '../../services/auth';
 
 function Navbar() {
   const { user } = useSelector((state) => state.user);
   const dispatch = useDispatch();
 
-  console.log(user);
-
   const handleLogout = async () => {
     try {
-      await signOut(auth);
+      await logoutUser();
       dispatch(logout());
     } catch (error) {
-      Swal.error(error.message);
+      throw new Error(error);
     }
   };
 

@@ -2,22 +2,15 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import Testimonials from '../Testimonials';
 
-// Mocking Swiper and SwiperSlide to avoid errors in tests
-
-const mockedSwiper = jest.fn();
-const mockedSwiperSlide = jest.fn();
-const mockedPagination = jest.fn();
-
 jest.mock('swiper/react', () => ({
-  ...jest.requireActual('swiper/react'),
-  Swiper: mockedSwiper,
-  SwiperSlide: mockedSwiperSlide,
+  Swiper: 'Swiper',
+  SwiperSlide: 'SwiperSlide',
 }));
 
 jest.mock('swiper', () => ({
-  ...jest.requireActual('swiper'),
-  Pagination: mockedPagination,
+  Pagination: 'Pagination',
 }));
+
 // Mocking testimonialsData to avoid errors in tests and to make sure the snapshot is consistent
 jest.mock('../../../data/testimonialsData', () => [
   {

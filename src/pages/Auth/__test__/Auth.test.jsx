@@ -1,21 +1,13 @@
-import { render } from '@testing-library/react';
-import Register from '../Register';
-
-const mockedUsedNavigate = jest.fn();
+import renderer from 'react-test-renderer';
+import Auth from '../Auth';
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
-  useNavigate: () => mockedUsedNavigate,
-  Link: () => <div>Link</div>,
-}));
-
-jest.mock('react-hook-form', () => ({
-  ...jest.requireActual('react-hook-form'),
-  useForm: () => ({
-    register: jest.fn(),
-    handleSubmit: jest.fn(),
-    formState: { errors: {} },
+  useLocation: () => ({
+    pathname: '/register',
   }),
+  useNavigate: () => jest.fn(),
+  Link: 'Link',
 }));
 
 jest.mock('react-redux', () => ({
@@ -23,9 +15,9 @@ jest.mock('react-redux', () => ({
   useDispatch: () => jest.fn(),
 }));
 
-describe('Register', () => {
+describe('Auth', () => {
   it('renders correctly', () => {
-    const { container } = render(<Register />);
-    expect(container).toMatchSnapshot();
+    const tree = renderer.create(<Auth />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });
