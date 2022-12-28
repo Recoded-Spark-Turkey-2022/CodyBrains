@@ -4,7 +4,6 @@ import { render } from '@testing-library/react';
 import Features from '../Features';
 import Feature from '../Feature';
 
-
 /*  This line mocks the react-router-dom library using the jest.mock function. 
 This is necessary because the Features and Feature components are dependent on this library, but we don't want to actually include it in the test. 
 Instead, we provide a fake implementation of the Link component, which allows us to run the test without running into errors. */
