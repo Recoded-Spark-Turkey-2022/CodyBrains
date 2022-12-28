@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 import Testimonials from '../Testimonials';
 
 jest.mock('swiper/react', () => ({
@@ -31,12 +31,7 @@ jest.mock('../../../data/testimonialsData', () => [
 
 describe('Testimonials', () => {
   it('renders correctly', () => {
-    const { container } = render(<Testimonials />);
-    expect(container).toMatchSnapshot();
-  });
-  it('renders testimonialsData correctly', () => {
-    const { getByText } = render(<Testimonials />);
-    expect(getByText('John Doe')).toBeInTheDocument();
-    expect(getByText('Jane Doe')).toBeInTheDocument();
+    const tree = renderer.create(<Testimonials />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

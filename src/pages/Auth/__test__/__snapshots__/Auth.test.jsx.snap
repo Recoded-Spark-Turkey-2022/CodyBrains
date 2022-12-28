@@ -126,7 +126,7 @@ exports[`Auth renders correctly 1`] = `
   />
   <img
     alt="blueVector"
-    className="absolute md:hidden bottom-0 w-full h-full "
+    className="absolute md:hidden bottom-0 right-0 w-full h-4/6 object-cover"
     src="mobile-baloon.svg"
   />
 </section>

@@ -1,5 +1,4 @@
 import { Link, useLocation } from 'react-router-dom';
-
 import Providers from '../Providers/Providers';
 import desktopBaloon from '../../assets/desktop-baloon.svg';
 import mobileBaloon from '../../assets/mobile-baloon.svg';
@@ -50,7 +49,7 @@ const Auth = () => {
       <img
         src={mobileBaloon}
         alt="blueVector"
-        className="absolute md:hidden bottom-0 w-full h-full "
+        className="absolute md:hidden bottom-0 right-0 w-full h-4/6 object-cover"
       />
     </section>
   );
