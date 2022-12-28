@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { BsChevronDown } from 'react-icons/bs';
 import logo from '../../assets/logo.svg';
@@ -20,18 +20,6 @@ function Navbar() {
     }
   };
 
-  const location = useLocation();
-  const pageMap = {
-    '/login': 'Sing In',
-    '/register': 'Sing Up',
-    '/about': 'About',
-    '/blog': 'Blog',
-    '/contact': 'Contact',
-    '/': 'Home',
-  };
-
-  const pageName = pageMap[location.pathname] || 'Unknown Page';
-
   return (
     <nav className="flex items-center justify-between w-full mt-10 py-2 px-5 z-10">
       <div className="px-16 flex items-center justify-center">
@@ -44,12 +32,6 @@ function Navbar() {
             Refubook
           </p>
         </Link>
-      </div>
-
-      <div className="hidden md:flex flex-grow  items-center justify-center">
-        <h4 className="text-refubookGray font-medium text-lg tracking-tight">
-          {pageName}
-        </h4>
       </div>
 
       <div className="hidden md:flex flex-grow  items-center justify-end">
