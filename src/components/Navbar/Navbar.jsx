@@ -21,6 +21,12 @@ function Navbar() {
     }
   };
 
+  const capitalize = (str) => {
+    return str.replace(/\b[a-z]/g, (char) => {
+      return char.toUpperCase();
+    });
+  };
+
   return (
     <nav className="flex items-center justify-between w-full mt-10 py-2 px-5 z-10">
       <div className=" flex items-center justify-center">
@@ -81,7 +87,7 @@ function Navbar() {
                     alt="profile pic"
                     className="w-8 h-8 rounded-full mr-2"
                   />
-                  {user.displayName}
+                  <p className="mr-2">{capitalize(user.displayName)}</p>
                   <BsChevronDown
                     className="ml-2 -mr-1 h-5 w-5"
                     aria-hidden="true"
