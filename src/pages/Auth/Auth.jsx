@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import Providers from '../Providers/Providers';
 import blueVector from '../../assets/blue-baloon.svg';
 
-const Register = () => {
+const Auth = () => {
   const location = useLocation();
 
   return (
@@ -55,11 +55,4 @@ const Register = () => {
   );
 };
 
-export default Register;
-
-/*
-
-
-
-
-      */
+export default Auth;

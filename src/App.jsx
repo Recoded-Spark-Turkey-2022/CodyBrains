@@ -5,7 +5,7 @@ import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Blog from './pages/Blog/Blog';
 import Contact from './pages/Contact/Contact';
-import Register from './pages/Register/Register';
+import Auth from './pages/Auth/Auth';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
           <Route
             key={path}
             path={path}
-            element={<Register isLogin={path === 'login'} />}
+            element={<Auth isLogin={path === 'login'} />}
           />
         ))}
       </Routes>
