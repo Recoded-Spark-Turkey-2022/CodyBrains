@@ -6,6 +6,7 @@ import { BsChevronDown } from 'react-icons/bs';
 import logo from '../../assets/logo.svg';
 import { logout } from '../../features/userSlice';
 import { logoutUser } from '../../services/auth';
+import avatar from '../../assets/avatar.png';
 
 function Navbar() {
   const { user } = useSelector((state) => state.user);
@@ -22,7 +23,7 @@ function Navbar() {
 
   return (
     <nav className="flex items-center justify-between w-full mt-10 py-2 px-5 z-10">
-      <div className="px-16 flex items-center justify-center">
+      <div className=" flex items-center justify-center">
         <Link
           to="/"
           className="text-refubookBlue font-bold text-xl tracking-tight flex items-center"
@@ -76,7 +77,7 @@ function Navbar() {
               <div>
                 <Menu.Button className="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white bg-refubookBlue border border-transparent rounded-md hover:bg-refubookActiveNav focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
                   <img
-                    src={user.photoURL}
+                    src={avatar}
                     alt="profile pic"
                     className="w-8 h-8 rounded-full mr-2"
                   />
@@ -146,21 +147,21 @@ function Navbar() {
               </Transition>
             </Menu>
           ) : (
-            <div className="flex">
-              <li className="mr-6">
+            <div className="flex ">
+              <li className="mr-6 ">
                 <Link
-                  to="/login"
-                  className="bg-refubookBlue text-white px-4 py-2 rounded-md font-medium"
+                  to="/signin"
+                  className="bg-refubookBlue text-refubookWhite px-4 py-2 rounded-3xl font-medium"
                 >
-                  Login
+                  Sign In
                 </Link>
               </li>
-              <li className="mr-6">
+              <li className="mr-6 ">
                 <Link
-                  to="/register"
-                  className="bg-refubookBlue text-white px-4 py-2 rounded-md font-medium"
+                  to="/signup"
+                  className="bg-refubookBlue text-refubookWhite px-4 py-2 rounded-3xl font-medium"
                 >
-                  Register
+                  Sign Up
                 </Link>
               </li>
             </div>
