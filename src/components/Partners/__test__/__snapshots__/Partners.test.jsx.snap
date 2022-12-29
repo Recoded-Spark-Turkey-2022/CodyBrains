@@ -1,105 +1,134 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Partners renders correctly 1`] = `
-<div>
-  <div
-    class="flex flex-col items-center justify-center w-full bg-refubookWhite px-8 py-4"
+<div
+  className="flex flex-col items-center justify-center w-full bg-refubookWhite px-8 py-4"
+>
+  <h1
+    className="text-3xl text-refubookBlack font-bold text-center"
   >
-    <h1
-      class="text-3xl text-refubookBlack font-bold text-center"
+    Our Partners
+  </h1>
+  <Swiper
+    breakpoints={
+      Object {
+        "1024": Object {
+          "slidesPerView": 5,
+          "spaceBetween": 5,
+        },
+        "1280": Object {
+          "slidesPerView": 6,
+          "spaceBetween": 5,
+        },
+        "320": Object {
+          "slidesPerView": 2,
+          "spaceBetween": 10,
+        },
+        "640": Object {
+          "slidesPerView": 3,
+          "spaceBetween": 5,
+        },
+        "768": Object {
+          "slidesPerView": 4,
+          "spaceBetween": 5,
+        },
+      }
+    }
+    className="w-full "
+    loop={true}
+    modules={
+      Array [
+        "Pagination",
+      ]
+    }
+    pagination={
+      Object {
+        "clickable": true,
+      }
+    }
+    spaceBetween={5}
+  >
+    <SwiperSlide
+      className="flex items-center justify-center "
     >
-      Our Partners
-    </h1>
-    <swiper
-      breakpoints="[object Object]"
-      class="w-full "
-      loop=""
-      modules="Pagination"
-      pagination="[object Object]"
-      spacebetween="5"
+      <img
+        alt="logo"
+        className=" block w-40 h-40 object-contain  "
+        src="recoded.png"
+      />
+    </SwiperSlide>
+    <SwiperSlide
+      className="flex items-center justify-center "
     >
-      <swiperslide
-        class="flex items-center justify-center "
-      >
-        <img
-          alt="logo"
-          class=" block w-40 h-40 object-contain  "
-          src="recoded"
-        />
-      </swiperslide>
-      <swiperslide
-        class="flex items-center justify-center "
-      >
-        <img
-          alt="logo"
-          class=" block w-40 h-40 object-contain  "
-          src="spark"
-        />
-      </swiperslide>
-      <swiperslide
-        class="flex items-center justify-center "
-      >
-        <img
-          alt="logo"
-          class=" block w-40 h-40 object-contain  "
-          src="flatiron"
-        />
-      </swiperslide>
-      <swiperslide
-        class="flex items-center justify-center "
-      >
-        <img
-          alt="logo"
-          class=" block w-40 h-40 object-contain  "
-          src="children"
-        />
-      </swiperslide>
-      <swiperslide
-        class="flex items-center justify-center "
-      >
-        <img
-          alt="logo"
-          class=" block w-40 h-40 object-contain  "
-          src="unhcr"
-        />
-      </swiperslide>
-      <swiperslide
-        class="flex items-center justify-center "
-      >
-        <img
-          alt="logo"
-          class=" block w-40 h-40 object-contain  "
-          src="amnesty"
-        />
-      </swiperslide>
-      <swiperslide
-        class="flex items-center justify-center "
-      >
-        <img
-          alt="logo"
-          class=" block w-40 h-40 object-contain  "
-          src="oxfam"
-        />
-      </swiperslide>
-      <swiperslide
-        class="flex items-center justify-center "
-      >
-        <img
-          alt="logo"
-          class=" block w-40 h-40 object-contain  "
-          src="giz"
-        />
-      </swiperslide>
-      <swiperslide
-        class="flex items-center justify-center "
-      >
-        <img
-          alt="logo"
-          class=" block w-40 h-40 object-contain  "
-          src="unicef"
-        />
-      </swiperslide>
-    </swiper>
-  </div>
+      <img
+        alt="logo"
+        className=" block w-40 h-40 object-contain  "
+        src="spark.png"
+      />
+    </SwiperSlide>
+    <SwiperSlide
+      className="flex items-center justify-center "
+    >
+      <img
+        alt="logo"
+        className=" block w-40 h-40 object-contain  "
+        src="flatiron.png"
+      />
+    </SwiperSlide>
+    <SwiperSlide
+      className="flex items-center justify-center "
+    >
+      <img
+        alt="logo"
+        className=" block w-40 h-40 object-contain  "
+        src="children.png"
+      />
+    </SwiperSlide>
+    <SwiperSlide
+      className="flex items-center justify-center "
+    >
+      <img
+        alt="logo"
+        className=" block w-40 h-40 object-contain  "
+        src="unhcr.png"
+      />
+    </SwiperSlide>
+    <SwiperSlide
+      className="flex items-center justify-center "
+    >
+      <img
+        alt="logo"
+        className=" block w-40 h-40 object-contain  "
+        src="amnesty.png"
+      />
+    </SwiperSlide>
+    <SwiperSlide
+      className="flex items-center justify-center "
+    >
+      <img
+        alt="logo"
+        className=" block w-40 h-40 object-contain  "
+        src="oxfam.png"
+      />
+    </SwiperSlide>
+    <SwiperSlide
+      className="flex items-center justify-center "
+    >
+      <img
+        alt="logo"
+        className=" block w-40 h-40 object-contain  "
+        src="giz.png"
+      />
+    </SwiperSlide>
+    <SwiperSlide
+      className="flex items-center justify-center "
+    >
+      <img
+        alt="logo"
+        className=" block w-40 h-40 object-contain  "
+        src="unicef.png"
+      />
+    </SwiperSlide>
+  </Swiper>
 </div>
 `;

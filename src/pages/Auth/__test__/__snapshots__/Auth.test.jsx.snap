@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Auth renders correctly 1`] = `
+<section
+  className="flex flex-col md:justify-center gap-10 items-center h-screen w-full relative "
+>
+  <div
+    className=" mx-auto w-full h-full flex items-center mt-10 md:mt-0 flex-col justify-evenly  bg-white rounded-3xl max-w-xs max-h-96 max  md:max-w-xl md:max-h-96 p-6 space-y-4 bg-refubookWhite z-10 shadow-2xl "
+  >
+    <div
+      className="mb-4 text-center"
+    >
+      <h3
+        className="text-refubookBlue text-2xl font-bold tracking-tight  text-center"
+      >
+        SIGN IN WITH
+      </h3>
+    </div>
+    <div
+      className="flex flex-col items-center justify-center w-full "
+    >
+      <div
+        className="flex flex-col md:flex-row  items-center justify-center gap-5   sm:px-6 lg:px-8 w-full "
+      >
+        <button
+          className="bg-googleRed py-4 px-20 w-full inline-flex items-center justify-center border border-gray-300 shadow-sm text-sm font-medium rounded-md text-white  "
+          data-testid="google"
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="mr-2 text-refubookWhite text-2xl"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 488 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
+            />
+          </svg>
+        </button>
+        <h3
+          className="text-center text-lg font-medium text-refubookBlue"
+        >
+          OR
+        </h3>
+        <button
+          className="bg-facebookBlue py-4 px-20 w-full inline-flex items-center justify-center border border-gray-300 shadow-sm text-sm font-medium rounded-md text-white  "
+          data-testid="facebook"
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="mr-2 text-refubookWhite text-2xl"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 320 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      className=" hidden md:block mx-auto text-center mt-8"
+    >
+      <p
+        className="hidden md:flex gap-2 text-lg font-semibold items-center justify-center text-refubookAuthBlue"
+      >
+        Want to be a member?
+        <span
+          className="text-refubookBlue hover:text-refubookLightBlue"
+        >
+          <Link
+            to="/signup"
+          >
+            Sign up
+          </Link>
+        </span>
+      </p>
+    </div>
+  </div>
+  <div
+    className="  flex flex-col md:hidden mx-auto text-center z-10"
+  >
+    <p
+      className=" md:flex gap-2 text-lg font-semibold items-center justify-center text-refubookAuthBlue"
+    >
+      Want to be a member?
+    </p>
+    <button
+      className="bg-refubookBlue text-refubookWhite rounded-full hover:text-refubookLightBlue p-2"
+      type="button"
+    >
+      <Link
+        to="/signup"
+      >
+        Sign up
+      </Link>
+    </button>
+  </div>
+  <img
+    alt="blueVector"
+    className="absolute hidden md:block top-0 left-0 h-screen"
+    src="desktop-baloon.svg"
+  />
+  <img
+    alt="blueVector"
+    className="absolute md:hidden bottom-0 right-0 w-full h-4/6 object-cover"
+    src="mobile-baloon.svg"
+  />
+</section>
+`;

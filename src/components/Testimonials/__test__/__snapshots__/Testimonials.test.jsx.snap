@@ -1,68 +1,74 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Testimonials renders correctly 1`] = `
-<div>
+<div
+  className="flex flex-col md:flex-row items-center justify-evenly w-full bg-refubookWhite px-8 py-4"
+>
   <div
-    class="flex flex-col md:flex-row items-center justify-evenly w-full bg-refubookWhite px-8 py-4"
+    className="flex flex-col items-center justify-center max-w-md"
   >
-    <div
-      class="flex flex-col items-center justify-center max-w-md"
+    <img
+      alt=""
+      className="w-96 h-96"
+      src="world-map.svg"
+    />
+  </div>
+  <div
+    className="flex flex-col items-center justify-center max-w-xs md:max-w-md px-4"
+  >
+    <Swiper
+      className="flex items-center justify-center w-full gap-3"
+      loop={true}
+      modules={
+        Array [
+          "Pagination",
+        ]
+      }
+      pagination={
+        Object {
+          "clickable": true,
+        }
+      }
     >
-      <img
-        alt=""
-        class="w-96 h-96"
-        src="world-map.svg"
-      />
-    </div>
-    <div
-      class="flex flex-col items-center justify-center max-w-xs md:max-w-md px-4"
-    >
-      <swiper
-        class="flex items-center justify-center w-full gap-3"
-        loop=""
-        modules="Pagination"
-        pagination="[object Object]"
+      <SwiperSlide
+        className=" flex flex-col  gap-3 "
       >
-        <swiperslide
-          class=" flex flex-col  gap-3 "
+        <h3
+          className="text-lg text-refubookBlack font-normal md:text-justify  text-center"
         >
-          <h3
-            class="text-lg text-refubookBlack font-normal md:text-justify  text-center"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, eu aliquam nunc nisl euismod nisl. Sed euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, eu aliquam nunc nisl euismod nisl.
-          </h3>
-          <span
-            class="text-md  text-refubookLightBlue font-light md:text-left text-center"
-          >
-            John Doe
-          </span>
-          <span
-            class="text-md  text-refubookLightBlue font-light md:text-left text-center mb-8"
-          >
-            United States
-          </span>
-        </swiperslide>
-        <swiperslide
-          class=" flex flex-col  gap-3 "
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, eu aliquam nunc nisl euismod nisl. Sed euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, eu aliquam nunc nisl euismod nisl.
+        </h3>
+        <span
+          className="text-md  text-refubookLightBlue font-light md:text-left text-center"
         >
-          <h3
-            class="text-lg text-refubookBlack font-normal md:text-justify  text-center"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, eu aliquam nunc nisl euismod nisl. Sed euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, eu aliquam nunc nisl euismod nisl.
-          </h3>
-          <span
-            class="text-md  text-refubookLightBlue font-light md:text-left text-center"
-          >
-            Jane Doe
-          </span>
-          <span
-            class="text-md  text-refubookLightBlue font-light md:text-left text-center mb-8"
-          >
-            United Kingdom
-          </span>
-        </swiperslide>
-      </swiper>
-    </div>
+          John Doe
+        </span>
+        <span
+          className="text-md  text-refubookLightBlue font-light md:text-left text-center mb-8"
+        >
+          United States
+        </span>
+      </SwiperSlide>
+      <SwiperSlide
+        className=" flex flex-col  gap-3 "
+      >
+        <h3
+          className="text-lg text-refubookBlack font-normal md:text-justify  text-center"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, eu aliquam nunc nisl euismod nisl. Sed euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, eu aliquam nunc nisl euismod nisl.
+        </h3>
+        <span
+          className="text-md  text-refubookLightBlue font-light md:text-left text-center"
+        >
+          Jane Doe
+        </span>
+        <span
+          className="text-md  text-refubookLightBlue font-light md:text-left text-center mb-8"
+        >
+          United Kingdom
+        </span>
+      </SwiperSlide>
+    </Swiper>
   </div>
 </div>
 `;
