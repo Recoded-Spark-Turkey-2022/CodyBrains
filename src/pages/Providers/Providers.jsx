@@ -54,6 +54,7 @@ const Providers = () => {
     <div className="flex flex-col md:flex-row  items-center justify-center gap-5   sm:px-6 lg:px-8 w-full ">
       <button
         type="button"
+        data-testid="google"
         className="bg-googleRed py-4 px-20 w-full inline-flex items-center justify-center border border-gray-300 shadow-sm text-sm font-medium rounded-md text-white  "
         onClick={handleLoginWithGoogle}
       >
@@ -62,6 +63,7 @@ const Providers = () => {
       <h3 className="text-center text-lg font-medium text-refubookBlue">OR</h3>
       <button
         type="button"
+        data-testid="facebook"
         className="bg-facebookBlue py-4 px-20 w-full inline-flex items-center justify-center border border-gray-300 shadow-sm text-sm font-medium rounded-md text-white  "
         onClick={handleLoginWithFacebook}
       >

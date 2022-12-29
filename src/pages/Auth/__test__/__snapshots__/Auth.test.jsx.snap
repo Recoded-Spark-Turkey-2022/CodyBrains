@@ -24,6 +24,7 @@ exports[`Auth renders correctly 1`] = `
       >
         <button
           className="bg-googleRed py-4 px-20 w-full inline-flex items-center justify-center border border-gray-300 shadow-sm text-sm font-medium rounded-md text-white  "
+          data-testid="google"
           onClick={[Function]}
           type="button"
         >
@@ -54,6 +55,7 @@ exports[`Auth renders correctly 1`] = `
         </h3>
         <button
           className="bg-facebookBlue py-4 px-20 w-full inline-flex items-center justify-center border border-gray-300 shadow-sm text-sm font-medium rounded-md text-white  "
+          data-testid="facebook"
           onClick={[Function]}
           type="button"
         >
@@ -85,15 +87,14 @@ exports[`Auth renders correctly 1`] = `
       <p
         className="hidden md:flex gap-2 text-lg font-semibold items-center justify-center text-refubookAuthBlue"
       >
-        Already a member?
-         
+        Want to be a member?
         <span
           className="text-refubookBlue hover:text-refubookLightBlue"
         >
           <Link
-            to="/login"
+            to="/signup"
           >
-            Sign in
+            Sign up
           </Link>
         </span>
       </p>
@@ -105,17 +106,16 @@ exports[`Auth renders correctly 1`] = `
     <p
       className=" md:flex gap-2 text-lg font-semibold items-center justify-center text-refubookAuthBlue"
     >
-      Already a member?
-       
+      Want to be a member?
     </p>
     <button
       className="bg-refubookBlue text-refubookWhite rounded-full hover:text-refubookLightBlue p-2"
       type="button"
     >
       <Link
-        to="/login"
+        to="/signup"
       >
-        Sign in
+        Sign up
       </Link>
     </button>
   </div>

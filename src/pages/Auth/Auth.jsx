@@ -19,9 +19,16 @@ const Auth = () => {
         </div>
         <div className=" hidden md:block mx-auto text-center mt-8">
           <p className="hidden md:flex gap-2 text-lg font-semibold items-center justify-center text-refubookAuthBlue">
-            Already a member?{' '}
+            {location.pathname === '/signup'
+              ? 'Already a member?'
+              : 'Want to be a member?'}
+
             <span className="text-refubookBlue hover:text-refubookLightBlue">
-              <Link to="/login">Sign in</Link>
+              <Link
+                to={location.pathname === '/signup' ? '/signin' : '/signup'}
+              >
+                {location.pathname === '/signup' ? 'Sign in' : 'Sign up'}
+              </Link>
             </span>
           </p>
         </div>
@@ -29,13 +36,17 @@ const Auth = () => {
 
       <div className="  flex flex-col md:hidden mx-auto text-center z-10">
         <p className=" md:flex gap-2 text-lg font-semibold items-center justify-center text-refubookAuthBlue">
-          Already a member?{' '}
+          {location.pathname === '/signup'
+            ? 'Already a member?'
+            : 'Want to be a member?'}
         </p>
         <button
           type="button"
           className="bg-refubookBlue text-refubookWhite rounded-full hover:text-refubookLightBlue p-2"
         >
-          <Link to="/login">Sign in</Link>
+          <Link to={location.pathname === '/signup' ? '/signin' : '/signup'}>
+            {location.pathname === '/signup' ? 'Sign in' : 'Sign up'}
+          </Link>
         </button>
       </div>
 
