@@ -10,7 +10,7 @@ import Auth from './pages/Auth/Auth';
 
 function App() {
   return (
-    <div className="w-full min-h-screen flex flex-col gap-2 ">
+    <div className="w-full  min-h-screen flex flex-col gap-2 ">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
