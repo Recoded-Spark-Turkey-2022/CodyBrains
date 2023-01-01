@@ -12,7 +12,7 @@ const Contact = () => {
   }
 return (
   
-  <div className="container  bg-refubookAboutBlue rounded-3xl shadow-2xl my-5 mx-10 xl:my-0 md:my-8 px-4 md:px-16 flex flex-col-reverse  md:flex-row justify-evenly items-center">
+  <div className="container  bg-refubookAboutBlue rounded-3xl shadow-2xl m-auto xl:my-0 md:my-8 px-4 md:px-16 flex flex-col-reverse  md:flex-row justify-evenly items-center">
     <div className="flex flex-col items-center lg:items-start justify-center px-2 md:px-0">
       <h1 className="text-5xl xl:text-6xl font-extrabold  pt-5 mt-5 py-1  text-refubookBlue text-center lg:text-left">
         Get in Touch 
@@ -56,7 +56,7 @@ return (
     </div>
      </div>
     <div className="flex justify-center lg:justify-end">
-    <img src={contactImg} alt="" height={100} />
+    <img src={contactImg} alt=""  />
     </div>
    </div>
    
