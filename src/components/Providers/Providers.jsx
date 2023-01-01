@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { signInWithPopup } from 'firebase/auth';
 import Swal from 'sweetalert2';
-import { login } from '../../features/userSlice';
+import { setUser } from '../../features/userSlice';
 import {
   auth,
   facebookProvider,
@@ -19,14 +19,17 @@ const Providers = () => {
       const result = await signInWithPopup(auth, googleProvider);
       const { displayName, email, photoURL, uid } = result.user;
       dispatch(
-        login({
+        setUser({
           uid,
           email,
           displayName,
           photoURL,
         })
       );
+      localStorage.setItem('user', JSON.stringify(result.user));
+
       navigate('/');
+      Swal.fire('Success', 'Login Success', 'success');
     } catch (error) {
       Swal.fire('Error', error.message, 'error');
     }
@@ -37,14 +40,17 @@ const Providers = () => {
       const result = await signInWithPopup(auth, facebookProvider);
       const { displayName, email, photoURL, uid } = result.user;
       dispatch(
-        login({
+        setUser({
           uid,
           email,
           displayName,
           photoURL,
         })
       );
+      localStorage.setItem('user', JSON.stringify(result.user));
+
       navigate('/');
+      Swal.fire('Success', 'Login Success', 'success');
     } catch (error) {
       Swal.fire('Error', error.message, 'error');
     }
@@ -55,6 +61,7 @@ const Providers = () => {
       <button
         type="button"
         data-testid="google"
+        aria-label="google"
         className="bg-googleRed py-4 px-20 w-full inline-flex items-center justify-center border border-gray-300 shadow-sm text-sm font-medium rounded-md text-white  "
         onClick={handleLoginWithGoogle}
       >
@@ -64,6 +71,7 @@ const Providers = () => {
       <button
         type="button"
         data-testid="facebook"
+        aria-label="facebook"
         className="bg-facebookBlue py-4 px-20 w-full inline-flex items-center justify-center border border-gray-300 shadow-sm text-sm font-medium rounded-md text-white  "
         onClick={handleLoginWithFacebook}
       >

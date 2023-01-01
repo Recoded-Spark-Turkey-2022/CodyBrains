@@ -39,21 +39,23 @@ jest.mock('../../../features/userSlice', () => ({
   login: () => jest.fn(),
 }));
 
+jest.mock('react-icons/fa', () => ({
+  ...jest.requireActual('react-icons/fa'),
+  FaFacebookF: () => <div>FaFacebookF</div>,
+  FaGoogle: () => <div>FaGoogle</div>,
+}));
+
 describe('Providers', () => {
-  it('renders correctly', () => {
+  it('should render correctly', () => {
     const tree = renderer.create(<Providers />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('should call handleLoginWithGoogle when click on google button', () => {
+  it('should render correctly', () => {
     render(<Providers />);
-    const googleButton = screen.getByTestId('google');
-    fireEvent.click(googleButton);
-  });
-
-  it('should call handleLoginWithFacebook when click on facebook button', () => {
-    render(<Providers />);
-    const facebookButton = screen.getByTestId('facebook');
-    fireEvent.click(facebookButton);
+    const google = screen.getByTestId('google');
+    const facebook = screen.getByTestId('facebook');
+    fireEvent.click(google);
+    fireEvent.click(facebook);
   });
 });
