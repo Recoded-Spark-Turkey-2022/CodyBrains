@@ -22,7 +22,7 @@ const Contact = () => {
         </p>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col  items-center lg:items-start  w-full w-4/6"
+          className="flex flex-col  items-center lg:items-start  w-full "
         >
           <div className="flex flex-col justify-between w-full mt-5 lg:flex-row">
             <div className="flex flex-col  w-full ">
