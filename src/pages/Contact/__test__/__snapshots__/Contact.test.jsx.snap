@@ -15,7 +15,7 @@ exports[`Contact renders correctly 1`] = `
     <p
       className="text-base  mt-5 py-1 text-refubookLightBlack  w-full lg:w-3/5 text-center lg:text-left"
     >
-       But Brooke Chaffin and Connors are looking to change that with the introduction   
+      But Brooke Chaffin and Connors are looking to change that with the introduction
     </p>
     <form
       className="flex flex-col  items-center lg:items-start  w-full w-4/6"
@@ -48,6 +48,7 @@ exports[`Contact renders correctly 1`] = `
         className=" mt-5   resize-none bg-secondary placeholder-opacity-100  pl-1.5 pt-1 box-border  w-full"
         name="message"
         placeholder="Message"
+        required={true}
         rows={10}
       />
       <div>
@@ -64,7 +65,7 @@ exports[`Contact renders correctly 1`] = `
     >
       <img
         alt=""
-        src="Social Media icons.svg"
+        src="SocialMedia.svg"
       />
     </div>
   </div>
