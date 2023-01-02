@@ -18,7 +18,7 @@ return (
         Get in Touch 
       </h1>
       <p className="text-base  mt-5 py-1 text-refubookLightBlack  w-full lg:w-3/5 text-center lg:text-left"> But Brooke Chaffin and Connors are looking to change that with the introduction   </p>
-      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col  w-full w-4/6">
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col  items-center lg:items-start  w-full w-4/6">
         <div className="flex flex-col justify-between w-full mt-5 lg:flex-row">
           
           <div className="flex flex-col  w-full ">
@@ -44,7 +44,7 @@ return (
         
        <div>
       <button type='submit'
-           className="py-1 px-3  mt-5  md:py-2 md:px-9 bg-refubookBlue text-refubookWhite font-bold text-lg md:text-xl  rounded-full shadow-lg hover:bg-refubookWhite hover:text-refubookBlack transition duration-500 ease-in-out"
+           className="flex justify-center lg:justify-start  py-1 px-3  mt-5  md:py-2 md:px-9  bg-refubookBlue text-refubookWhite font-bold text-lg md:text-xl  rounded-full shadow-lg hover:bg-refubookWhite hover:text-refubookBlack transition duration-500 ease-in-out"
         >
           Send
         </button>
