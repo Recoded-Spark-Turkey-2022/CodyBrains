@@ -1,60 +1,10 @@
 import { FaFacebookF, FaGoogle } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { signInWithPopup } from 'firebase/auth';
-import Swal from 'sweetalert2';
-import { setUser } from '../../features/userSlice';
-import {
-  auth,
-  facebookProvider,
-  googleProvider,
-} from '../../services/firebase.config';
+import useFacebookAuth from '../../hooks/useFacebookAuth';
+import useGoogleAuth from '../../hooks/useGoogleAuth';
 
 const Providers = () => {
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-
-  const handleLoginWithGoogle = async () => {
-    try {
-      const result = await signInWithPopup(auth, googleProvider);
-      const { displayName, email, photoURL, uid } = result.user;
-      dispatch(
-        setUser({
-          uid,
-          email,
-          displayName,
-          photoURL,
-        })
-      );
-      localStorage.setItem('user', JSON.stringify(result.user));
-
-      navigate('/');
-      Swal.fire('Success', 'Login Success', 'success');
-    } catch (error) {
-      Swal.fire('Error', error.message, 'error');
-    }
-  };
-
-  const handleLoginWithFacebook = async () => {
-    try {
-      const result = await signInWithPopup(auth, facebookProvider);
-      const { displayName, email, photoURL, uid } = result.user;
-      dispatch(
-        setUser({
-          uid,
-          email,
-          displayName,
-          photoURL,
-        })
-      );
-      localStorage.setItem('user', JSON.stringify(result.user));
-
-      navigate('/');
-      Swal.fire('Success', 'Login Success', 'success');
-    } catch (error) {
-      Swal.fire('Error', error.message, 'error');
-    }
-  };
+  const { handleLoginWithGoogle } = useGoogleAuth();
+  const { handleLoginWithFacebook } = useFacebookAuth();
 
   return (
     <div className="flex flex-col md:flex-row  items-center justify-center gap-5   sm:px-6 lg:px-8 w-full ">

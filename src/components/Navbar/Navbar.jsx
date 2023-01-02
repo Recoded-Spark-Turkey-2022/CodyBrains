@@ -1,63 +1,28 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import { BsChevronDown } from 'react-icons/bs';
-import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { signOut } from 'firebase/auth';
 import Swal from 'sweetalert2';
 import logo from '../../assets/logo.svg';
-import { logout, setUser } from '../../features/userSlice';
+import { logout, selectUser } from '../../features/userSlice';
 import avatar from '../../assets/avatar.png';
 import { auth } from '../../services/firebase.config';
 
 function Navbar() {
   const dispatch = useDispatch();
 
-  const navigate = useNavigate();
-
   const logOut = async () => {
     try {
       await signOut(auth);
       dispatch(logout());
-      localStorage.removeItem('user');
-      Swal.fire({
-        title: 'Success',
-        text: 'Logout Success',
-        icon: 'success',
-        timer: 2000,
-        showConfirmButton: false,
-      });
-
-      navigate(0);
     } catch (error) {
       Swal.fire('Error', error.message, 'error');
     }
   };
 
-  const authListener = () => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        dispatch(
-          setUser({
-            uid: user.uid,
-            email: user.email,
-            displayName: user.displayName,
-            photoURL: user.photoURL,
-          })
-        );
-
-        localStorage.setItem('user', JSON.stringify(user));
-      } else {
-        dispatch(setUser(null));
-      }
-    });
-  };
-
-  const user = JSON.parse(localStorage.getItem('user'));
-
-  useEffect(() => {
-    authListener();
-  }, []);
+  const user = useSelector(selectUser);
 
   const capitalize = (str) => {
     return str.replace(/\b[a-z]/g, (char) => {
@@ -125,7 +90,7 @@ function Navbar() {
                     alt="profile pic"
                     className="w-8 h-8 rounded-full mr-2"
                   />
-                  <p className="mr-2">{capitalize(user?.displayName)}</p>
+                  <p className="mr-2">{capitalize(user?.name)}</p>
                   <BsChevronDown
                     className="ml-2 -mr-1 h-5 w-5"
                     aria-hidden="true"
