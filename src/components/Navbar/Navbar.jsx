@@ -25,7 +25,7 @@ function Navbar() {
   const user = useSelector(selectUser);
 
   const capitalize = (str) => {
-    return str.replace(/\b[a-z]/g, (char) => {
+    return str?.replace(/\b[a-z]/g, (char) => {
       return char.toUpperCase();
     });
   };
