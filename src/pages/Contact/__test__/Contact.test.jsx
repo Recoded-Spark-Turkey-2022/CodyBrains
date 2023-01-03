@@ -1,13 +1,13 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Hero from '../Hero';
+import Contact from '../Contact';
 
 jest.mock('react-router-dom', () => ({
   Link: 'Link',
 }));
-describe('Hero', () => {
+describe('Contact', () => {
   it('renders correctly', () => {
-    const tree = renderer.create(<Hero />).toJSON();
+    const tree = renderer.create(<Contact />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

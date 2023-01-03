@@ -25,7 +25,7 @@ const Hero = () => {
           </button>
         </Link>
       </div>
-      <div className="flex justify-center lg:justify-end">
+      <div className="flex justify-center lg:justify-end ">
         <img src={illustration} alt="" />
       </div>
     </section>

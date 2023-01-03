@@ -34,7 +34,7 @@ exports[`Hero renders correctly 1`] = `
     </Link>
   </div>
   <div
-    className="flex justify-center lg:justify-end"
+    className="flex justify-center lg:justify-end "
   >
     <img
       alt=""
