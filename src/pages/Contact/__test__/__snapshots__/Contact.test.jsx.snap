@@ -18,7 +18,7 @@ exports[`Contact renders correctly 1`] = `
       But Brooke Chaffin and Connors are looking to change that with the introduction
     </p>
     <form
-      className="flex flex-col  items-center lg:items-start  w-full w-4/6"
+      className="flex flex-col  items-center lg:items-start  w-full "
       onSubmit={[Function]}
     >
       <div
