@@ -32,7 +32,6 @@ function Navbar() {
       try {
         const docRef = doc(db, 'users', user?.uid);
         const docSnap = await getDoc(docRef);
-        ææ;
 
         if (docSnap.exists()) {
           dispatch(setUser(docSnap.data()));

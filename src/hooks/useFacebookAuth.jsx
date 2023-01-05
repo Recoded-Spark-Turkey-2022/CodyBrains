@@ -22,7 +22,7 @@ function useFacebookAuth() {
               uid: user.uid,
               email: user.email,
               name: user.displayName,
-              photoURL: user.photoURL,
+              photoURL: '',
               biography: '',
               location: '',
             })
@@ -32,7 +32,7 @@ function useFacebookAuth() {
             uid: user.uid,
             email: user.email,
             name: user.displayName,
-            photoURL: user.photoURL,
+            photoURL: '',
             biography: '',
             location: '',
           });
@@ -41,7 +41,7 @@ function useFacebookAuth() {
               uid: user.uid,
               email: user.email,
               name: user.displayName,
-              photoURL: user.photoURL,
+              photoURL: '',
               biography: '',
               location: '',
             })

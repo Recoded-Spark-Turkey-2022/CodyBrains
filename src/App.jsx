@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
-import { About, Auth, Blog, Contact, Home } from './pages';
+import { About, Auth, Blog, Contact, Home, UserProfile } from './pages';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
             element={<Auth isLogin={path === 'signin'} />}
           />
         ))}
+        <Route path="profile" element={<UserProfile />} />
       </Routes>
       <Footer />
     </div>
