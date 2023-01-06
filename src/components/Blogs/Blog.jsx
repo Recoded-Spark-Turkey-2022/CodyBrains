@@ -1,36 +1,28 @@
 import React from 'react';
 
-const stylingObject = {
-    blogTitle: {
-        height: "40px",
-    },
-    p: {
-        height: "120px",
-    }
-};
-
-const Blog = ({item}) => {
+const Blog = ({item,isSmallCard}) => {
     return (
         <div
-            className="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800">
+            className="max-w-sm bg-white shadow-md
+             dark:bg-gray-800 mx-3 mt-4">
             <a href="!#">
-                <img className="rounded-t-lg" src={item.cover} alt={item.title}/>
+                <img className="" src={item.cover} alt={item.title}/>
             </a>
             <div className="p-5">
                 <a href="!#">
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-                        style={stylingObject.blogTitle}>
-                        {item.title.substring(0, 30)}
-                    </h5>
+                    <h6 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                    >
+                         {isSmallCard ? item.title.substring(0, 15) : item.title.substring(0, 20)}
+                    </h6>
                 </a>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400" style={stylingObject.p}>
-                    {item.text.substring(0, 179)}
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    {item.text.substring(0, 50)}
                 </p>
 
 
                 <div className="flex items-center space-x-4">
                     <img className="w-10 h-10 rounded-full" src={item.avatar} alt={item.title}/>
-                    <div className="font-medium dark:text-white">
+                    <div className="text-refubookBlue">
                         <div>{item.userName}</div>
                     </div>
                 </div>
