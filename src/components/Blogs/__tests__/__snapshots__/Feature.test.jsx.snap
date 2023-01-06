@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Feature renders correctly with props passed 1`] = `
+<div
+  className=" max-w-sm flex flex-col items-center   gap-4 py-5"
+>
+  <div
+    className="flex items-center justify-start w-full gap-4"
+  >
+    <img
+      alt=""
+      src="star.svg"
+    />
+    <h4
+      className="text-lg text-refubookLightBlack text-left font-bold"
+    />
+  </div>
+  <p
+    className="text-md text-refubookLightBlack font-medium text-left"
+  />
+</div>
+`;
