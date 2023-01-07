@@ -24,12 +24,12 @@ function useEditProfile() {
     const userRef = doc(db, 'users', user.uid);
 
     await updateDoc(userRef, {
-      name: displayName,
+      displayName,
       biography,
       location,
       photoURL,
     });
-    dispatch(setUser({ ...user, name: displayName, photoURL }));
+    dispatch(setUser({ ...user, displayName, biography, location, photoURL }));
     Swal.fire({
       icon: 'success',
       title: 'Profile updated successfully',
@@ -38,8 +38,6 @@ function useEditProfile() {
     });
     setIsEditing(false);
     reset();
-    console.log(data);
-    console.log(photoURL);
   };
 
   return {

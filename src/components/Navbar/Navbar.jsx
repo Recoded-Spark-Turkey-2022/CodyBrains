@@ -1,17 +1,16 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { BsChevronDown } from 'react-icons/bs';
-import { getDoc, doc } from 'firebase/firestore';
 import { signOut } from 'firebase/auth';
 import Swal from 'sweetalert2';
 import logo from '../../assets/logo.svg';
-import { logout, selectUser, setUser } from '../../features/userSlice';
+import { logout, selectUser } from '../../features/userSlice';
 import avatar from '../../assets/avatar.png';
-import { auth, db } from '../../services/firebase.config';
+import { auth } from '../../services/firebase.config';
 
-function Navbar() {
+const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -19,32 +18,22 @@ function Navbar() {
     try {
       await signOut(auth);
       dispatch(logout());
+      Swal.fire({
+        icon: 'success',
+        title: 'Goodbye!',
+        text: 'You are logged out',
+      });
       navigate('/');
     } catch (error) {
-      Swal.fire('Error', error.message, 'error');
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: error.message,
+      });
     }
   };
+
   const user = useSelector(selectUser);
-
-  useEffect(() => {
-    if (!user) return;
-    const getUser = async () => {
-      try {
-        const docRef = doc(db, 'users', user?.uid);
-        const docSnap = await getDoc(docRef);
-
-        if (docSnap.exists()) {
-          dispatch(setUser(docSnap.data()));
-        } else {
-          Swal.fire('Error', 'No such document!', 'error');
-        }
-      } catch (error) {
-        Swal.fire('Error', error.message, 'error');
-        console.log(error);
-      }
-    };
-    getUser();
-  }, []);
 
   const capitalize = (str) => {
     return str?.replace(/\b[a-z]/g, (char) => {
@@ -108,11 +97,14 @@ function Navbar() {
               <div>
                 <Menu.Button className="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white bg-refubookBlue border border-transparent rounded-md hover:bg-refubookActiveNav focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
                   <img
-                    src={user?.photoURL ? user?.photoURL : avatar}
+                    src={user?.photoURL}
+                    onError={(e) => {
+                      e.target.onerror = avatar;
+                    }}
                     alt="profile pic"
                     className="w-8 h-8 rounded-full mr-2"
                   />
-                  <p className="mr-2">{capitalize(user?.name)}</p>
+                  <p className="mr-2">{capitalize(user?.displayName)}</p>
                   <BsChevronDown
                     className="ml-2 -mr-1 h-5 w-5"
                     aria-hidden="true"
@@ -201,6 +193,6 @@ function Navbar() {
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;

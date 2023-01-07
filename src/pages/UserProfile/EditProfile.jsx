@@ -9,8 +9,6 @@ import camera from '../../assets/camera.png';
 const EditProfile = ({ setIsEditing }) => {
   const user = useSelector(selectUser);
 
-  console.log(user);
-
   const { file, handleFileChange, photoURL, loading, percentage } =
     useAvatarUpload();
 

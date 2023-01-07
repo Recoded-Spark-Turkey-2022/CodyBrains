@@ -4,11 +4,10 @@ import avatar from '../../assets/avatar.png';
 import edit from '../../assets/edit.png';
 import BlogPosts from './BlogPosts';
 import EditProfile from './EditProfile';
+import { selectUser } from '../../features/userSlice';
 
 const UserProfile = () => {
-  const { user } = useSelector((state) => state.user);
-
-  const profilePic = user.photoURL || avatar;
+  const user = useSelector(selectUser);
 
   const [isEditing, setIsEditing] = useState(false);
 
@@ -23,7 +22,11 @@ const UserProfile = () => {
       ) : (
         <>
           <div className="flex flex-col items-center justify-center relative">
-            <img src={profilePic} alt="" className="w-40 h-40 rounded-full " />
+            <img
+              src={user.photoURL || avatar}
+              alt=""
+              className="w-40 h-40 rounded-full "
+            />
             <button
               type="button"
               className="absolute bottom-0 right-0 bg-refubookBlue p-2 rounded-full cursor-pointer"
@@ -31,10 +34,10 @@ const UserProfile = () => {
             >
               <img src={edit} alt="" className="w-6 h-6" />
             </button>
-            <span className="text-refubookGray font-medium text-lg mt-2">
-              {user.displayName}
-            </span>
           </div>
+          <span className="text-refubookBlack font-medium text-lg mt-4 ">
+            {user.displayName}
+          </span>
           <BlogPosts />
         </>
       )}
