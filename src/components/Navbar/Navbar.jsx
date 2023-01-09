@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { BsChevronDown } from 'react-icons/bs';
 import { signOut } from 'firebase/auth';
@@ -10,15 +10,26 @@ import { logout, selectUser } from '../../features/userSlice';
 import avatar from '../../assets/avatar.png';
 import { auth } from '../../services/firebase.config';
 
-function Navbar() {
+const Navbar = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const logOut = async () => {
     try {
       await signOut(auth);
       dispatch(logout());
+      Swal.fire({
+        icon: 'success',
+        title: 'Goodbye!',
+        text: 'You are logged out',
+      });
+      navigate('/');
     } catch (error) {
-      Swal.fire('Error', error.message, 'error');
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: error.message,
+      });
     }
   };
 
@@ -86,11 +97,14 @@ function Navbar() {
               <div>
                 <Menu.Button className="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white bg-refubookBlue border border-transparent rounded-md hover:bg-refubookActiveNav focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
                   <img
-                    src={avatar}
+                    src={user?.photoURL}
+                    onError={(e) => {
+                      e.target.onerror = avatar;
+                    }}
                     alt="profile pic"
                     className="w-8 h-8 rounded-full mr-2"
                   />
-                  <p className="mr-2">{capitalize(user?.name)}</p>
+                  <p className="mr-2">{capitalize(user?.displayName)}</p>
                   <BsChevronDown
                     className="ml-2 -mr-1 h-5 w-5"
                     aria-hidden="true"
@@ -111,7 +125,7 @@ function Navbar() {
                     <Menu.Item>
                       {({ active }) => (
                         <Link
-                          to="/"
+                          to="/profile"
                           className={`${
                             active
                               ? 'bg-refubookActiveNav text-white'
@@ -179,6 +193,6 @@ function Navbar() {
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;

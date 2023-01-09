@@ -5,7 +5,6 @@ import contactImg from '../../assets/contact-draw.svg';
 import socialIcons from '../../assets/SocialMedia.svg';
 
 const Contact = () => {
-
   const { register, handleSubmit } = useForm();
   const onSubmit = () => {
     Swal.fire('Your message has been send successfuly');
@@ -69,7 +68,6 @@ const Contact = () => {
       </div>
     </div>
   );
-
 };
 
 export default Contact;
