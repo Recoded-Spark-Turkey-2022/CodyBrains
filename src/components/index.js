@@ -7,3 +7,5 @@ export { default as Providers } from './Providers/Providers';
 export { default as Navbar } from './Navbar/Navbar';
 export { default as UserBlogPosts } from './UserBlogPosts/UserBlogPosts';
 export { default as EditProfile } from './EditProfile/EditProfile';
+export { default as ProfileNavbar } from './ProfileNavbar/ProfileNavbar';
+export { default as Header } from './Header/Header';

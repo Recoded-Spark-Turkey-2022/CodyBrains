@@ -1,12 +1,12 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { About, Auth, Blog, Contact, Home, UserProfile } from './pages';
-import { Footer, Navbar } from './components';
+import { Footer, Header } from './components';
 
 function App() {
   return (
     <div className="w-full  min-h-screen flex flex-col gap-2 ">
-      <Navbar />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
