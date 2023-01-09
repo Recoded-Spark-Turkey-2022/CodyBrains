@@ -40,7 +40,7 @@ const UserProfile = () => {
           <span className="text-refubookBlack font-medium text-lg mt-4 ">
             {user.displayName}
           </span>
-          <UserBlogPosts />
+          <UserBlogPosts user={user} />
         </>
       )}
     </div>

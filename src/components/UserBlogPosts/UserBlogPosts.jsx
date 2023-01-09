@@ -1,13 +1,11 @@
 import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Grid, Pagination } from 'swiper';
 import { getDocs, collection } from 'firebase/firestore';
 import { db } from '../../services/firebase.config';
 
-const UserBlogPosts = () => {
+const UserBlogPosts = ({ user }) => {
   const [blogPosts, setBlogPosts] = useState([]);
-  const { user } = useSelector((state) => state.user);
 
   useEffect(() => {
     const getBlogPosts = async () => {
