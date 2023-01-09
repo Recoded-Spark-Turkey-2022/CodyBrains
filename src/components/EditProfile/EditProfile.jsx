@@ -4,7 +4,6 @@ import useEditProfile from '../../hooks/useUpdateProfile';
 import useAvatarUpload from '../../hooks/useAvatarUpload';
 import Loading from '../Icons/Loading';
 import camera from '../../assets/camera.png';
-/* import avatar from '../../assets/avatar.png'; */
 
 const EditProfile = ({ setIsEditing }) => {
   const user = useSelector(selectUser);
