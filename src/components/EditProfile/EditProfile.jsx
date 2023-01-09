@@ -83,7 +83,7 @@ const EditProfile = ({ setIsEditing }) => {
             <input
               type="text"
               id="name"
-              className="w-full border border-refubookGray p-2 rounded-md"
+              className="w-full border border-refubookGray p-2 rounded-md text-refubookBlack"
               {...register('name')}
             />
           </label>
@@ -98,7 +98,7 @@ const EditProfile = ({ setIsEditing }) => {
             <input
               type="text"
               id="surname"
-              className="w-full border border-refubookGray p-2 rounded-md"
+              className="w-full border border-refubookGray p-2 rounded-md text-refubookBlack"
               {...register('surname')}
             />
           </label>
@@ -117,7 +117,7 @@ const EditProfile = ({ setIsEditing }) => {
             <textarea
               id="biography"
               name="biography"
-              className="w-full border border-refubookGray py-6 px-2 rounded-md"
+              className="w-full border border-refubookGray p-1 rounded-md text-refubookBlack"
               {...register('biography')}
             />
           </label>
@@ -137,7 +137,7 @@ const EditProfile = ({ setIsEditing }) => {
               type="text"
               id="location"
               name="location"
-              className="w-full border border-refubookGray p-2 rounded-md"
+              className="w-full border border-refubookGray p-2 rounded-md text-refubookBlack"
               {...register('location')}
             />
           </label>
