@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import avatar from '../../assets/avatar.png';
 import edit from '../../assets/edit.png';
-import BlogPosts from './BlogPosts';
-import EditProfile from './EditProfile';
+import EditProfile from '../../components/EditProfile/EditProfile';
 import { selectUser } from '../../features/userSlice';
+import { UserBlogPosts } from '../../components';
 
 const UserProfile = () => {
   const user = useSelector(selectUser);
@@ -23,7 +23,10 @@ const UserProfile = () => {
         <>
           <div className="flex flex-col items-center justify-center relative">
             <img
-              src={user.photoURL || avatar}
+              src={user ? user.photoURL : avatar}
+              onError={(e) => {
+                e.target.onerror = avatar;
+              }}
               alt=""
               className="w-40 h-40 rounded-full "
             />
@@ -38,7 +41,7 @@ const UserProfile = () => {
           <span className="text-refubookBlack font-medium text-lg mt-4 ">
             {user.displayName}
           </span>
-          <BlogPosts />
+          <UserBlogPosts />
         </>
       )}
     </div>

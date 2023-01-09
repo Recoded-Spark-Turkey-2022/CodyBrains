@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { selectUser } from '../../features/userSlice';
 import useEditProfile from '../../hooks/useUpdateProfile';
 import useAvatarUpload from '../../hooks/useAvatarUpload';
-import Loading from '../../components/Icons/Loading';
+import Loading from '../Icons/Loading';
 import camera from '../../assets/camera.png';
 /* import avatar from '../../assets/avatar.png'; */
 
@@ -74,12 +74,12 @@ const EditProfile = ({ setIsEditing }) => {
             </div>
           )}
         </div>
-        <div className="flex items-center justify-center gap-2 w-full">
+        <div className="flex flex-col md:flex-row items-center justify-evenly gap-2 md:gap-10 w-full">
           <label
             htmlFor="name"
-            className="text-refubookGray font-medium text-lg"
+            className="text-refubookBlue w-full font-medium text-lg"
           >
-            Name
+            Name:
             <input
               type="text"
               id="name"
@@ -92,9 +92,9 @@ const EditProfile = ({ setIsEditing }) => {
           )}
           <label
             htmlFor="surname"
-            className="text-refubookGray font-medium text-lg"
+            className="text-refubookBlue w-full font-medium text-lg"
           >
-            Surname
+            Surname:
             <input
               type="text"
               id="surname"
@@ -111,13 +111,13 @@ const EditProfile = ({ setIsEditing }) => {
         <div className="flex  items-center justify-center gap-2 w-full">
           <label
             htmlFor="biography"
-            className="text-refubookGray font-medium text-lg"
+            className="text-refubookBlue w-full font-medium text-lg"
           >
-            Biography
-            <input
+            Biography:
+            <textarea
               id="biography"
               name="biography"
-              className="w-full border border-refubookGray p-2 rounded-md"
+              className="w-full border border-refubookGray py-6 px-2 rounded-md"
               {...register('biography')}
             />
           </label>
@@ -126,11 +126,13 @@ const EditProfile = ({ setIsEditing }) => {
               {errors.biography.message}
             </span>
           )}
+        </div>
+        <div className="flex  items-center justify-center gap-2 w-full">
           <label
             htmlFor="location"
-            className="text-refubookGray font-medium text-lg"
+            className="text-refubookBlue w-full font-medium text-lg"
           >
-            Location
+            Location:
             <input
               type="text"
               id="location"
@@ -145,17 +147,16 @@ const EditProfile = ({ setIsEditing }) => {
             </span>
           )}
         </div>
-
-        <div className="flex  items-center justify-center gap-2 w-full max-w-xs">
+        <div className="flex  items-center justify-evenly gap-2 w-full max-w-xs">
           <button
             type="submit"
-            className=" group relative flex w-full justify-center rounded-full border border-transparent bg-refubookBlue py-2 px-4 text-sm font-medium mt-8 text-refubookWhite hover:bg-refubookLightBlue focus:outline-none focus:ring-2 focus:ring-[#331416] focus:ring-offset-2"
+            className=" group relative flex w-28 justify-center rounded-full border border-transparent bg-refubookBlue py-2 px-4  text-sm font-medium mt-8 text-refubookWhite hover:bg-refubookLightBlue focus:outline-none focus:ring-2 focus:ring-[#331416] focus:ring-offset-2"
           >
             Save
           </button>
           <button
             type="button"
-            className="group relative flex w-full justify-center rounded-full border border-transparent bg-refubookWhite py-2 px-4 text-sm font-medium mt-8 text-refubookBlack hover:bg-refubookLightBlue focus:outline-none focus:ring-2 focus:ring-[#331416] focus:ring-offset-2"
+            className="group relative flex w-28 justify-center rounded-full border border-transparent bg-refubookWhite py-2 px-4 text-sm font-medium mt-8 text-refubookBlack hover:bg-refubookLightBlue focus:outline-none focus:ring-2 focus:ring-[#331416] focus:ring-offset-2"
             onClick={handleCancel}
           >
             Cancel

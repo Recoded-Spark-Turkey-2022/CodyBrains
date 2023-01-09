@@ -5,7 +5,7 @@ import { Grid, Pagination } from 'swiper';
 import { getDocs, collection } from 'firebase/firestore';
 import { db } from '../../services/firebase.config';
 
-const BlogPosts = () => {
+const UserBlogPosts = () => {
   const [blogPosts, setBlogPosts] = useState([]);
   const { user } = useSelector((state) => state.user);
 
@@ -51,4 +51,4 @@ const BlogPosts = () => {
   );
 };
 
-export default BlogPosts;
+export default UserBlogPosts;

@@ -1,7 +1,7 @@
-/* eslint-disable no-console */
 import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
+import Swal from 'sweetalert2';
 import { storage } from '../services/firebase.config';
 import { selectUser } from '../features/userSlice';
 
@@ -34,7 +34,11 @@ const useAvatarUpload = () => {
           setLoading(true);
         },
         (error) => {
-          console.log(error);
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: error.message,
+          });
         },
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
