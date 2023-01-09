@@ -1,8 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
 import { About, Auth, Blog, Contact, Home, UserProfile } from './pages';
+import { Footer, Navbar } from './components';
 
 function App() {
   return (

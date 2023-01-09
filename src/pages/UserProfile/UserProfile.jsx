@@ -2,9 +2,8 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import avatar from '../../assets/avatar.png';
 import edit from '../../assets/edit.png';
-import EditProfile from '../../components/EditProfile/EditProfile';
 import { selectUser } from '../../features/userSlice';
-import { UserBlogPosts } from '../../components';
+import { EditProfile, UserBlogPosts } from '../../components';
 
 const UserProfile = () => {
   const user = useSelector(selectUser);
