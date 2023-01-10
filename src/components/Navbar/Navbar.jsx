@@ -141,14 +141,14 @@ const Navbar = ({ isOpen, setIsOpen }) => {
                       <Menu.Item>
                         {({ active }) => (
                           <Link
-                            to="/"
+                            to="/write"
                             className={`${
                               active
                                 ? 'bg-refubookActiveNav text-white'
                                 : 'text-gray-900'
                             } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
                           >
-                            Settings
+                            Write
                           </Link>
                         )}
                       </Menu.Item>
@@ -206,12 +206,15 @@ const Navbar = ({ isOpen, setIsOpen }) => {
       <Transition
         show={isOpen}
         as={Fragment}
-        enter="transition-opacity duration-75"
+        enter="transition-opacity duration-100"
         enterFrom="opacity-0"
         enterTo="opacity-100"
+        leave="transition-opacity duration-75"
+        leaveFrom="opacity-100"
+        leaveTo="opacity-0"
       >
-        <div className="absolute bg-refubookWhite  top-0 left-0 w-4/5 h-full bg-white z-10 flex flex-col gap-36 shadow-xl shadow-refubookLightBlue rounded-3xl">
-          <div className="flex flex-col items-center gap-5 mt-10 py-2 px-5">
+        <div className="absolute bg-refubookWhite  top-0 left-0 w-4/5 h-full bg-white z-50 flex flex-col gap-36 shadow-xl shadow-refubookLightBlue rounded-3xl">
+          <div className="flex flex-col items-center gap-3 mt-10 py-2 px-5">
             <button
               type="button"
               onClick={() => setIsOpen(!isOpen)}
@@ -219,39 +222,140 @@ const Navbar = ({ isOpen, setIsOpen }) => {
             >
               <FaArrowLeft />
             </button>
-            <div className="flex flex-col w-fit mx-auto items-center justify-center relative">
-              <img
-                src={user ? user.photoURL : avatar}
-                onError={(e) => {
-                  e.target.onerror = avatar;
-                }}
-                alt=""
-                className="w-40 h-40 rounded-full "
-              />
-              <div className="absolute bottom-10 right-0 mt-4 mr-4 bg-profileStatusRed w-8 h-8 rounded-full" />
-              <p className="text-refubookBlack font-medium text-xl tracking-tight mt-2">
-                {capitalize(user?.displayName)}
-              </p>
-            </div>
+            {user ? (
+              <>
+                <div className="flex flex-col w-fit mx-auto items-center justify-center relative">
+                  <img
+                    src={user ? user.photoURL : avatar}
+                    onError={(e) => {
+                      e.target.onerror = avatar;
+                    }}
+                    alt=""
+                    className="w-40 h-40 rounded-full "
+                  />
+                  <div className="absolute bottom-0 right-0 mt-4 mr-4 bg-profileStatusRed w-8 h-8 rounded-full" />
+                </div>
+
+                <Menu as="div" className=" relative inline-block text-left ">
+                  <div>
+                    <Menu.Button className="flex items-center justify-center w-full px-4 py-2 text-sm font-semibold   ">
+                      <p className="mr-2 text-xl">
+                        {capitalize(user?.displayName)}
+                      </p>
+                      <BsChevronDown
+                        className="ml-2 -mr-1 text-2xl font-extrabold  text-refubookBlack"
+                        aria-hidden="true"
+                      />
+                    </Menu.Button>
+                  </div>
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-100"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
+                  >
+                    <Menu.Items className="absolute   -left-5  w-56 mt-2 origin-center bg-white divide-y divide-refubookBlack rounded-md shadow-lg ring-1 ring-refubookBlack ring-opacity-5 focus:outline-none">
+                      <div className="px-1 py-1 space-y-1  ">
+                        <Menu.Item>
+                          {({ active }) => (
+                            <Link
+                              to="/profile"
+                              className={`${
+                                active
+                                  ? 'bg-refubookActiveNav text-white'
+                                  : 'text-gray-900'
+                              } group flex  items-center w-full px-2 py-2 text-lg font-medium border-b`}
+                            >
+                              Profile
+                            </Link>
+                          )}
+                        </Menu.Item>
+                        <Menu.Item>
+                          {({ active }) => (
+                            <Link
+                              to="/write"
+                              className={`${
+                                active
+                                  ? 'bg-refubookActiveNav text-white'
+                                  : 'text-gray-900'
+                              } group flex border-b items-center w-full px-2 py-2 text-lg font-medium`}
+                            >
+                              Write
+                            </Link>
+                          )}
+                        </Menu.Item>
+                        <Menu.Item>
+                          {({ active }) => (
+                            <button
+                              type="button"
+                              onClick={logOut}
+                              className={`${
+                                active
+                                  ? 'bg-refubookActiveNav text-white'
+                                  : 'text-gray-900'
+                              } group flex rounded-md items-center w-full px-2 py-2 text-lg font-medium`}
+                            >
+                              Sign out
+                            </button>
+                          )}
+                        </Menu.Item>
+                      </div>
+                    </Menu.Items>
+                  </Transition>
+                </Menu>
+              </>
+            ) : (
+              <div className="flex flex-col mt-10 items-center gap-5">
+                <h3 className="text-2xl font-semibold text-refubookBlue">
+                  Welcome to RefuBook !
+                </h3>
+                <div className="flex gap-5 items-center mt-4 justify-center">
+                  <button
+                    type="button"
+                    className="bg-refubookBlue text-refubookWhite px-6 text-lg py-2 rounded-3xl font-medium"
+                    onClick={() => setIsOpen(!isOpen)}
+                  >
+                    <Link to="/signup">Sign Up</Link>
+                  </button>
+                  <button
+                    type="button"
+                    className="bg-refubookActiveNav text-refubookWhite px-6 text-lg py-2 rounded-3xl font-medium"
+                    onClick={() => setIsOpen(!isOpen)}
+                  >
+                    <Link to="/signin">Sign In</Link>
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
           <ul className="flex flex-col ml-12  ">
             <li className="my-4">
-              <Link to="/" className="text-refubookBlue  font-semibold text-xl">
+              <Link
+                to="/"
+                className="text-refubookBlue  font-semibold text-xl"
+                onClick={() => setIsOpen(!isOpen)}
+              >
                 Home
               </Link>
             </li>
+
             <li className="my-4">
               <Link
                 to="/about"
                 className="text-refubookBlue  font-semibold text-xl"
+                onClick={() => setIsOpen(!isOpen)}
               >
-                About US
+                About Us
               </Link>
             </li>
             <li className="my-4">
               <Link
                 to="/contact"
                 className="text-refubookBlue  font-semibold text-xl"
+                onClick={() => setIsOpen(!isOpen)}
               >
                 Contact
               </Link>

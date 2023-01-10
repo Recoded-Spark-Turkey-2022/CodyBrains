@@ -128,17 +128,14 @@ const ProfileNavbar = ({ isOpen, setIsOpen }) => {
           </div>
           <ul className="flex flex-col ml-12  ">
             <li className="my-4">
-              <Link
-                to="/"
-                className="text-refubookGray hover:text-refubookActiveNav font-medium"
-              >
+              <Link to="/" className="text-refubookBlue  font-semibold text-xl">
                 Home
               </Link>
             </li>
             <li className="my-4">
               <Link
                 to="/profile"
-                className="text-refubookGray hover:text-refubookActiveNav font-medium"
+                className="text-refubookBlue  font-semibold text-xl"
               >
                 My Account
               </Link>
@@ -146,7 +143,7 @@ const ProfileNavbar = ({ isOpen, setIsOpen }) => {
             <li className="my-4">
               <Link
                 to="/write"
-                className="text-refubookGray hover:text-refubookActiveNav font-medium"
+                className="text-refubookBlue  font-semibold text-xl"
               >
                 Write
               </Link>
@@ -155,7 +152,7 @@ const ProfileNavbar = ({ isOpen, setIsOpen }) => {
               <button
                 type="button"
                 onClick={logOut}
-                className="text-refubookGray hover:text-refubookActiveNav font-medium"
+                className="text-refubookWhite bg-refubookBlue px-5 py-2 rounded-full  font-semibold text-xl tracking-tight"
               >
                 Sign Out
               </button>
