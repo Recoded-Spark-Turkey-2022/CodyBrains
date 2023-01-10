@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
-import DropdownComponent from '../DropdownComponent/DropdownComponent';
+import LanguagesMenu from '../LanguagesMenu/LanguagesMenu';
 
 const Footer = () => {
 
   
   return (
-    <div className="flex items-center justify-center bg-transparent p-20 m-5 ">
+    <div className="lg:flex lg:flex-row lg:pt-4 max-lg:flex max-lg:flex-col max-lg:items-center max-lg:justify-center ">
       <div className="items-center justify-center mr-6">
         <Link
           to="/"
@@ -56,16 +56,18 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className="flex max-lg:pb-10 max-lg:ml-10 items-start">
+      <div className="flex max-lg:pb-10 max-lg:ml-10 justify-between">
       <Link to="/signup">
           <button
             type="button"
-            className=" px-4 mx-5 md:py-2 md:px-9 h-10 w-40  bg-refubookBlue text-refubookWhite font-bold text-lg md:text-xl  rounded-full shadow-lg hover:bg-text-refubookGray hover:text-refubookBlack transition duration-500 ease-in-out"
+            className="mr-6 px-12 py-3 bg-refubookBlue text-white font-medium text-l leading-tight
+            rounded-full shadow-md
+            ease-in duration-300 hover:shadow-lg"
           >
             Sign Up
           </button>
         </Link>
-      <DropdownComponent />
+      <LanguagesMenu />
     </div>
     </div>
   );

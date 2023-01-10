@@ -1,8 +1,9 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
-import contactImg from '../../assets/contact-draw.svg';
-import socialIcons from '../../assets/SocialMedia.svg';
+import ContactImg from '../../assets/contact-draw.svg';
+import SocialIcons from '../../assets/SocialMedia.svg';
+import Union from '../../assets/Union.svg'
 
 const Contact = () => {
 
@@ -22,7 +23,7 @@ const Contact = () => {
         </p>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col  items-center lg:items-start  w-full "
+          className="flex flex-col  items-center lg:items-start  w-full w-4/6"
         >
           <div className="flex flex-col justify-between w-full mt-5 lg:flex-row">
             <div className="flex flex-col  w-full ">
@@ -61,11 +62,12 @@ const Contact = () => {
         </form>
 
         <div className="flex justify-center lg:justify-start  py-5 ">
-          <img src={socialIcons} alt="" />
+          <img src={SocialIcons} alt="" />
         </div>
       </div>
-      <div className="flex justify-center lg:justify-end">
-        <img src={contactImg} alt="" />
+      <div className="basis-1/2 m-auto w-6/12">
+        <img src={ContactImg } alt=""  className=" flex justify-end sm:hidden" />
+        <img src={Union} alt=""  className="hidden  sm:flex justify-center " />
       </div>
     </div>
   );
