@@ -7,7 +7,7 @@ const Footer = () => {
 
   
   return (
-    <div className="lg:flex lg:flex-row lg:pt-4 max-lg:flex max-lg:flex-col max-lg:items-center max-lg:justify-center ">
+    <div className="lg:flex lg:flex-row lg:pt-20 max-lg:flex max-lg:flex-col max-lg:items-center max-lg:justify-center py-10 ">
       <div className="items-center justify-center mr-6">
         <Link
           to="/"
@@ -18,7 +18,7 @@ const Footer = () => {
       </div>
 
       <div className="flex-grow flex items-center">
-        <ul className="flex justify-center">
+        <ul className="flex justify-center ">
           <li className="mr-6">
             <Link
               to="/"

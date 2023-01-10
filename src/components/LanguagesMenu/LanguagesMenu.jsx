@@ -20,7 +20,7 @@ export default function DropdownComponent() {
   return (
       
       <Listbox value={selectedLanguage} onChange={setSelectedLanguage}>
-      <div className="relative mt-1  max-lg:pb-10 max-lg:ml-10 items-start">
+      <div className="relative mt-1 max-lg:pb-10 max-lg:ml-10 items-start lg:mb-1">
         <Listbox.Button className="  flex items-center justify-between font-medium h-10 border border-cyan-600 rounded-full px-4  w-40 cursor-pointer hover:bg-cyan-600 hover:text-white duration-300 ease-in" >
         <span className="block truncate text-refubookGray"> {selectedLanguage.name}</span>
         <span className="pointer-events-none inset-y-0 right-0 flex items-center pr-2">
@@ -35,8 +35,9 @@ export default function DropdownComponent() {
             leave="transition ease-in duration-100"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
+           
           >
-            <Listbox.Options className= " absolute mb-1 w-full  bg-white shadow-lg bottom-full  py-1 text-base   focus:outline-none sm:text-sm">
+            <Listbox.Options className= " absolute mb-1 w-full  bg-white shadow-lg lg:bottom-full  py-1 text-base   focus:outline-none sm:text-sm ">
               {languages.map((language) => (
                 <Listbox.Option
                   
