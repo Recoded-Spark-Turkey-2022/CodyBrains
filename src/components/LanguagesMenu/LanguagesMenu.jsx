@@ -1,76 +1,71 @@
-import { Fragment, useState } from 'react'
-import { Listbox, Transition } from '@headlessui/react'
-import {  BsChevronDown } from 'react-icons/bs'; 
+import { Fragment, useState } from 'react';
+import { Listbox, Transition } from '@headlessui/react';
+import { BsChevronUp } from 'react-icons/bs';
 
-import ar from '../../assets/ar.png';
-import en from '../../assets/en.png';
-import tr from '../../assets/tr.png';
-
-
+import ar from '../../assets/ar.svg';
+import en from '../../assets/en.svg';
+import tr from '../../assets/tr.svg';
 
 const languages = [
-  { name: 'English', image:en},
-  { name: 'Turkish', image:tr},
-  { name: 'العربية',image:ar} 
-]
-
+  {
+    name: 'English',
+    flag: en,
+  },
+  {
+    name: 'العربية',
+    flag: ar,
+  },
+  {
+    name: 'Turkish',
+    flag: tr,
+  },
+];
 
 export default function DropdownComponent() {
-  const [selectedLanguage, setSelectedLanguage] = useState(languages[0])
+  const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
   return (
-      
+    <div className="flex items-center justify-center relative">
       <Listbox value={selectedLanguage} onChange={setSelectedLanguage}>
-      <div className="relative mt-1 max-lg:pb-10 max-lg:ml-10 items-start lg:mb-1">
-        <Listbox.Button className="  flex items-center justify-between font-medium h-10 border border-cyan-600 rounded-full px-4  w-40 cursor-pointer hover:bg-cyan-600 hover:text-white duration-300 ease-in" >
-        <span className="block truncate text-refubookGray"> {selectedLanguage.name}</span>
-        <span className="pointer-events-none inset-y-0 right-0 flex items-center pr-2">
-              <BsChevronDown
-                className="h-5 w-5 text-refubookGray"
-                aria-hidden="true"
-              />
-            </span>
-            </Listbox.Button>
-            <Transition
-            as={Fragment}
-            leave="transition ease-in duration-100"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-           
-          >
-            <Listbox.Options className= " absolute mb-1 w-full  bg-white shadow-lg lg:bottom-full  py-1 text-base   focus:outline-none sm:text-sm ">
-              {languages.map((language) => (
-                <Listbox.Option
-                  
-                  className={({ active }) =>
-                    `relative cursor-default text-refubookGray hover:bg-refubookAboutBlue select-none py-2 pl-10 pr-4 ${
-                      active ? 'bg-amber-100 text-amber-900' : 'text-'
-                    }`
+        <Listbox.Button className="  flex items-center justify-between gap-2 font-medium z-40  bg-refubookBlue text-refubookWhite rounded-full py-2  md:px-10 px-3 cursor-pointer  duration-300 ease-in">
+          <span className="text-sm md:text-lg "> {selectedLanguage.name}</span>
+          <BsChevronUp className="w-5 h-5" />
+        </Listbox.Button>
+        <Transition
+          as={Fragment}
+          leave="transition ease-in duration-100"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+          enter="transition ease-out duration-100"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+        >
+          <Listbox.Options className="absolute w-full z-10 bottom-9   bg-refubookWhite shadow-lg  rounded-tl-md rounded-tr-md  rounded-bl-lg rounded-br-lg  py-2  ring-2 ring-refubookBlue ring-opacity-25 overflow-hidden focus:outline-none sm:text-sm">
+            {languages.map((language) => (
+              <Listbox.Option
+                key={language.name}
+                className={({ active }) =>
+                  `${
+                    active
+                      ? 'text-refubookWhite bg-refubookBlue'
+                      : 'text-refubookBlack'
                   }
-                  value={language}
-                >
-                  
-                    <>
-                      <span
-                        className={`block truncate ${
-                          selectedLanguage ? 'font-medium' : 'font-normal'
-                        }`}
-                      >
-                        {language.name}
-                        <img src={language.image} alt="" />
-                      </span>
-                      {selectedLanguage ? (
-                        <span className="absolute inset-y-0 left-0 flex items-center  text-refubookGray pl-3 text-amber-600"/>
-                        
-                      
-                      ) : null}
-                    </>
-                  
-                </Listbox.Option>
-              ))}
-            </Listbox.Options>
-          </Transition>
-        </div>
+                          cursor-pointer select-none relative py-2 pl-4 pr-4 w-full`
+                }
+                value={language}
+              >
+                <div className="flex items-center justify-between w-full ">
+                  <img
+                    src={language.flag}
+                    alt={language.name}
+                    className="w-6 h-6 object-cover rounded-full"
+                  />
+                  <span className="text-xs md:text-lg ">{language.name}</span>
+                </div>
+              </Listbox.Option>
+            ))}
+          </Listbox.Options>
+        </Transition>
       </Listbox>
-    
+    </div>
   );
 }
