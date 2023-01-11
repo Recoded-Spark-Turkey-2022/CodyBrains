@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
-import Providers from '../Providers/Providers';
 import desktopBaloon from '../../assets/desktop-baloon.svg';
 import mobileBaloon from '../../assets/mobile-baloon.svg';
+import Providers from '../../components/Providers/Providers';
 
 const Auth = () => {
   const location = useLocation();

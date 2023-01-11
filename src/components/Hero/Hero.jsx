@@ -26,7 +26,7 @@ const Hero = () => {
         </Link>
       </div>
       <div className="flex justify-center lg:justify-end ">
-        <img src={illustration} alt=""  />
+        <img src={illustration} alt="" />
       </div>
     </section>
   );

@@ -1,34 +1,37 @@
 import React, { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { BsChevronDown } from 'react-icons/bs';
+import { signOut } from 'firebase/auth';
+import Swal from 'sweetalert2';
 import logo from '../../assets/logo.svg';
-import { logout } from '../../features/userSlice';
-import { logoutUser } from '../../services/auth';
+import { logout, selectUser } from '../../features/userSlice';
 import avatar from '../../assets/avatar.png';
+import { auth } from '../../services/firebase.config';
 
 function Navbar() {
-  const { user } = useSelector((state) => state.user);
   const dispatch = useDispatch();
 
-  const handleLogout = async () => {
+  const logOut = async () => {
     try {
-      await logoutUser();
+      await signOut(auth);
       dispatch(logout());
     } catch (error) {
-      throw new Error(error);
+      Swal.fire('Error', error.message, 'error');
     }
   };
 
+  const user = useSelector(selectUser);
+
   const capitalize = (str) => {
-    return str.replace(/\b[a-z]/g, (char) => {
+    return str?.replace(/\b[a-z]/g, (char) => {
       return char.toUpperCase();
     });
   };
 
   return (
-    <nav className="flex items-center justify-between w-full mt-10 py-2 px-5 z-10">
+    <nav className="flex items-center justify-between w-full over mt-10 py-2 px-5 z-10">
       <div className=" flex items-center justify-center">
         <Link
           to="/"
@@ -87,7 +90,7 @@ function Navbar() {
                     alt="profile pic"
                     className="w-8 h-8 rounded-full mr-2"
                   />
-                  <p className="mr-2">{capitalize(user.displayName)}</p>
+                  <p className="mr-2">{capitalize(user?.name)}</p>
                   <BsChevronDown
                     className="ml-2 -mr-1 h-5 w-5"
                     aria-hidden="true"
@@ -137,7 +140,7 @@ function Navbar() {
                       {({ active }) => (
                         <button
                           type="button"
-                          onClick={handleLogout}
+                          onClick={logOut}
                           className={`${
                             active
                               ? 'bg-refubookActiveNav text-white'
