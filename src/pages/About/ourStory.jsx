@@ -7,8 +7,8 @@
     return(
       <>
       <div 
-      className="flex justify-center items-center to-transparent h-1/2 w-100 scale-75 ">
-         <img src={hands}  alt=""/>
+      className="flex justify-center items-center to-transparent h-1/2 w-100">
+         <img className="w-1/2" src={hands}  alt=""/>
          </div>
       <section className="flex flex-col">
   
@@ -17,11 +17,7 @@
          Our Story
        </h2>
          <p className="text-center px-15 mx-15 font-medium  text-xl max-w-screen">
-           It is a long established fact that a reader will be distracted by
-           the readable content of a page when looking at its layout. The point
-           of using Lorem Ipsum is that it has a more-or-less normal
-           distribution of letters, as opposed to using `Content here, content
-           here`, making it look like readable English.
+         RefuBook is a website dedicated to helping refugees navigate their new surroundings and feel connected to their community. We offer a platform for sharing knowledge and experiences, and strive to be a comprehensive and reliable source of information. Thank you for visiting and we hope you find the resources here helpful in your journey as a refugee.
          </p>
      </div>
  

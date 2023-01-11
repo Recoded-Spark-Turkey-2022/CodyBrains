@@ -7,8 +7,8 @@ const SignUp = ()=>
 {
    return(
      <section className="flex flex-col">
-    <div className="px-20 mx-20 pb-20 grid place-items-center scale-75">
-    <img src={hug}  alt=""/>  
+    <div className="px-20 mx-20 pb-20 grid place-items-center">
+    <img className="w-60" src={hug}  alt=""/>  
     <h2 className="text-2xl xl:text-4xl text-refubookBlue mb-4 text-center">
         Share your story, help others and get help from others
       </h2>
