@@ -6,9 +6,13 @@ import SocialIcons from '../../assets/SocialMedia.svg';
 import Union from '../../assets/Union.svg';
 
 const Contact = () => {
+
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const { handleSubmit } = useForm();
+
+
+  const { register, handleSubmit } = useForm();
 
   const onSubmit = () => {
     Swal.fire({

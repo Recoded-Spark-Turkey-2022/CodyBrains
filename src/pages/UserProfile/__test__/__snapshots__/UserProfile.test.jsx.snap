@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserProfile should render correctly 1`] = `
+<div
+  className="flex flex-col items-center justify-center gap-4"
+>
+  <div
+    className="flex flex-col items-center justify-center relative"
+  >
+    <img
+      alt=""
+      className="w-40 h-40 rounded-full "
+      onError={[Function]}
+    />
+    <button
+      className="absolute bottom-0 right-0 bg-refubookBlue p-2 rounded-full cursor-pointer"
+      onClick={[Function]}
+      type="button"
+    >
+      <img
+        alt=""
+        className="w-6 h-6"
+        src="edit.png"
+      />
+    </button>
+  </div>
+  <span
+    className="text-refubookBlack font-medium text-lg mt-4 "
+  />
+  <div
+    className="w-full flex flex-col gap-2"
+  >
+    <h1
+      className="text-2xl font-bold text-center"
+    >
+      No blog posts yet
+    </h1>
+  </div>
+</div>
+`;
