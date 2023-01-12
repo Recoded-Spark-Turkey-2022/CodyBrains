@@ -1,8 +1,4 @@
-import React from 'react';
-import Features from '../../components/Features/Features';
-import Testimonials from '../../components/Testimonials/Testimonials';
-import Partners from '../../components/Partners/Partners';
-import Hero from '../../components/Hero/Hero';
+import { Features, Hero, Partners, Testimonials } from '../../components';
 
 function Home() {
   return (
