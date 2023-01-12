@@ -5,7 +5,7 @@ exports[`SignUp renders correctly 1`] = `
   className="flex flex-col"
 >
   <div
-    className="px-20 mx-20 pb-20 grid place-items-center"
+    className=" mx-20 pb-20 grid place-items-center"
   >
     <img
       alt=""
@@ -20,7 +20,7 @@ exports[`SignUp renders correctly 1`] = `
     <p
       className="text-center pt-7 pb-5 px-15 mx-15 text-refubookGray font-medium  text-l max-w-screen"
     >
-      “As a refugee myself, I know the challenges and struggles refugees face. Despite the challenges, I look back on my journey to a new country with gratitude and joy. I am grateful for the opportunities I received in my new country with the help of the wonderful community here.” – Nura, 32
+      “I am grateful for the opportunities I received in a new country with the help of the wonderful community here.” – Nura, 32
     </p>
     <Link
       to="/signup"
