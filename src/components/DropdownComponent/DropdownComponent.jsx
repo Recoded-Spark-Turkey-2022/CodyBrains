@@ -1,49 +1,68 @@
-import React from 'react';
-import ar from '../../assets/ar.png';
-import en from '../../assets/en.png';
-import tr from '../../assets/tr.png';
+import React, { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
+import cookies from 'js-cookie';
+import classNames from 'classnames';
+import { Dropdown } from "flowbite-react";
+
+const languages = [
+  {
+    code: 'fr',
+    name: 'Français',
+    countryCode: 'fr',
+  },
+  {
+    code: 'en',
+    name: 'English',
+    countryCode: 'gb',
+  },
+  {
+    code: 'ar',
+    name: 'العربية',
+    dir: 'rtl',
+    countryCode: 'sa',
+  },
+]
 
 export default function DropdownComponent() {
+
+  const currentLanguageCode = cookies.get('i18next') || 'en'
+  const currentLanguage = languages.find((l) => l.code === currentLanguageCode)
+  const { t } = useTranslation()
+
+  useEffect(() => {
+    console.log('Setting page stuff')
+    document.body.dir = currentLanguage.dir || 'ltr'
+    document.title = t('app_title')
+  }, [currentLanguage, t])
+
   return (
     <div className="p-20 ">
-      <div className="group inline-block relative border border-refubookActiveNav rounded-xl ">
-        <button type="button" className="rounded inline-flex items-center ">
-          <span className="mr-1 ">Language</span>
-          <svg
-            className="fill-current h-4 w-4"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-          >
-            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-          </svg>
-        </button>
-        <ul className="absolute hidden text-refubookGray pt-1 group-hover:block">
-          <li className="flex items-center">
-            <button
-              type="button"
-              className="text-refubookGray hover:text-refubookActiveNav p-2"
-            >
-              <img src={ar} alt="arabic" /> العربية
-            </button>
-          </li>
-          <li className="flex items-center">
-            <button
-              type="button"
-              className="text-refubookGray hover:text-refubookActiveNav "
-            >
-              <img src={en} alt="english" /> English
-            </button>
-          </li>
-          <li className="flex items-center">
-            <button
-              type="button"
-              className="text-refubookGray hover:text-refubookActiveNav "
-            >
-              <img src={tr} alt="turkish" /> Türkçe
-            </button>
-          </li>
-        </ul>
-      </div>
+
+        <Dropdown label="Select Language" placement="top">
+            <span className={`flag-icon flag-icon-${currentLanguage.countryCode} mx-2`}></span>
+
+          <Dropdown.Item>
+            <span className="dropdown-item-text">{t('language')}</span>
+          </Dropdown.Item>
+
+          {languages.map(({ code, name, countryCode }) => (
+          <Dropdown.Item key={countryCode}>
+            <a href="#/"
+                      className={classNames('dropdown-item', {
+                        disabled: currentLanguageCode === code,
+                      })}
+                      onClick={() => {
+                        i18next.changeLanguage(code) 
+                      }}
+                    >
+                      <span className={`flag-icon flag-icon-${countryCode} mx-2`} style={{ opacity: currentLanguageCode === code ? 0.5 : 1, }}></span>
+                      {name}
+            </a>
+          </Dropdown.Item>
+
+          ))}
+        </Dropdown>
     </div>
   );
 }

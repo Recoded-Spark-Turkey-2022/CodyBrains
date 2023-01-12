@@ -1,9 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import logo from '../../assets/logo.svg';
 import DropdownComponent from '../DropdownComponent/DropdownComponent';
+// import Local from '../Local/Local';
+
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <div className="flex items-center justify-center bg-transparent p-5">
       <div className="items-center justify-center mr-6">
@@ -22,7 +26,7 @@ const Footer = () => {
               to="/"
               className="text-refubookGray hover:text-refubookActiveNav font-medium"
             >
-              Home
+               {t('Home')}
             </Link>
           </li>
 
@@ -31,7 +35,7 @@ const Footer = () => {
               to="/about"
               className="text-refubookGray hover:text-refubookActiveNav font-medium"
             >
-              About
+              {t('About')}
             </Link>
           </li>
 
@@ -40,7 +44,7 @@ const Footer = () => {
               to="/contact"
               className="text-refubookGray hover:text-refubookActiveNav font-medium"
             >
-              Contact
+              {t('Contact')}
             </Link>
           </li>
 
@@ -49,12 +53,22 @@ const Footer = () => {
               to="/blog"
               className="text-refubookGray hover:text-refubookActiveNav font-medium"
             >
-              Blog
+              {t('Blog')}
             </Link>
           </li>
         </ul>
       </div>
-
+      
+      <Link to="/signup">
+          <button
+            type="button"
+            className="px-1 md:py-2 md:px-3 bg-refubookBlue text-refubookWhite font-medium   rounded-full shadow-lg hover:bg-refubookWhite hover:text-refubookBlack transition duration-500 ease-in-out"
+          >
+            {t('Sign_Up')}
+          </button>
+        </Link>
+      
+      {/* <Local /> */}
       <DropdownComponent />
     </div>
   );
