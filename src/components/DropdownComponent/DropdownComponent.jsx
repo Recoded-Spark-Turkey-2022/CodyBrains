@@ -22,19 +22,19 @@ const languages = [
     dir: 'rtl',
     countryCode: 'sa',
   },
-]
+];
 
 export default function DropdownComponent() {
 
-  const currentLanguageCode = cookies.get('i18next') || 'en'
-  const currentLanguage = languages.find((l) => l.code === currentLanguageCode)
-  const { t } = useTranslation()
+  const currentLanguageCode = cookies.get('i18next') || 'en';
+  const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
+  const { t } = useTranslation();
 
   useEffect(() => {
-    console.log('Setting page stuff')
-    document.body.dir = currentLanguage.dir || 'ltr'
-    document.title = t('app_title')
-  }, [currentLanguage, t])
+    console.log('Setting page stuff');
+    document.body.dir = currentLanguage.dir || 'ltr';
+    document.title = t('app_title');
+  }, [currentLanguage, t]);
 
   return (
     <div className="p-20 ">
