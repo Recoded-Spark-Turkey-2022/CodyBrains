@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import logo from '../../assets/logo.svg';
 import LanguagesMenu from '../LanguagesMenu/LanguagesMenu';
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col items-center justify-center gap-5 px-14 py-6 mb-6 md:flex-row  w-full bg-refubookWhite mt-10">
       <div className="items-center justify-center mr-6">
@@ -21,7 +23,7 @@ const Footer = () => {
             to="/"
             className="text-refubookGray hover:text-refubookActiveNav font-medium"
           >
-            Home
+            {t('Home')}
           </Link>
         </li>
 
@@ -30,7 +32,7 @@ const Footer = () => {
             to="/about"
             className="text-refubookGray hover:text-refubookActiveNav font-medium"
           >
-            About
+            {t('About')}
           </Link>
         </li>
 
@@ -39,7 +41,7 @@ const Footer = () => {
             to="/contact"
             className="text-refubookGray hover:text-refubookActiveNav font-medium"
           >
-            Contact
+            {t('Contact')}
           </Link>
         </li>
 
@@ -48,7 +50,7 @@ const Footer = () => {
             to="/blog"
             className="text-refubookGray hover:text-refubookActiveNav font-medium"
           >
-            Blog
+            {t('Blog')}
           </Link>
         </li>
       </ul>
@@ -59,7 +61,7 @@ const Footer = () => {
             type="button"
             className=" flex items-center justify-between font-medium z-40 text-xs md:text-lg bg-refubookBlue text-refubookWhite rounded-full py-2 md:py-2.5  md:px-10 px-6 cursor-pointer  duration-300 ease-in"
           >
-            Sign Up
+            {t('Sign_Up')}
           </button>
         </Link>
         <LanguagesMenu />
