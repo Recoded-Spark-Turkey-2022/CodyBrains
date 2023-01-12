@@ -40,10 +40,10 @@ export default function DropdownComponent() {
     <div className="p-20 ">
 
         <Dropdown label="Select Language" placement="top">
-            <span className={`flag-icon flag-icon-${currentLanguage.countryCode} mx-2`}></span>
+            <span className={`flag-icon flag-icon-${currentLanguage.countryCode} mx-2`} />
 
           <Dropdown.Item>
-            <span className="dropdown-item-text">{t('language')}</span>
+            <span className="dropdown-item-text" />{t('language')}
           </Dropdown.Item>
 
           {languages.map(({ code, name, countryCode }) => (
@@ -56,7 +56,7 @@ export default function DropdownComponent() {
                         i18next.changeLanguage(code) 
                       }}
                     >
-                      <span className={`flag-icon flag-icon-${countryCode} mx-2`} style={{ opacity: currentLanguageCode === code ? 0.5 : 1, }}></span>
+                      <span className={`flag-icon flag-icon-${countryCode} mx-2`} style={{ opacity: currentLanguageCode === code ? 0.5 : 1, }} />
                       {name}
             </a>
           </Dropdown.Item>
