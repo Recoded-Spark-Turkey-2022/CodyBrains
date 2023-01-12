@@ -18,7 +18,7 @@ module.exports = {
       refubookGray: '#8B8F9C',
       refubookAboutBlue: '#E5FAFF',
       darkBlue: '#025594',
-      refubookTeamLightRed: '#FD9E71'
+      refubookTeamLightRed: '#FD9E71',
     },
     fontFamily: {
       roboto: ['Roboto', 'sans-serif'],

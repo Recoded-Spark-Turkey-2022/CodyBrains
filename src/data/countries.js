@@ -1,2 +1,2 @@
-const COUNTRIES=["usa", "lebanon", "turkey"]
-export default COUNTRIES
+const COUNTRIES = ['usa', 'lebanon', 'turkey'];
+export default COUNTRIES;

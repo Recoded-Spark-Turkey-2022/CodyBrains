@@ -6,17 +6,16 @@ import Testimonials from '../../components/Testimonials/Testimonials';
 import Partners from '../../components/Partners/Partners';
 import SignUp from '../../components/SignupPart/Signuppart';
 
-
-const About=()=> {
+const About = () => {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center">
-    <OurStory />
-    <OurTeam />
-    <Testimonials />
-    <Partners />
-    <SignUp />
-  </div>
+      <OurStory />
+      <OurTeam />
+      <Testimonials />
+      <Partners />
+      <SignUp />
+    </div>
   );
-}
+};
 
 export default About;
