@@ -1037,7 +1037,7 @@
     core-js-pure "^3.25.1"
     regenerator-runtime "^0.13.11"
 
-"@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.15.4", "@babel/runtime@^7.16.3", "@babel/runtime@^7.19.4", "@babel/runtime@^7.20.6", "@babel/runtime@^7.20.7", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.15.4", "@babel/runtime@^7.16.3", "@babel/runtime@^7.18.9", "@babel/runtime@^7.19.4", "@babel/runtime@^7.20.6", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.20.7"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.20.7.tgz#fcb41a5a70550e04a7b708037c7c32f7f356d8fd"
   integrity sha512-UF0tvkUtxwAgZ5W/KrkHf0Rn0fdnLDU9ScxBrEVNUprE/MzirjK4MJUX1/BVDv00Sv8cljtukVK1aky++X1SjQ==
@@ -8897,9 +8897,9 @@ react-error-overlay@^6.0.11:
   integrity sha512-/6UZ2qgEyH2aqzYZgQPxEnz33NJ2gNsnHA2o5+o4wW9bLM/JYQitNP9xPhsXwC08hMMovfGe/8retsdDsczPRg==
 
 react-hook-form@^7.41.0:
-  version "7.42.1"
-  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.42.1.tgz#c6396ca684716d89abc1c7e64343badfd30c56c6"
-  integrity sha512-2UIGqwMZksd5HS55crTT1ATLTr0rAI4jS7yVuqTaoRVDhY2Qc4IyjskCmpnmdYqUNOYFy04vW253tb2JRVh+IQ==
+  version "7.41.2"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.41.2.tgz#db37b0bfd844b96d7b30d26ed3c55366e3c2c7cd"
+  integrity sha512-Uz5kNlfkEZve0sr5y2LsxPDGN3eNDjjKb1XJgand1E5Ay0S3zWo8YcJQNGu88/Zs6JaFnrJqTXbSr6B2q7wllA==
 
 react-i18next@^12.1.4:
   version "12.1.4"
