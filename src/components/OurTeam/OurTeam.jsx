@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Tab } from '@headlessui/react';
+import { useTranslation } from 'react-i18next';
 import ourTeam from '../../data/ourTeamData';
 
 const OurTeam = () => {
+  const { t } = useTranslation();
   const [selectedTab, setSelectedTab] = useState('All');
   const [countries, setCountries] = useState([]);
 
@@ -21,7 +23,7 @@ const OurTeam = () => {
     <section className="px-8 py-8 bg-refubookAboutBlue text-darkBlue font-bold w-full">
       <div className="container mx-auto">
         <div className="flex  items-center justify-center">
-          <h1 className="text-4xl font-bold text-center">Our Team</h1>
+          <h1 className="text-4xl font-bold text-center">{t('Our_Team')}</h1>
         </div>
         <div className="hidden md:block mt-10">
           <Tab.Group>
@@ -40,7 +42,7 @@ const OurTeam = () => {
                   )
                 }
               >
-                View All
+                {t('View_All')}
               </Tab>
               {countries.map((country) => (
                 <Tab
@@ -116,7 +118,7 @@ const OurTeam = () => {
                   )
                 }
               >
-                View All
+                {t('View_All')}
               </Tab>
               <Tab.Panel selected={selectedTab === 'All'}>
                 <div className="px-4 md:px-48 md:mt-10 md:py-10 justify-self-center items-center w-full mx-auto grid grid-cols-2 gap-16 md:grid-cols-3 md:gap-20">

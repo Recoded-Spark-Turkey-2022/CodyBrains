@@ -7,7 +7,7 @@ exports[`Partners renders correctly 1`] = `
   <h1
     className="text-3xl text-refubookBlack font-bold text-center"
   >
-    Our Partners
+    Our_Partners
   </h1>
   <Swiper
     breakpoints={

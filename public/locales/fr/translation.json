@@ -1,10 +1,23 @@
 {
   "app_title": "Refubook",
+  "Refubook": "Refubook",
   "language": "Langue",
   "welcome_message": "Bienvenue",
   "Home": "Maison",
   "About": "Quelque",
   "Contact": "Contact",
   "Blog": "Blog",
-  "Sign_Up": "S'inscrire"
+  "Sign_Up": "S'inscrire",
+  "Sign_In": "Se connecter",
+  "Our_Partners": "Nos Partenaires",
+  "About_RefuBook_Website": "RefuBook est un site Web dédié à aider les réfugiés à naviguer dans leur nouvel environnement et à se sentir connectés à leur communauté. Nous offrons une plate-forme de partage de connaissances et d'expériences et nous nous efforçons d'être une source d'informations complète et fiable. Merci de votre visite, et nous espérons que vous trouverez les ressources ici utiles dans votre voyage en tant que réfugié.",
+  "Learn_More": "Apprendre encore plus",
+  "Express_Freely": "Exprimer Librement",
+  "Hero_Text": "Refubook est une ressource précieuse pour les réfugiés qui cherchent à entrer en contact avec d'autres réfugiés et à en savoir plus sur différents pays.",
+  "Our_Story": "Notre Histoire",
+  "Our_Story_Text": "RefuBook est un site Web dédié à aider les réfugiés à naviguer dans leur nouvel environnement et à se sentir connectés à leur communauté. Nous offrons une plate-forme de partage de connaissances et d'expériences et nous nous efforçons d'être une source d'informations complète et fiable. Merci de votre visite, et nous espérons que vous trouverez les ressources ici utiles dans votre voyage en tant que réfugié.",
+  "Our_Team": "Notre Équipe",
+  "View_All": "Voir Tout",
+  "Share_Your_Story": "Partagez votre histoire, aidez les autres et obtenez l'aide des autres",
+  "Share_Your_Story_Content": "“Je suis reconnaissant pour les opportunités que j'ai reçues dans un nouveau pays avec l'aide de la merveilleuse communauté ici. – Nura, 32”"
 }

@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { BsChevronDown } from 'react-icons/bs';
 import { signOut } from 'firebase/auth';
@@ -11,6 +12,7 @@ import avatar from '../../assets/avatar.png';
 import { auth } from '../../services/firebase.config';
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -50,7 +52,7 @@ const Navbar = () => {
         >
           <img src={logo} alt="" className="w-10 h-10 mr-2" />
           <p className="text-refubookBlue font-bold text-xl tracking-tight">
-            Refubook
+          {t('Refubook')}
           </p>
         </Link>
       </div>
@@ -62,7 +64,7 @@ const Navbar = () => {
               to="/"
               className="text-refubookGray hover:text-refubookActiveNav font-medium"
             >
-              Home
+              {t('Home')}
             </Link>
           </li>
 
@@ -71,7 +73,7 @@ const Navbar = () => {
               to="/about"
               className="text-refubookGray hover:text-refubookActiveNav font-medium"
             >
-              About
+              {t('About')}
             </Link>
           </li>
 
@@ -80,7 +82,7 @@ const Navbar = () => {
               to="/blog"
               className="text-refubookGray hover:text-refubookActiveNav font-medium"
             >
-              Blog
+              {t('Blog')}
             </Link>
           </li>
 
@@ -89,7 +91,7 @@ const Navbar = () => {
               to="/contact"
               className="text-refubookGray hover:text-refubookActiveNav font-medium"
             >
-              Contact
+              {t('Contact')}
             </Link>
           </li>
           {user ? (
@@ -176,7 +178,7 @@ const Navbar = () => {
                   to="/signin"
                   className="bg-refubookBlue text-refubookWhite px-4 py-2 rounded-3xl font-medium"
                 >
-                  Sign In
+                  {t('Sign_In')}
                 </Link>
               </li>
               <li className="mr-6 ">
@@ -184,7 +186,7 @@ const Navbar = () => {
                   to="/signup"
                   className="bg-refubookBlue text-refubookWhite px-4 py-2 rounded-3xl font-medium"
                 >
-                  Sign Up
+                  {t('Sign_Up')}
                 </Link>
               </li>
             </div>

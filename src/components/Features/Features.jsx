@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
+import { useTranslation } from 'react-i18next';
 import featuresData from '../../data/featuresData';
 import Feature from './Feature';
 import illustration from '../../assets/features-illustration.svg';
@@ -8,21 +9,17 @@ import star from '../../assets/star.svg';
 
 // The Features component is a functional component that displays information about RefuBook.
 const Features = () => {
+  const { t } = useTranslation();
   return (
     // The component consists of a div with a blue background and two main sections: a section with text and a button, and a section with an illustration and a list of features.
     <div className="w-full flex flex-col items-center justify-center bg-refubookAboutBlue py-4 mt-5">
       <div className=" w-3/4  md:w-2/3 flex flex-col items-center gap-4 justify-center py-5">
         {/* The first section contains a heading and a paragraph of text. */}
         <h1 className="text-4xl md:text-3xl xl:text-4xl   text-refubookBlue font-bold text-center">
-          About
+          {t('About')}
         </h1>
         <p className="text-md leading-relaxed md:text-lg  text-refubookLightBlack font-medium text-justify md:text-center">
-          RefuBook is a website dedicated to helping refugees navigate their new
-          surroundings and feel connected to their community. We offer a
-          platform for sharing knowledge and experiences, and strive to be a
-          comprehensive and reliable source of information. Thank you for
-          visiting and we hope you find the resources here helpful in your
-          journey as a refugee.
+          {t('About_RefuBook_Website')}
         </p>
         {/* The first section also contains a button with a link to the "about" page. */}
         <Link to="about">
@@ -30,7 +27,7 @@ const Features = () => {
             type="button"
             className=" py-1 px-3 md:py-2 md:px-9 bg-refubookBlue text-refubookWhite font-bold text-lg md:text-xl  rounded-full shadow-lg hover:bg-refubookWhite hover:text-refubookBlack transition duration-500 ease-in-out"
           >
-            Learn More
+            {t('Learn_More')}
           </button>
         </Link>
       </div>

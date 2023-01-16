@@ -31,26 +31,6 @@ const languages = [
   },
 ];
 
-
-/* import ar from '../../assets/ar.svg';
-import en from '../../assets/en.svg';
-import tr from '../../assets/tr.svg';
-
-const languages = [
-  {
-    name: 'English',
-    flag: en,
-  },
-  {
-    name: 'العربية',
-    flag: ar,
-  },
-  {
-    name: 'Turkish',
-    flag: tr,
-  },
-]; */
-
 export default function DropdownComponent() {
 
   const currentLanguageCode = cookies.get('i18next') || 'en'

@@ -1,10 +1,23 @@
 {
   "app_title": "Refubook",
+  "Refubook": "Refubook",
   "language": "Language",
   "welcome_message": "Welcome",
   "Home": "Home",
   "About": "About",
   "Contact": "Contact",
   "Blog": "Blog",
-  "Sign_Up": "Sign Up"
+  "Sign_Up": "Sign Up",
+  "Sign_In": "Sign In",
+  "Our_Partners": "Our Partners",
+  "About_RefuBook_Website": "RefuBook is a website dedicated to helping refugees navigate their new surroundings and feel connected to their community. We offer a platform for sharing knowledge and experiences, and strive to be a comprehensive and reliable source of information. Thank you for visiting and we hope you find the resources here helpful in your journey as a refugee.",
+  "Learn_More": "Learn More",
+  "Express_Freely": "Express Freely",
+  "Hero_Text" : "Refubook is a valuable resource for refugees looking to connect with other refugees and learn more about different countries.",
+  "Our_Story": "Our Story",
+  "Our_Story_Text": "RefuBook is a website dedicated to helping refugees navigate their new surroundings and feel connected to their community. We offer a platform for sharing knowledge and experiences, and strive to be a comprehensive and reliable source of information. Thank you for visiting and we hope you find the resources here helpful in your journey as a refugee.",
+  "Our_Team": "Our Team",
+  "View_All": "View All",
+  "Share_Your_Story": "Share your story, help others and get help from others",
+  "Share_Your_Story_Content": "“I am grateful for the opportunities I received in a new country with the help of the wonderful community here.” – Nura, 32"
 }
