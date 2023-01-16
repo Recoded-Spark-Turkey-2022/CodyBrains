@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { Menu, Transition } from '@headlessui/react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { BsChevronDown } from 'react-icons/bs';
 import { FaArrowLeft, FaBars } from 'react-icons/fa';
@@ -11,19 +11,31 @@ import { logout, selectUser } from '../../features/userSlice';
 import avatar from '../../assets/avatar.png';
 import { auth } from '../../services/firebase.config';
 
-const Navbar = ({ isOpen, setIsOpen }) => {
+const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const [navigation, setNavigation] = useState([
+    { name: 'Home', href: '/', current: false },
+    { name: 'About', href: '/about', current: false },
+    { name: 'Contact', href: '/contact', current: false },
+  ]);
+
+  const [profileNavigation, setProfileNavigation] = useState([
+    { name: 'Home', href: '/', current: false },
+    { name: 'Profile', href: '/profile', current: false },
+    { name: 'Write', href: '/write', current: false },
+    { name: 'Sign Out ', href: '/', current: false, onClick: 'logOut' },
+  ]);
 
   const logOut = async () => {
     try {
       await signOut(auth);
       dispatch(logout());
-      Swal.fire({
-        icon: 'success',
-        title: 'Goodbye!',
-        text: 'You are logged out',
-      });
+      setIsOpen(false);
       navigate('/');
     } catch (error) {
       Swal.fire({
@@ -42,170 +54,203 @@ const Navbar = ({ isOpen, setIsOpen }) => {
     });
   };
 
-  const navigation = [
-    { name: 'Home', href: '/', current: false },
-    { name: 'About', href: '/about', current: false },
-    { name: 'Blog', href: '/blog', current: false },
-    { name: 'Contact', href: '/contact', current: false },
-  ];
+  useEffect(() => {
+    setNavigation((prev) =>
+      prev.map((item) => {
+        if (item.href === location.pathname) {
+          return { ...item, current: true };
+        }
+        return { ...item, current: false };
+      })
+    );
+    setProfileNavigation((prev) =>
+      prev.map((item) => {
+        if (item.href === location.pathname) {
+          return { ...item, current: true };
+        }
+        return { ...item, current: false };
+      })
+    );
+  }, [location.pathname]);
 
   return (
-    <div className="fixed  z-[999] w-full md:relative">
-      <nav className=" hidden md:flex items-center justify-between w-full bg-refubookWhite  mt-10 py-2 px-5 z-10">
-        <div className=" flex items-center justify-start px-4">
-          <Link
-            to="/"
-            className="text-refubookBlue font-bold text-xl tracking-tight flex items-center"
+    <div className=" w-full  z-[100] py-6 px-8">
+      <div className="flex justify-between  items-center w-full h-full ">
+        <div className="flex items-center">
+          <button
+            type="button"
+            onClick={() => setIsOpen(true)}
+            className="md:hidden block cursor-pointer  "
           >
-            <img src={logo} alt="" className="w-10 h-10 mr-2" />
-            <p className="text-refubookBlue font-bold text-xl tracking-tight">
-              Refubook
-            </p>
+            <FaBars size={25} />
+          </button>
+          <Link to="/">
+            <img
+              src={logo}
+              alt="Refubook Logo"
+              className="h-10 w-10 hidden md:block"
+            />
           </Link>
         </div>
 
-        <div className="hidden md:flex  items-center px-4 ">
-          <ul className="flex justify-center items-center gap-5">
-            {navigation.map((item) => (
-              <li key={item.name}>
-                <Link
-                  to={item.href}
-                  className="text-refubookBlue font-medium text-lg tracking-tight "
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-            {user ? (
-              <Menu as="div" className="relative inline-block text-left">
-                <div>
-                  <Menu.Button className="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white bg-refubookBlue border border-transparent rounded-md hover:bg-refubookActiveNav focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-                    <img
-                      src={user?.photoURL}
-                      onError={(e) => {
-                        e.target.onerror = avatar;
-                      }}
-                      alt="profile pic"
-                      className="w-8 h-8 rounded-full mr-2"
-                    />
-                    <p className="mr-2">{capitalize(user?.displayName)}</p>
-                    <BsChevronDown
-                      className="ml-2 -mr-1 h-5 w-5"
-                      aria-hidden="true"
-                    />
-                  </Menu.Button>
-                </div>
-                <Transition
-                  as={Fragment}
-                  enter="transition ease-out duration-100"
-                  enterFrom="transform opacity-0 scale-95"
-                  enterTo="transform opacity-100 scale-100"
-                  leave="transition ease-in duration-75"
-                  leaveFrom="transform opacity-100 scale-100"
-                  leaveTo="transform opacity-0 scale-95"
-                >
-                  <Menu.Items className="absolute bg-refubookWhite right-0 w-56 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                    <div className="px-1 py-1  ">
-                      <Menu.Item>
-                        {({ active }) => (
-                          <Link
-                            to="/profile"
-                            className={`${
-                              active
-                                ? 'bg-refubookActiveNav text-white'
-                                : 'text-gray-900'
-                            } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
-                          >
-                            Profile
-                          </Link>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <Link
-                            to="/write"
-                            className={`${
-                              active
-                                ? 'bg-refubookActiveNav text-white'
-                                : 'text-gray-900'
-                            } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
-                          >
-                            Write
-                          </Link>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <button
-                            type="button"
-                            onClick={logOut}
-                            className={`${
-                              active
-                                ? 'bg-refubookActiveNav text-white'
-                                : 'text-gray-900'
-                            } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
-                          >
-                            Sign out
-                          </button>
-                        )}
-                      </Menu.Item>
-                    </div>
-                  </Menu.Items>
-                </Transition>
-              </Menu>
-            ) : (
-              <div className="flex ">
-                <li className="mr-6 ">
-                  <Link
-                    to="/signin"
-                    className="bg-refubookBlue text-refubookWhite px-4 py-2 rounded-3xl font-medium"
-                  >
-                    Sign In
-                  </Link>
-                </li>
-                <li className="mr-6 ">
-                  <Link
-                    to="/signup"
-                    className="bg-refubookBlue text-refubookWhite px-4 py-2 rounded-3xl font-medium"
-                  >
-                    Sign Up
-                  </Link>
-                </li>
-              </div>
-            )}
-          </ul>
-        </div>
-      </nav>
-      <div className="md:hidden flex flex-col min-h-screen  z-10">
-        <button
-          type="button"
-          onClick={() => setIsOpen(!isOpen)}
-          className={`${
-            isOpen ? 'hidden' : 'flex '
-          } text-refubookBlue text-3xl p-4 mt-3  font-medium`}
-        >
-          <FaBars />
-        </button>
+        {/* Hamburger Icon */}
 
-        <Transition
-          show={isOpen}
-          as="div"
-          enter="transition-opacity duration-100"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="transition-opacity duration-75"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-          className="w-8/12 shadow-xl h-full top-0 left-0 z-40 bg-refubookWhite duration-150 ease-in flex flex-col gap-48"
+        <div className="hidden md:flex items-center gap-4">
+          <ul className="hidden md:flex">
+            {location.pathname === '/profile' || location.pathname === '/write'
+              ? profileNavigation.map((item) => (
+                  <Link
+                    to={item.href}
+                    key={item.name}
+                    onClick={item.onClick === 'logOut' ? logOut : null}
+                  >
+                    <li
+                      className={`${
+                        item.current ? 'border-b' : ''
+                      } py-2 px-4   text-refubookBlue font-medium text-lg tracking-tight`}
+                    >
+                      {item.name}
+                    </li>
+                  </Link>
+                ))
+              : navigation.map((item) => (
+                  <Link to={item.href} key={item.name}>
+                    <li
+                      className={`${
+                        item.current ? 'border-b' : ''
+                      } py-2 px-4   text-refubookBlue font-medium text-lg tracking-tight`}
+                    >
+                      {item.name}
+                    </li>
+                  </Link>
+                ))}
+          </ul>
+          {user ? (
+            <Menu as="div" className="relative inline-block text-left">
+              <div>
+                <Menu.Button className="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white bg-refubookBlue border border-transparent rounded-md hover:bg-refubookActiveNav focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+                  <img
+                    src={user?.photoURL}
+                    onError={(e) => {
+                      e.target.onerror = avatar;
+                    }}
+                    alt="profile pic"
+                    className="w-8 h-8 rounded-full mr-2"
+                  />
+                  <p className="mr-2">{capitalize(user.displayName)}</p>
+                  <BsChevronDown
+                    className="ml-2 -mr-1 h-5 w-5"
+                    aria-hidden="true"
+                  />
+                </Menu.Button>
+              </div>
+              <Transition
+                as={Fragment}
+                enter="transition-opacity duration-75"
+                enterFrom="opacity-0"
+                enterTo="opacity-100"
+                leave="transition-opacity duration-150"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0"
+              >
+                <Menu.Items className="absolute bg-refubookWhite right-0 w-56 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                  <div className="px-1 py-1  ">
+                    <Menu.Item>
+                      {({ active }) => (
+                        <Link
+                          to="/profile"
+                          className={`${
+                            active
+                              ? 'bg-refubookActiveNav text-white'
+                              : 'text-gray-900'
+                          } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
+                        >
+                          Profile
+                        </Link>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <Link
+                          to="/write"
+                          className={`${
+                            active
+                              ? 'bg-refubookActiveNav text-white'
+                              : 'text-gray-900'
+                          } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
+                        >
+                          Write
+                        </Link>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <button
+                          type="button"
+                          onClick={logOut}
+                          className={`${
+                            active
+                              ? 'bg-refubookActiveNav text-white'
+                              : 'text-gray-900'
+                          } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
+                        >
+                          Sign out
+                        </button>
+                      )}
+                    </Menu.Item>
+                  </div>
+                </Menu.Items>
+              </Transition>
+            </Menu>
+          ) : (
+            <div className="flex items-center gap-4">
+              <Link
+                to="/signin"
+                className="bg-refubookBlue text-refubookWhite px-4 py-2 rounded-3xl font-medium"
+              >
+                Sign In
+              </Link>
+
+              <Link
+                to="/signup"
+                className="bg-refubookBlue text-refubookWhite px-4 py-2 rounded-3xl font-medium"
+              >
+                Sign Up
+              </Link>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {/* Overlay */}
+      <div
+        className={
+          isOpen
+            ? 'md:hidden fixed left-0 top-0 w-full min-h-screen bg-black/70'
+            : ''
+        }
+      >
+        {/* Side Drawer Menu */}
+        <div
+          className={
+            isOpen
+              ? ' fixed top-0 left-0 bottom-0 w-[60%] overflow-clip flex-shrink md:w-[45%] min-h-screen bg-refubookWhite p-10 ease-in duration-500 shadow-xl shadow-refubookBlack rounded-tr-3xl rounded-br-3xl'
+              : 'fixed left-[-100%] top-0 bottom-0 p-10 ease-in duration-500 bg-refubookWhite'
+          }
         >
-          <div className="flex flex-col items-center gap-3 mt-10 py-2 px-5">
-            <button
-              type="button"
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-refubookBlue font-medium ml-5 text-2xl justify-start w-full"
-            >
-              <FaArrowLeft />
-            </button>
+          <div>
+            <div className="flex w-full items-center ">
+              <button
+                type="button"
+                onClick={() => setIsOpen(false)}
+                className="rounded-full  p-3 cursor-pointer text-refubookBlue text-2xl"
+              >
+                <FaArrowLeft />
+              </button>
+            </div>
+          </div>
+          <div className="py-4 flex flex-col h-full">
             {user ? (
               <>
                 <div className="flex flex-col  mx-auto items-center justify-center relative">
@@ -219,135 +264,135 @@ const Navbar = ({ isOpen, setIsOpen }) => {
                   />
                   <div className="absolute bottom-0 right-0 mt-4 mr-4 bg-profileStatusRed w-8 h-8 rounded-full" />
                 </div>
-
-                <Menu as="div" className=" relative inline-block text-left ">
-                  <div>
-                    <Menu.Button className="flex items-center justify-center w-full px-4 py-2 text-sm font-semibold   ">
-                      <p className="mr-2 text-xl">
-                        {capitalize(user.displayName)}
-                      </p>
-                      <BsChevronDown
-                        className="ml-2 -mr-1 text-2xl font-extrabold  text-refubookBlack"
-                        aria-hidden="true"
-                      />
-                    </Menu.Button>
+                {location.pathname === '/profile' ||
+                location.pathname === '/write' ? (
+                  <div className="flex flex-col items-center justify-center mt-4">
+                    <p className="text-2xl font-bold text-center">
+                      {capitalize(user.displayName)}
+                    </p>
                   </div>
-                  <Transition
-                    as={Fragment}
-                    enter="transition ease-out duration-100"
-                    enterFrom="transform opacity-0 scale-95"
-                    enterTo="transform opacity-100 scale-100"
-                    leave="transition ease-in duration-75"
-                    leaveFrom="transform opacity-100 scale-100"
-                    leaveTo="transform opacity-0 scale-95"
-                  >
-                    <Menu.Items className="absolute z-30 -left-5  w-56 mt-2 origin-center bg-white divide-y divide-refubookBlack rounded-md shadow-lg ring-1 ring-refubookBlack ring-opacity-5 focus:outline-none">
-                      <div className="px-1 py-1 space-y-1  ">
-                        <Menu.Item>
-                          {({ active }) => (
-                            <Link
-                              to="/profile"
-                              className={`${
-                                active
-                                  ? 'bg-refubookActiveNav text-white'
-                                  : 'text-gray-900'
-                              } group flex  items-center w-full px-2 py-2 text-lg font-medium border-b`}
-                              onClick={() => setIsOpen(!isOpen)}
-                            >
-                              Profile
-                            </Link>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <Link
-                              to="/write"
-                              className={`${
-                                active
-                                  ? 'bg-refubookActiveNav text-white'
-                                  : 'text-gray-900'
-                              } group flex border-b items-center w-full px-2 py-2 text-lg font-medium`}
-                              onClick={() => setIsOpen(!isOpen)}
-                            >
-                              Write
-                            </Link>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <button
-                              type="button"
-                              onClick={logOut}
-                              className={`${
-                                active
-                                  ? 'bg-refubookActiveNav text-white'
-                                  : 'text-gray-900'
-                              } group flex rounded-md items-center w-full px-2 py-2 text-lg font-medium`}
-                            >
-                              Sign out
-                            </button>
-                          )}
-                        </Menu.Item>
-                      </div>
-                    </Menu.Items>
-                  </Transition>
-                </Menu>
+                ) : (
+                  <Menu as="div" className=" relative inline-block text-left ">
+                    <div>
+                      <Menu.Button className="flex items-center justify-center w-full px-4 py-2 text-sm font-semibold   ">
+                        <p className="mr-2 text-xl">
+                          {capitalize(user.displayName)}
+                        </p>
+                        <BsChevronDown
+                          className="ml-2 -mr-1 text-2xl font-extrabold  text-refubookBlack"
+                          aria-hidden="true"
+                        />
+                      </Menu.Button>
+                    </div>
+                    <Transition
+                      as={Fragment}
+                      enter="transition ease-out duration-100"
+                      enterFrom="transform opacity-0 scale-95"
+                      enterTo="transform opacity-100 scale-100"
+                      leave="transition ease-in duration-75"
+                      leaveFrom="transform opacity-100 scale-100"
+                      leaveTo="transform opacity-0 scale-95"
+                    >
+                      <Menu.Items className="absolute z-[999] bg-refubookWhite w-full  flex flex-col gap-10 mt-2  divide-y divide-refubookBlack rounded-md shadow-lg ring-1 ring-refubookBlack ring-opacity-5 focus:outline-none">
+                        <div className="px-2 py-1  ">
+                          <Menu.Item>
+                            {({ active }) => (
+                              <Link
+                                to="/profile"
+                                className={`${
+                                  active
+                                    ? 'bg-refubookActiveNav text-white'
+                                    : 'text-gray-900'
+                                } group flex  items-center w-full p-4 text-xl font-medium border-b`}
+                                onClick={() => setIsOpen(!isOpen)}
+                              >
+                                Profile
+                              </Link>
+                            )}
+                          </Menu.Item>
+                          <Menu.Item>
+                            {({ active }) => (
+                              <Link
+                                to="/write"
+                                className={`${
+                                  active
+                                    ? 'bg-refubookActiveNav text-white'
+                                    : 'text-gray-900'
+                                } group flex border-b items-center w-full p-4 text-xl font-medium`}
+                                onClick={() => setIsOpen(!isOpen)}
+                              >
+                                Write
+                              </Link>
+                            )}
+                          </Menu.Item>
+                          <Menu.Item>
+                            {({ active }) => (
+                              <button
+                                type="button"
+                                onClick={logOut}
+                                className={`${
+                                  active
+                                    ? 'bg-refubookActiveNav text-white'
+                                    : 'text-gray-900'
+                                } group flex rounded-md items-center w-full p-4 text-xl font-medium`}
+                              >
+                                Sign out
+                              </button>
+                            )}
+                          </Menu.Item>
+                        </div>
+                      </Menu.Items>
+                    </Transition>
+                  </Menu>
+                )}
               </>
             ) : (
-              <div className="flex flex-col mt-10 h-full items-center gap-5 ">
-                <h3 className="text-2xl font-semibold text-refubookBlue">
-                  Welcome to RefuBook !
-                </h3>
-                <div className="flex gap-5 items-center mt-4 justify-center">
-                  <button
-                    type="button"
-                    className="bg-refubookBlue text-refubookWhite px-6 text-lg py-2 rounded-3xl font-medium"
-                    onClick={() => setIsOpen(!isOpen)}
-                  >
-                    <Link to="/signup">Sign Up</Link>
-                  </button>
-                  <button
-                    type="button"
-                    className="bg-refubookActiveNav text-refubookWhite px-6 text-lg py-2 rounded-3xl font-medium"
-                    onClick={() => setIsOpen(!isOpen)}
-                  >
-                    <Link to="/signin">Sign In</Link>
-                  </button>
-                </div>
+              <div className="flex items-center justify-evenly">
+                <Link
+                  to="/signin"
+                  className="bg-refubookBlue text-refubookWhite px-4 py-2 rounded-3xl font-medium"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Sign In
+                </Link>
+
+                <Link
+                  to="/signup"
+                  className="bg-refubookBlue text-refubookWhite px-4 py-2 rounded-3xl font-medium"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Sign Up
+                </Link>
               </div>
             )}
+            <ul className="flex flex-col ml-5 mt-28 h-full ">
+              {location.pathname === '/profile' ||
+              location.pathname === '/write'
+                ? profileNavigation.map((item) => (
+                    <Link to={item.href} key={item.name}>
+                      <li
+                        onClick={() => setIsOpen(false)}
+                        aria-hidden="true"
+                        className="py-2 text-2xl font-semibold text-refubookBlue"
+                      >
+                        {item.name}
+                      </li>
+                    </Link>
+                  ))
+                : navigation.map((item) => (
+                    <Link to={item.href} key={item.name}>
+                      <li
+                        onClick={() => setIsOpen(false)}
+                        aria-hidden="true"
+                        className="py-2 text-2xl font-semibold text-refubookBlue"
+                      >
+                        {item.name}
+                      </li>
+                    </Link>
+                  ))}
+            </ul>
           </div>
-          <ul className="flex flex-col ml-12 h-full ">
-            <li className="my-4">
-              <Link
-                to="/"
-                className="text-refubookBlue  font-semibold text-xl"
-                onClick={() => setIsOpen(!isOpen)}
-              >
-                Home
-              </Link>
-            </li>
-
-            <li className="my-4">
-              <Link
-                to="/about"
-                className="text-refubookBlue  font-semibold text-xl"
-                onClick={() => setIsOpen(!isOpen)}
-              >
-                About Us
-              </Link>
-            </li>
-            <li className="my-4">
-              <Link
-                to="/contact"
-                className="text-refubookBlue  font-semibold text-xl"
-                onClick={() => setIsOpen(!isOpen)}
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </Transition>
+        </div>
       </div>
     </div>
   );
