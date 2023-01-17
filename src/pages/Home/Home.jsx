@@ -1,3 +1,4 @@
+import Stories from '../../components/Stories/Stories';
 import { Features, Hero, Partners, Testimonials } from '../../components';
 
 function Home() {
@@ -7,6 +8,7 @@ function Home() {
       <Features />
       <Testimonials />
       <Partners />
+      <Stories />
     </div>
   );
 }
