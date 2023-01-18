@@ -13,7 +13,7 @@ exports[`OurTeam renders correctly 1`] = `
       <h1
         className="text-4xl font-bold text-center"
       >
-        Our Team
+        Our_Team
       </h1>
     </div>
     <div
@@ -37,7 +37,7 @@ exports[`OurTeam renders correctly 1`] = `
           tabIndex={0}
           type="button"
         >
-          View All
+          View_All
         </button>
         <button
           aria-selected={false}
@@ -309,7 +309,7 @@ exports[`OurTeam renders correctly 1`] = `
           tabIndex={0}
           type="button"
         >
-          View All
+          View_All
         </button>
         <div
           data-headlessui-state="selected"

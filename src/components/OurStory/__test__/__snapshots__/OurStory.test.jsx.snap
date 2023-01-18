@@ -20,12 +20,12 @@ Array [
       <h2
         className="text-5xl xl:text-6xl font-extrabold text-darkBlue mb-4 text-center"
       >
-        Our Story
+        Our_Story
       </h2>
       <p
         className="text-center px-15 mx-15 font-medium  text-xl max-w-screen"
       >
-        RefuBook is a website dedicated to helping refugees navigate their new surroundings and feel connected to their community. We offer a platform for sharing knowledge and experiences, and strive to be a comprehensive and reliable source of information. Thank you for visiting and we hope you find the resources here helpful in your journey as a refugee.
+        Our_Story_Text
       </p>
     </div>
   </section>,
