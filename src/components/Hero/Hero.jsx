@@ -6,7 +6,7 @@ import illustration from '../../assets/hero-illustration.svg';
 const Hero = () => {
   const { t } = useTranslation();
   return (
-    <section className="container mx-auto my-10 xl:my-0 md:my-8 px-4 md:px-16 flex flex-col-reverse  md:flex-row justify-evenly items-center">
+    <section className="container mx-auto my-24 md:my-32  px-4 md:px-16 flex flex-col-reverse  md:flex-row justify-evenly items-center">
       <div className="flex flex-col items-center lg:items-start justify-center px-2 md:px-0">
         <h1 className="text-5xl xl:text-6xl font-extrabold text-refubookBlue mb-4 text-center lg:text-left">
           {t('Refubook')}
