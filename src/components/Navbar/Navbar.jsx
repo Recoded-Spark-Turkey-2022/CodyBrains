@@ -87,12 +87,12 @@ const Navbar = () => {
           >
             <FaBars size={25} />
           </button>
-          <Link to="/">
-            <img
-              src={logo}
-              alt="Refubook Logo"
-              className="h-10 w-10 hidden md:block"
-            />
+          <Link
+            to="/"
+            className="text-refubookBlue font-bold text-xl  gap-2 md:flex items-center hidden "
+          >
+            <img src={logo} alt="Refubook Logo" className="h-10 w-10 " />
+            {t('Refubook')}
           </Link>
         </div>
 

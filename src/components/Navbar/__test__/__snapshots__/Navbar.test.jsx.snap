@@ -35,13 +35,15 @@ exports[`Navbar should render correctly 1`] = `
         </svg>
       </button>
       <Link
+        className="text-refubookBlue font-bold text-xl  gap-2 md:flex items-center hidden "
         to="/"
       >
         <img
           alt="Refubook Logo"
-          className="h-10 w-10 hidden md:block"
+          className="h-10 w-10 "
           src="logo.svg"
         />
+        Refubook
       </Link>
     </div>
     <div
@@ -66,6 +68,15 @@ exports[`Navbar should render correctly 1`] = `
             className=" py-2 px-4   text-refubookBlue font-medium text-lg tracking-tight"
           >
             About
+          </li>
+        </Link>
+        <Link
+          to="/blog"
+        >
+          <li
+            className=" py-2 px-4   text-refubookBlue font-medium text-lg tracking-tight"
+          >
+            Blog
           </li>
         </Link>
         <Link
@@ -245,6 +256,17 @@ exports[`Navbar should render correctly 1`] = `
               onClick={[Function]}
             >
               About
+            </li>
+          </Link>
+          <Link
+            to="/blog"
+          >
+            <li
+              aria-hidden="true"
+              className="py-2 text-2xl font-semibold text-refubookBlue"
+              onClick={[Function]}
+            >
+              Blog
             </li>
           </Link>
           <Link
