@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { Menu, Transition } from '@headlessui/react';
+import { useTranslation } from 'react-i18next';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { BsChevronDown } from 'react-icons/bs';
@@ -12,6 +13,7 @@ import avatar from '../../assets/avatar.png';
 import { auth } from '../../services/firebase.config';
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
@@ -19,16 +21,17 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const [navigation, setNavigation] = useState([
-    { name: 'Home', href: '/', current: false },
-    { name: 'About', href: '/about', current: false },
-    { name: 'Contact', href: '/contact', current: false },
+    { name: t('Home'), href: '/', current: false },
+    { name: t('About'), href: '/about', current: false },
+    { name: t('Blog'), href: '/blog', current: false },
+    { name: t('Contact'), href: '/contact', current: false },
   ]);
 
   const [profileNavigation, setProfileNavigation] = useState([
-    { name: 'Home', href: '/', current: false },
-    { name: 'Profile', href: '/profile', current: false },
-    { name: 'Write', href: '/write', current: false },
-    { name: 'Sign Out ', href: '/', current: false, onClick: 'logOut' },
+    { name: t('Home'), href: '/', current: false },
+    { name: t('Profile'), href: '/profile', current: false },
+    { name: t('Write'), href: '/write', current: false },
+    { name: t('Sign Out'), href: '/', onClick: 'logOut', current: false },
   ]);
 
   const logOut = async () => {
@@ -353,7 +356,7 @@ const Navbar = () => {
                   className="bg-refubookBlue text-refubookWhite px-4 py-2 rounded-3xl font-medium"
                   onClick={() => setIsOpen(false)}
                 >
-                  Sign In
+                  {t('Sign_In')}
                 </Link>
 
                 <Link
@@ -361,7 +364,7 @@ const Navbar = () => {
                   className="bg-refubookBlue text-refubookWhite px-4 py-2 rounded-3xl font-medium"
                   onClick={() => setIsOpen(false)}
                 >
-                  Sign Up
+                  {t('Sign_Up')}
                 </Link>
               </div>
             )}
