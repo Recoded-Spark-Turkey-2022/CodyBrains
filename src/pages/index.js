@@ -4,4 +4,3 @@ export { default as Contact } from './Contact/Contact';
 export { default as About } from './About/About';
 export { default as Blog } from './Blog/Blog';
 export { default as UserProfile } from './UserProfile/UserProfile';
-export { default as Write } from './Write/Write';

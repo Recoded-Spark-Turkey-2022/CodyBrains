@@ -8,7 +8,6 @@ module.exports = {
       refubookActiveNav: '#026FC2',
       refubookRed: '#FC8476',
       googleRed: '#EB5757',
-      profileStatusRed: '#F46363',
       facebookBlue: '#2F80ED',
       refubookAuthBlue: '#70CDD6',
       refubookLightBlue: '#9DAFBD',
@@ -18,6 +17,8 @@ module.exports = {
       refubookWhite: '#FFFFFF',
       refubookGray: '#8B8F9C',
       refubookAboutBlue: '#E5FAFF',
+      darkBlue: '#025594',
+      refubookTeamLightRed: '#FD9E71',
     },
     fontFamily: {
       roboto: ['Roboto', 'sans-serif'],

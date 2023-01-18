@@ -15,7 +15,7 @@ const OurStory = () => {
             {t('Our_Story')}
           </h2>
           <p className="text-center px-15 mx-15 font-medium  text-xl max-w-screen">
-            {t('Our_Story_Text')}
+          {t('Our_Story_Text')}
           </p>
         </div>
       </section>
