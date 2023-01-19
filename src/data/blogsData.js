@@ -2,7 +2,7 @@
 // The featuresData array is a collection of objects representing the features of RefuBook.
 // Each object has an id, a title, and some text.
 
-import userAvatar from '../assets/user-avatar.png';
+import userAvatar from '../assets/avatar.png';
 import coverImage from '../assets/blog-cover.jpg';
 
 const blogsData = [
