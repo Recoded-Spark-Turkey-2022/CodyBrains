@@ -7,6 +7,9 @@ module.exports = {
       refubookBlue: '#4699C2',
       refubookActiveNav: '#026FC2',
       refubookRed: '#FC8476',
+      googleRed: '#EB5757',
+      facebookBlue: '#2F80ED',
+      refubookAuthBlue: '#70CDD6',
       refubookLightBlue: '#9DAFBD',
       refubookYellow: '#FEDB9B',
       refubookBlack: '#000000',
@@ -14,6 +17,8 @@ module.exports = {
       refubookWhite: '#FFFFFF',
       refubookGray: '#8B8F9C',
       refubookAboutBlue: '#E5FAFF',
+      darkBlue: '#025594',
+      refubookTeamLightRed: '#FD9E71',
     },
     fontFamily: {
       roboto: ['Roboto', 'sans-serif'],

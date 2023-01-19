@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OurStory renders correctly 1`] = `
+Array [
+  <div
+    className="flex justify-center items-center to-transparent h-1/2 w-100"
+  >
+    <img
+      alt=""
+      className="w-1/2"
+      src="hands.jpg"
+    />
+  </div>,
+  <section
+    className="flex flex-col"
+  >
+    <div
+      className="px-40 mx-40 pb-20"
+    >
+      <h2
+        className="text-5xl xl:text-6xl font-extrabold text-darkBlue mb-4 text-center"
+      >
+        Our_Story
+      </h2>
+      <p
+        className="text-center px-15 mx-15 font-medium  text-xl max-w-screen"
+      >
+        Our_Story_Text
+      </p>
+    </div>
+  </section>,
+]
+`;

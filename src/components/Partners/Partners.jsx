@@ -1,12 +1,14 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
+import { useTranslation } from 'react-i18next';
 import partners from '../../data/partnersData';
 
 const Partners = () => {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col items-center justify-center w-full bg-refubookWhite px-8 py-4">
       <h1 className="text-3xl text-refubookBlack font-bold text-center">
-        Our Partners
+        {t('Our_Partners')}
       </h1>
       <Swiper
         spaceBetween={5}
