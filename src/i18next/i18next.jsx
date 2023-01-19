@@ -22,6 +22,6 @@ i18next
     backend: {
       loadPath: './locales/{{lng}}/translation.json',
     },
-  })
+  });
 
 export default i18next;
