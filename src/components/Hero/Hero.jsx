@@ -15,7 +15,7 @@ const Hero = () => {
           {t('Express_Freely')}
         </h2>
         <p className="text-base text-grey-800 mb-8 w-full lg:w-3/5 text-center lg:text-left">
-        {t('Hero_Text')}
+          {t('Hero_Text')}
         </p>
         <Link to="/signup">
           <button
