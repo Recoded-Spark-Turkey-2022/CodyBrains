@@ -19,5 +19,13 @@
   "Our_Team": "Our Team",
   "View_All": "View All",
   "Share_Your_Story": "Share your story, help others and get help from others",
-  "Share_Your_Story_Content": "“I am grateful for the opportunities I received in a new country with the help of the wonderful community here.” – Nura, 32"
+  "Share_Your_Story_Content": "“I am grateful for the opportunities I received in a new country with the help of the wonderful community here.” – Nura, 32",
+  "contact": {
+    "Contact": "Contact",
+    "touch":"Get in Touch",
+     "p" :" We are always ready to help you. If you have any questions, please feel free to contact us.",
+     "message":"Messagr",
+     "email":"Email",
+     "send":"Send"
+   }
 }

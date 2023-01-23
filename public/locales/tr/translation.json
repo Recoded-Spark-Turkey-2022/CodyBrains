@@ -19,5 +19,13 @@
   "Our_Team": "Bizim Takım",
   "View_All": "Hepsini gör",
   "Share_Your_Story": "Hikayenizi paylaşın, başkalarına yardım edin ve başkalarından yardım alın",
-  "Share_Your_Story_Content": "“Buradaki harika topluluğun yardımıyla yeni bir ülkede elde ettiğim fırsatlar için minnettarım.” – Nura, 32"
+  "Share_Your_Story_Content": "“Buradaki harika topluluğun yardımıyla yeni bir ülkede elde ettiğim fırsatlar için minnettarım.” – Nura, 32" ,
+  "contact": {
+    "Contact": "Contact",
+    "touch":"Get in Touch",
+     "p" :" We are always ready to help you. If you have any questions, please feel free to contact us.",
+     "message":"Messagr",
+     "email":"Email",
+     "send":"Send"
+  }
 }

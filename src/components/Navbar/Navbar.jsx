@@ -91,7 +91,7 @@ const Navbar = () => {
               to="/contact"
               className="text-refubookGray hover:text-refubookActiveNav font-medium"
             >
-              {t('contact.Contact')}
+              {t('Contact')}
             </Link>
           </li>
           {user ? (
