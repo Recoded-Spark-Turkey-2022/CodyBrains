@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useSelector } from "react-redux";
+import { selectUser } from '../../features/userSlice';
 import hug from '../../assets/hug.png';
 
 const SignUp = () => {
+  const user = useSelector(selectUser);
   const { t } = useTranslation();
   return (
     <section className="flex flex-col">
@@ -16,14 +19,21 @@ const SignUp = () => {
           {t('Share_Your_Story_Content')}
         </p>
 
-        <Link to="/signup">
+        {user?<Link to="/profile">
+          <button
+            type="button"
+            className="py-1 px-3 md:py-2 md:px-9 bg-refubookBlue text-refubookWhite font-bold text-lg md:text-xl  rounded-full shadow-lg hover:bg-refubookWhite hover:text-refubookBlack transition duration-500 ease-in-out"
+          >
+            {t('Create Blog Post')}
+          </button>
+        </Link>:<Link to="/signup">
           <button
             type="button"
             className="py-1 px-3 md:py-2 md:px-9 bg-refubookBlue text-refubookWhite font-bold text-lg md:text-xl  rounded-full shadow-lg hover:bg-refubookWhite hover:text-refubookBlack transition duration-500 ease-in-out"
           >
             {t('Sign_Up')}
           </button>
-        </Link>
+        </Link>}
       </div>
     </section>
   );

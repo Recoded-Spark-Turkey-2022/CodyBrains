@@ -10,7 +10,7 @@ const OurStory = () => {
         <img className="w-1/2" src={hands} alt="" />
       </div>
       <section className="flex flex-col">
-        <div className="px-40 mx-40 pb-20">
+        <div className="mx-20 pb-20 grid place-items-center">
           <h2 className="text-5xl xl:text-6xl font-extrabold text-darkBlue mb-4 text-center">
             {t('Our_Story')}
           </h2>
