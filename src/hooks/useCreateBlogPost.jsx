@@ -1,31 +1,56 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { FieldValue, collection } from 'firebase/firestore';
+import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import {
+  Timestamp,
+  doc,
+  addDoc,
+  updateDoc,
+  collection,
+  arrayUnion,
+} from 'firebase/firestore';
+import { db } from '../services/firebase.config';
+import { selectUser } from '../features/userSlice';
 
-function useCreateBlogPost() {
-  const [isCreating, setIsCreating] = useState(false);
-  const user = useSelector((state) => state.user);
+export const useCreateBlogPost = () => {
+  const [title, setTitle] = useState('');
+  const [loading, setLoading] = useState(false);
+  const user = useSelector(selectUser);
+  const navigate = useNavigate();
 
-  const createBlogPost = async (title, content) => {
-    setIsCreating(true);
+  const createBlogPost = async (content) => {
+    setLoading(true);
     try {
-      await collection('users')
-        .doc(user.uid)
-        .update({
-          blogPosts: FieldValue.arrayUnion({ title, content }),
-        });
+      const docRef = await addDoc(collection(db, 'posts'), {
+        title,
+        content,
+        date: Timestamp.fromDate(new Date()),
+        author: {
+          id: user.uid,
+          name: user.displayName,
+          photo: user.photoURL,
+        },
+      });
+      await updateDoc(doc(db, 'users', user.uid), {
+        posts: arrayUnion({
+          id: docRef.id,
+          title,
+          date: Timestamp.fromDate(new Date()),
+          content,
+        }),
+      });
+      setLoading(false);
+      navigate(`/post/${docRef.id}`);
     } catch (error) {
+      setLoading(false);
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
         text: error.message,
       });
     }
-    setIsCreating(false);
   };
 
-  return { isCreating, createBlogPost };
-}
-
-export default useCreateBlogPost;
+  return { title, setTitle, createBlogPost, loading };
+};
