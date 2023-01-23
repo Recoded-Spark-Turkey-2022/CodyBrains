@@ -73,7 +73,7 @@ const Navbar = () => {
               to="/about"
               className="text-refubookGray hover:text-refubookActiveNav font-medium"
             >
-              {t('about.About')}
+              {t('About')}
             </Link>
           </li>
 
