@@ -15,7 +15,7 @@ Array [
     className="flex flex-col"
   >
     <div
-      className="px-40 mx-40 pb-20"
+      className="mx-20 pb-20 grid place-items-center"
     >
       <h2
         className="text-5xl xl:text-6xl font-extrabold text-darkBlue mb-4 text-center"
