@@ -20,8 +20,6 @@ jest.mock('react-router-dom', () => ({
 
 jest.mock('html-react-parser', () => jest.fn());
 
-jest.mock('react-quill', () => 'ReactQuill');
-
 jest.mock('../../../hooks/useCreateBlogPost', () => ({
   useCreateBlogPost: () => ({
     createBlogPost: jest.fn(),
