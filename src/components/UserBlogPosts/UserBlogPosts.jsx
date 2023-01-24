@@ -4,8 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
 import { doc, getDoc } from 'firebase/firestore';
-// eslint-disable-next-line import/no-unresolved
-import 'swiper/css/pagination';
+
 import parse from 'html-react-parser';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { db } from '../../services/firebase.config';

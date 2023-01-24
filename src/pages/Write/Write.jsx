@@ -1,12 +1,7 @@
 import { useState } from 'react';
-import ReactQuill, { Quill } from 'react-quill';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import ImageCompress from 'quill-image-compress';
+import ReactQuill from 'react-quill';
 import parse from 'html-react-parser';
-import 'react-quill/dist/quill.snow.css';
 import { useCreateBlogPost } from '../../hooks/useCreateBlogPost';
-
-Quill.register('modules/imageCompress', ImageCompress);
 
 const Write = () => {
   const [content, setContent] = useState('');
@@ -39,17 +34,9 @@ const Write = () => {
       ['blockquote', 'code-block'],
       [{ list: 'ordered' }, { list: 'bullet' }],
       [{ indent: '-1' }, { indent: '+1' }, { align: [] }],
-      ['link', 'image'],
+      ['link'],
       ['clean'],
     ],
-    imageCompress: {
-      quality: 0.7, // default
-      maxWidth: 1000, // default
-      maxHeight: 1000, // default
-      imageType: 'image/jpeg', // default
-      suppressErrorLogging: false, // default
-      insertIntoEditor: undefined, // default
-    },
   };
 
   return (
