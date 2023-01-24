@@ -31,3 +31,7 @@ body {
 .ql-editor {
   min-height: 18em;
 }
+
+.ql-editor p {
+  margin: 0;
+}
