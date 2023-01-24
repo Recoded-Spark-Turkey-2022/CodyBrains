@@ -31,7 +31,6 @@ const UserBlogPosts = ({ user }) => {
   const defaultImageUrl =
     'https://images.unsplash.com/photo-1521295121783-8a321d551ad2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80';
 
-  console.log('blogPosts', blogPosts);
   return (
     <div className="bg-refubookWhite mt-32 mb-16  ">
       {loading ? (
@@ -60,8 +59,8 @@ const UserBlogPosts = ({ user }) => {
         </div>
       ) : (
         <div className="md:container mx-auto px-4 sm:px-6 lg:px-8 max-w-sm">
-          <div className="flex justify-between items-center mb-5">
-            <h2 className="text-2xl font-semibold text-refubookBlack">
+          <div className="flex justify-between items-center mb-5 px-5">
+            <h2 className="md:text-2xl text-lg font-semibold text-refubookBlack">
               Your Blog Posts
             </h2>
             <button
