@@ -1,9 +1,38 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
-import testimonialsData from '../../data/testimonialsData';
+import { useTranslation } from 'react-i18next';
+
 import map from '../../assets/world-map.svg';
 
 const Testimonials = () => {
+  const { t } = useTranslation();
+  const testimonialsData = [
+    {
+      id: 1,
+      name: t('Maria'),
+      comment: t('Maria_Comment'),
+      country:t('Maria_Country'),
+    },
+    {
+      id: 1,
+      name: t('Hassan'),
+      comment: t('Hassan_Comment'),
+      country:t('Hassan_Country'),
+    },
+    {
+      id: 1,
+      name: t('Olga'),
+      comment: t('Olga_Comment'),
+      country:t('Olga_Country'),
+    },
+    {
+      id: 1,
+      name: t('John'),
+      comment: t('John_Comment'),
+      country:t('John_Country'),
+    },
+  ]
+
   return (
     <div className="flex flex-col md:flex-row items-center justify-evenly w-full bg-refubookWhite px-8 py-4">
       <div className="flex flex-col items-center justify-center max-w-md">

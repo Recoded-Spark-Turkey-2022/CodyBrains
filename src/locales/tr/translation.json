@@ -27,5 +27,25 @@
   "Efficiency": "Yeterlik",
   "Efficiency_Text": "Verimliliğe değer veriyoruz ve web sitemizi mültecilerin ihtiyaç duydukları bilgi ve kaynaklara kolayca erişebilmeleri için kullanıcı dostu hale getirmeye çalışıyoruz.",
   "Creativity": "Yaratıcılık",
-  "Creativity_Text": "Mültecilerin karşılaştığı zorluklara yenilikçi çözümler bulmak için yaratıcılık çok önemlidir. Kullanıcıları benzersiz bakış açılarını ve fikirlerini platformumuzda paylaşmaya teşvik ediyoruz."
+  "Creativity_Text": "Mültecilerin karşılaştığı zorluklara yenilikçi çözümler bulmak için yaratıcılık çok önemlidir. Kullanıcıları benzersiz bakış açılarını ve fikirlerini platformumuzda paylaşmaya teşvik ediyoruz.",
+  "Maria":"Maria",
+  "Maria_Comment":"RefuBook has been a game changer for me as a refugee from Mexico. It's so comprehensive and up-to-date, and I feel much more connected to my community because of it.",
+  "Maria_Country":"Mexico",
+  "Hassan":"Hassan",
+  "Hassan_Comment":"As a refugee from Afghanistan, RefuBook has been an invaluable resource for me. It's so reliable and trustworthy, and I feel much more confident about my future because of it.",
+  "Hassan_Country":"Afghanistan",
+  "Olga":"Olga",
+  "Olga_Comment":"RefuBook has been a lifesaver for me as a refugee from Ukraine. It's so user-friendly and efficient, and I've been able to find all the information and resources I need thanks to it.",
+  "Olga_Country":"Ukraine",
+  "John":"John", 
+  "John_Comment":"The community on RefuBook has been a great source of support and motivation for me as a refugee from South Sudan. I'm so grateful to have found such a welcoming and helpful platform.", 
+  "John_Country":"South Sudan",
+  "contact": {
+    "Contact": "Contact",
+    "touch":"Get in Touch",
+     "p" :" We are always ready to help you. If you have any questions, please feel free to contact us.",
+     "message":"Message",
+     "email":"Email",
+     "send":"Send"
+}
 }
