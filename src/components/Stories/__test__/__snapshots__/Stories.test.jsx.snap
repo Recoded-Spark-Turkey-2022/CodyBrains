@@ -33,12 +33,12 @@ exports[`Stories renders correctly 1`] = `
         <span
           className=" w-fit text-center p-1 rounded  bg-refubookYellow  text-refubookGray font-bold  "
         >
-          Languages
+          Stories_Rami_Category
         </span>
         <h1
           className="mt-5 mb-10 lg:text-4xl text-2xl text-refubookWhite font-light  "
         >
-          How I learned Turkish quickly and what are the best places to learn.
+          Stories_Rami_Title
         </h1>
         <div
           className="flex"
@@ -52,12 +52,12 @@ exports[`Stories renders correctly 1`] = `
             <p
               className="text-refubookWhite font-bold "
             >
-              Rami Al-Khaldi
+              Rami_Al-Khaldi
             </p>
             <p
               className="text-refubookWhite font-light"
             >
-              Refugee in Turkey
+              Stories_Rami_Role
             </p>
           </div>
         </div>
@@ -77,12 +77,12 @@ exports[`Stories renders correctly 1`] = `
         <span
           className=" w-fit text-center p-1 rounded  bg-refubookYellow  text-refubookGray font-bold  "
         >
-          Jobs
+          Stories_Ahmad_Category
         </span>
         <h1
           className="mt-5 mb-10 lg:text-4xl text-2xl text-refubookWhite font-light  "
         >
-          How to find job in Lebanon, and what are the obstacles in Lebanon.
+          Stories_Ahmad_Title
         </h1>
         <div
           className="flex"
@@ -96,12 +96,12 @@ exports[`Stories renders correctly 1`] = `
             <p
               className="text-refubookWhite font-bold "
             >
-              Ahmad Fesal
+              Ahmad_Fesal
             </p>
             <p
               className="text-refubookWhite font-light"
             >
-              Refugee in Lebanon
+              Stories_Ahmad_Role
             </p>
           </div>
         </div>
