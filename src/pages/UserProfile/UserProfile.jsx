@@ -15,7 +15,7 @@ const UserProfile = () => {
   };
 
   return (
-    <div className="flex flex-col items-center  gap-4 min-h-screen">
+    <div className=" container mx-auto flex flex-col items-center  gap-4 min-h-screen ">
       {isEditing ? (
         <EditProfile setIsEditing={setIsEditing} />
       ) : (

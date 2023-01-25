@@ -14,3 +14,24 @@ body {
 * {
   box-sizing: border-box;
 }
+
+.ql-container {
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  background: #fefcfc;
+}
+
+.ql-snow.ql-toolbar {
+  display: block;
+  background: #eaecec;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+
+.ql-editor {
+  min-height: 18em;
+}
+
+.ql-editor p {
+  margin: 0;
+}
