@@ -6,3 +6,4 @@ export { default as Blog } from './Blog/Blog';
 export { default as UserProfile } from './UserProfile/UserProfile';
 export { default as NotFound } from './NotFound/NotFound';
 export { default as Write } from './Write/Write';
+export { default as SingleBlogPage } from './SingleBlogPage/SingleBlogPage';

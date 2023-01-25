@@ -52,6 +52,7 @@ exports[`Write should render correctly 1`] = `
                 Upload Your Header Image
               </span>
               <input
+                accept="image/*"
                 class="hidden"
                 id="file"
                 type="file"

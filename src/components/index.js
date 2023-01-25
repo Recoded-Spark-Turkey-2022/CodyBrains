@@ -7,3 +7,8 @@ export { default as Providers } from './Providers/Providers';
 export { default as Navbar } from './Navbar/Navbar';
 export { default as UserBlogPosts } from './UserBlogPosts/UserBlogPosts';
 export { default as EditProfile } from './EditProfile/EditProfile';
+export { default as OurStory } from './OurStory/OurStory';
+export { default as OurTeam } from './OurTeam/OurTeam';
+export { default as Stories } from './Stories/Stories';
+export { default as SignUp } from './SignupPart/Signuppart';
+export { default as LanguagesMenu } from './LanguagesMenu/LanguagesMenu';

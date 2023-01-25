@@ -7,11 +7,11 @@ import {
   Contact,
   Home,
   NotFound,
+  SingleBlogPage,
   UserProfile,
   Write,
 } from './pages';
 import { Footer, Navbar } from './components';
-import SingleBlogPage from './pages/SingleBlogPage/SingleBlogPage';
 
 function App() {
   return (

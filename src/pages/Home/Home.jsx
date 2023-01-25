@@ -1,5 +1,10 @@
-import Stories from '../../components/Stories/Stories';
-import { Features, Hero, Partners, Testimonials } from '../../components';
+import {
+  Features,
+  Hero,
+  Partners,
+  Stories,
+  Testimonials,
+} from '../../components';
 
 function Home() {
   return (
