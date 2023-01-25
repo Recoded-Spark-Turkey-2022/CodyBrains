@@ -57,9 +57,7 @@ const Testimonials = () => {
                 {/* The content for each slide is a div containing an image, a title, and some text. */}
 
                 <h3 className="text-lg text-refubookBlack font-normal md:text-justify  text-center">
-                {t(item.comment)}
-                  
-                  
+                  {t(item.comment)}
                 </h3>
                 <span className="text-md  text-refubookLightBlue font-light md:text-left text-center">
                   {t(item.name)}

@@ -1,9 +1,13 @@
 import { useState } from 'react';
 import ReactQuill from 'react-quill';
 import parse from 'html-react-parser';
+import Swal from 'sweetalert2';
+import { useSelector } from 'react-redux';
+import { selectUser } from '../../features/userSlice';
 import { useCreateBlogPost } from '../../hooks/useCreateBlogPost';
 
 const Write = () => {
+  const user = useSelector(selectUser);
   const [content, setContent] = useState('');
   const {
     title,
@@ -19,9 +23,23 @@ const Write = () => {
     setContent(value);
   };
 
-  const handleSubmit = (e) => {
+  const checkUser = async () => {
+    if (!user) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'You need to login to write a blog post',
+      });
+    }
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    createBlogPost(content);
+    if (!user) {
+      checkUser();
+    } else {
+      await createBlogPost(content);
+    }
   };
 
   const modules = {

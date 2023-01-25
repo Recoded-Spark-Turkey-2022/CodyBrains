@@ -79,8 +79,7 @@ const Features = () => {
                   <div className=" flex flex-col items-center justify-center gap-5 py-5">
                     <img src={star} alt="" />
                     <p className="text-md  text-refubookLightBlack font-medium text-center">
-                    {t('item.title')}
-                      
+                      {t('item.title')}
                     </p>
                     <p className="text-md  text-refubookLightBlack font-medium text-center mb-4">
                       {t('item.text')}
