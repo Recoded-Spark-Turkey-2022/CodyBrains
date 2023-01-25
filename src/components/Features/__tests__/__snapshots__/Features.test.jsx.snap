@@ -61,12 +61,12 @@ exports[`Features renders correctly 1`] = `
             <p
               className="text-md  text-refubookLightBlack font-medium text-center"
             >
-              Reliability
+              item.title
             </p>
             <p
               className="text-md  text-refubookLightBlack font-medium text-center mb-4"
             >
-              At RefuBook, we prioritize accuracy and up-to-date information to be a dependable source for refugees. Trustworthiness is crucial for us.
+              item.text
             </p>
           </div>
         </SwiperSlide>
@@ -81,12 +81,12 @@ exports[`Features renders correctly 1`] = `
             <p
               className="text-md  text-refubookLightBlack font-medium text-center"
             >
-              Motivation
+              item.title
             </p>
             <p
               className="text-md  text-refubookLightBlack font-medium text-center mb-4"
             >
-              Our goal is to help refugees feel connected to their community and succeed in their new home. We are dedicated to providing the necessary resources and support.
+              item.text
             </p>
           </div>
         </SwiperSlide>
@@ -101,12 +101,12 @@ exports[`Features renders correctly 1`] = `
             <p
               className="text-md  text-refubookLightBlack font-medium text-center"
             >
-              Efficiency
+              item.title
             </p>
             <p
               className="text-md  text-refubookLightBlack font-medium text-center mb-4"
             >
-              We value efficiency and strive to make our website user-friendly for refugees to easily access the information and resources they need.
+              item.text
             </p>
           </div>
         </SwiperSlide>
@@ -121,12 +121,12 @@ exports[`Features renders correctly 1`] = `
             <p
               className="text-md  text-refubookLightBlack font-medium text-center"
             >
-              Creativity
+              item.title
             </p>
             <p
               className="text-md  text-refubookLightBlack font-medium text-center mb-4"
             >
-              Creativity is essential for finding innovative solutions to the challenges refugees face. We encourage users to share their unique perspectives and ideas on our platform.
+              item.text
             </p>
           </div>
         </SwiperSlide>
@@ -154,7 +154,7 @@ exports[`Features renders correctly 1`] = `
         <p
           className="text-md text-refubookLightBlack font-medium text-left"
         >
-          At RefuBook, we prioritize accuracy and up-to-date information to be a dependable source for refugees. Trustworthiness is crucial for us.
+          Reliability_Text
         </p>
       </div>
       <div
@@ -176,7 +176,7 @@ exports[`Features renders correctly 1`] = `
         <p
           className="text-md text-refubookLightBlack font-medium text-left"
         >
-          Our goal is to help refugees feel connected to their community and succeed in their new home. We are dedicated to providing the necessary resources and support.
+          Motivation_Text
         </p>
       </div>
       <div
@@ -198,7 +198,7 @@ exports[`Features renders correctly 1`] = `
         <p
           className="text-md text-refubookLightBlack font-medium text-left"
         >
-          We value efficiency and strive to make our website user-friendly for refugees to easily access the information and resources they need.
+          Efficiency_Text
         </p>
       </div>
       <div
@@ -220,7 +220,7 @@ exports[`Features renders correctly 1`] = `
         <p
           className="text-md text-refubookLightBlack font-medium text-left"
         >
-          Creativity is essential for finding innovative solutions to the challenges refugees face. We encourage users to share their unique perspectives and ideas on our platform.
+          Creativity_Text
         </p>
       </div>
     </div>

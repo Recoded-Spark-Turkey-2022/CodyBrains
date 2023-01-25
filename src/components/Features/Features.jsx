@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
 import { useTranslation } from 'react-i18next';
-import featuresData from '../../data/featuresData';
+// import featuresData from '../../data/featuresData';
 import Feature from './Feature';
 import illustration from '../../assets/features-illustration.svg';
 import star from '../../assets/star.svg';
@@ -10,6 +10,30 @@ import star from '../../assets/star.svg';
 // The Features component is a functional component that displays information about RefuBook.
 const Features = () => {
   const { t } = useTranslation();
+
+  const featuresData = [
+    {
+      id: 1,
+      title: t('Reliability'),
+      text: t('Reliability_Text'),
+    },
+    {
+      id: 2,
+      title: t('Motivation'),
+      text: t('Motivation_Text'),
+    },
+    {
+      id: 3,
+      title: t('Efficiency'),
+      text: t('Efficiency_Text'),
+    },
+    {
+      id: 4,
+      title: t('Creativity'),
+      text: t('Creativity_Text'),
+    },
+  ];
+
   return (
     // The component consists of a div with a blue background and two main sections: a section with text and a button, and a section with an illustration and a list of features.
     <div className="w-full flex flex-col items-center justify-center bg-refubookAboutBlue py-4 mt-5">
@@ -55,10 +79,11 @@ const Features = () => {
                   <div className=" flex flex-col items-center justify-center gap-5 py-5">
                     <img src={star} alt="" />
                     <p className="text-md  text-refubookLightBlack font-medium text-center">
-                      {item.title}
+                    {t('item.title')}
+                      
                     </p>
                     <p className="text-md  text-refubookLightBlack font-medium text-center mb-4">
-                      {item.text}
+                      {t('item.text')}
                     </p>
                   </div>
                 </SwiperSlide>
