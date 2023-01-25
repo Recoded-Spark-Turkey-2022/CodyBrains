@@ -101,9 +101,7 @@ const Blog = () => {
                         alt=""
                       />
                       <p className="text-sm font-medium text-refubookActiveNav">
-                        {new Date(
-                          item.date.seconds * 1000
-                        ).toLocaleDateString()}
+                        {(item.date.seconds * 1000).toLocaleString()}
                       </p>
 
                       <p className="md:text-md  text-lg text-center mb-3 border-b font-semibold text-refubookBlack">
