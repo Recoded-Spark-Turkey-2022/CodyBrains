@@ -34,6 +34,12 @@ const Navbar = () => {
     { name: t('Sign Out'), href: '/', onClick: 'logOut', current: false },
   ]);
 
+  const [dropdownNavigation, setDropdownNavigation] = useState([
+    { name: t('Profile'), href: '/profile', current: false },
+    { name: t('Write'), href: '/write', current: false },
+    { name: t('Sign Out'), href: '/', onClick: 'logOut', current: false },
+  ]);
+
   const logOut = async () => {
     try {
       await signOut(auth);
@@ -67,6 +73,14 @@ const Navbar = () => {
       })
     );
     setProfileNavigation((prev) =>
+      prev.map((item) => {
+        if (item.href === location.pathname) {
+          return { ...item, current: true };
+        }
+        return { ...item, current: false };
+      })
+    );
+    setDropdownNavigation((prev) =>
       prev.map((item) => {
         if (item.href === location.pathname) {
           return { ...item, current: true };
@@ -158,49 +172,23 @@ const Navbar = () => {
               >
                 <Menu.Items className="absolute bg-refubookWhite right-0 w-56 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                   <div className="px-1 py-1  ">
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link
-                          to="/profile"
-                          className={`${
-                            active
-                              ? 'bg-refubookActiveNav text-white'
-                              : 'text-gray-900'
-                          } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
-                        >
-                          Profile
-                        </Link>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link
-                          to="/write"
-                          className={`${
-                            active
-                              ? 'bg-refubookActiveNav text-white'
-                              : 'text-gray-900'
-                          } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
-                        >
-                          Write
-                        </Link>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
-                        <button
-                          type="button"
-                          onClick={logOut}
-                          className={`${
-                            active
-                              ? 'bg-refubookActiveNav text-white'
-                              : 'text-gray-900'
-                          } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
-                        >
-                          Sign out
-                        </button>
-                      )}
-                    </Menu.Item>
+                    {dropdownNavigation.map((item) => (
+                      <Menu.Item key={item.name}>
+                        {({ active }) => (
+                          <Link
+                            to={item.href}
+                            onClick={item.onClick === 'logOut' ? logOut : null}
+                            className={`${
+                              active
+                                ? 'bg-refubookActiveNav text-white'
+                                : 'text-gray-900'
+                            } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
+                          >
+                            {item.name}
+                          </Link>
+                        )}
+                      </Menu.Item>
+                    ))}
                   </div>
                 </Menu.Items>
               </Transition>
@@ -298,51 +286,25 @@ const Navbar = () => {
                     >
                       <Menu.Items className="absolute z-[999] bg-refubookWhite w-full  flex flex-col gap-10 mt-2  divide-y divide-refubookBlack rounded-md shadow-lg ring-1 ring-refubookBlack ring-opacity-5 focus:outline-none">
                         <div className="px-2 py-1  ">
-                          <Menu.Item>
-                            {({ active }) => (
-                              <Link
-                                to="/profile"
-                                className={`${
-                                  active
-                                    ? 'bg-refubookActiveNav text-white'
-                                    : 'text-gray-900'
-                                } group flex  items-center w-full p-4 text-xl font-medium border-b`}
-                                onClick={() => setIsOpen(!isOpen)}
-                              >
-                                Profile
-                              </Link>
-                            )}
-                          </Menu.Item>
-                          <Menu.Item>
-                            {({ active }) => (
-                              <Link
-                                to="/write"
-                                className={`${
-                                  active
-                                    ? 'bg-refubookActiveNav text-white'
-                                    : 'text-gray-900'
-                                } group flex border-b items-center w-full p-4 text-xl font-medium`}
-                                onClick={() => setIsOpen(!isOpen)}
-                              >
-                                Write
-                              </Link>
-                            )}
-                          </Menu.Item>
-                          <Menu.Item>
-                            {({ active }) => (
-                              <button
-                                type="button"
-                                onClick={logOut}
-                                className={`${
-                                  active
-                                    ? 'bg-refubookActiveNav text-white'
-                                    : 'text-gray-900'
-                                } group flex rounded-md items-center w-full p-4 text-xl font-medium`}
-                              >
-                                Sign out
-                              </button>
-                            )}
-                          </Menu.Item>
+                          {dropdownNavigation.map((item) => (
+                            <Menu.Item key={item.name}>
+                              {({ active }) => (
+                                <Link
+                                  to={item.href}
+                                  onClick={
+                                    item.onClick === 'logOut' ? logOut : null
+                                  }
+                                  className={`${
+                                    active
+                                      ? 'bg-refubookActiveNav text-white'
+                                      : 'text-gray-900'
+                                  } group flex rounded-md items-center w-full p-4 text-xl font-medium`}
+                                >
+                                  {item.name}
+                                </Link>
+                              )}
+                            </Menu.Item>
+                          ))}
                         </div>
                       </Menu.Items>
                     </Transition>

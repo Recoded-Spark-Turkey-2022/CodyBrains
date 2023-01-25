@@ -8,6 +8,7 @@ import {
   Home,
   NotFound,
   UserProfile,
+  Write,
 } from './pages';
 import { Footer, Navbar } from './components';
 
@@ -28,7 +29,6 @@ function App() {
           />
         ))}
         <Route path="profile" element={<UserProfile />} />
-        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>
