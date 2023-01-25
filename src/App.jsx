@@ -1,8 +1,15 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { About, Auth, Blog, Contact, Home, UserProfile } from './pages';
+import {
+  About,
+  Auth,
+  Blog,
+  Contact,
+  Home,
+  NotFound,
+  UserProfile,
+} from './pages';
 import { Footer, Navbar } from './components';
-import NotFound from './pages/NotFound/NotFound';
 
 function App() {
   return (
