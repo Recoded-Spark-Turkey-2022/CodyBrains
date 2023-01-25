@@ -24,10 +24,9 @@ const Blog = () => {
     };
     getBlogs();
   }, []);
+  const firstFourBlogs = blogsData.slice(0, 4);
 
   const combinedArrays = [...blogPosts, ...blogsData];
-
-  const firstFourBlogs = blogsData.slice(0, 4);
 
   const defaultImageUrl =
     'https://images.unsplash.com/photo-1521295121783-8a321d551ad2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80';
@@ -134,7 +133,9 @@ const Blog = () => {
 
                       {item.text && (
                         <div className=" max-h-36 overflow-hidden ">
-                          <p className="text-sm  ">{item.text.slice(0, 200)}</p>
+                          <p className="text-sm  ">
+                            {item.text.slice(0, 230)}...
+                          </p>
                         </div>
                       )}
                     </div>

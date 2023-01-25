@@ -46,7 +46,8 @@ exports[`renders correctly 1`] = `
               <p
                 className="text-sm  "
               >
-                There are several ways to learn a language from locals as a refugee: Enroll in a language class: Many communities offer language classes for refugees and immigrants. These classes are usually taught b
+                There are several ways to learn a language from locals as a refugee: Enroll in a language class: Many communities offer language classes for refugees and immigrants. These classes are usually taught by trained instructors and can 
+                ...
               </p>
             </div>
           </div>
@@ -125,7 +126,8 @@ exports[`renders correctly 1`] = `
               <p
                 className="text-sm  "
               >
-                Leaving ones home country and immigrating to a new place can be a challenging and emotional experience, especially for refugees who may be fleeing conflict, persecution, or other difficult circumstanc
+                Leaving ones home country and immigrating to a new place can be a challenging and emotional experience, especially for refugees who may be fleeing conflict, persecution, or other difficult circumstances. Lorem ipsum, dolor sit ame
+                ...
               </p>
             </div>
           </div>
@@ -204,7 +206,8 @@ exports[`renders correctly 1`] = `
               <p
                 className="text-sm  "
               >
-                Nour was a young Syrian girl who lived with her parents and two younger brothers in a small village near the border of Turkey. One day, their peaceful village was attacked by a group of armed men, and
+                Nour was a young Syrian girl who lived with her parents and two younger brothers in a small village near the border of Turkey. One day, their peaceful village was attacked by a group of armed men, and Nours family was forced to fl
+                ...
               </p>
             </div>
           </div>
@@ -283,7 +286,8 @@ exports[`renders correctly 1`] = `
               <p
                 className="text-sm  "
               >
-                If you are a refugee moving to a new country, there are a few steps you can take to help you adjust to your new environment and get settled in your new home: Learn about the country you are moving to:
+                If you are a refugee moving to a new country, there are a few steps you can take to help you adjust to your new environment and get settled in your new home: Learn about the country you are moving to: Research the culture, customs
+                ...
               </p>
             </div>
           </div>
@@ -362,7 +366,8 @@ exports[`renders correctly 1`] = `
               <p
                 className="text-sm  "
               >
-                There are several ways to learn a language from locals as a refugee: Enroll in a language class: Many communities offer language classes for refugees and immigrants. These classes are usually taught b
+                There are several ways to learn a language from locals as a refugee: Enroll in a language class: Many communities offer language classes for refugees and immigrants. These classes are usually taught by trained instructors and can 
+                ...
               </p>
             </div>
           </div>
@@ -441,7 +446,8 @@ exports[`renders correctly 1`] = `
               <p
                 className="text-sm  "
               >
-                Leaving ones home country and immigrating to a new place can be a challenging and emotional experience, especially for refugees who may be fleeing conflict, persecution, or other difficult circumstanc
+                Leaving ones home country and immigrating to a new place can be a challenging and emotional experience, especially for refugees who may be fleeing conflict, persecution, or other difficult circumstances. Lorem ipsum, dolor sit ame
+                ...
               </p>
             </div>
           </div>
