@@ -17,6 +17,7 @@ import {
   ref,
   uploadBytesResumable,
 } from 'firebase/storage';
+import { v4 as uuidv4 } from 'uuid';
 import { db } from '../services/firebase.config';
 import { selectUser } from '../features/userSlice';
 
@@ -27,6 +28,8 @@ export const useCreateBlogPost = () => {
   const [loading, setLoading] = useState(false);
   const user = useSelector(selectUser);
   const navigate = useNavigate();
+
+  const id = uuidv4();
 
   const handleFileChange = (e) => {
     const selected = e.target.files[0];
@@ -84,17 +87,19 @@ export const useCreateBlogPost = () => {
       setLoading(false);
       return;
     }
+
     try {
-      const docRef = await addDoc(collection(db, 'posts'), {
+      const docRef = await addDoc(collection(db, 'blogs'), {
+        id,
         title,
-        content,
         date: Timestamp.fromDate(new Date()),
+        content,
+        headerPhoto,
         author: {
-          id: user.uid,
           name: user.displayName,
+          id: user.uid,
           photo: user.photoURL,
         },
-        headerPhoto,
       });
       await updateDoc(doc(db, 'users', user.uid), {
         posts: arrayUnion({
@@ -105,6 +110,7 @@ export const useCreateBlogPost = () => {
           headerPhoto,
         }),
       });
+
       await Swal.fire({
         title: 'Your post created',
         text: 'Redirecting to your profile',

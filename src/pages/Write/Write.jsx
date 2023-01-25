@@ -86,6 +86,7 @@ const Write = () => {
                     handleFileChange(e);
                     setFile(e.target.files[0]);
                   }}
+                  accept="image/*"
                 />
               </label>
             </div>

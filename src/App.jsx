@@ -11,6 +11,7 @@ import {
   Write,
 } from './pages';
 import { Footer, Navbar } from './components';
+import SingleBlogPage from './pages/SingleBlogPage/SingleBlogPage';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="profile" element={<UserProfile />} />
         <Route path="*" element={<NotFound />} />
         <Route path="write" element={<Write />} />
+        <Route path="blog/:id" element={<SingleBlogPage />} />
       </Routes>
       <Footer />
     </div>
