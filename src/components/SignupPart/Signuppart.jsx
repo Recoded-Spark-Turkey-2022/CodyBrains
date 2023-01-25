@@ -24,7 +24,7 @@ const SignUp = () => {
             type="button"
             className="py-1 px-3 md:py-2 md:px-9 bg-refubookBlue text-refubookWhite font-bold text-lg md:text-xl  rounded-full shadow-lg hover:bg-refubookWhite hover:text-refubookBlack transition duration-500 ease-in-out"
           >
-            {t('Create Blog Post')}
+            {t('Create_Blog_Post')}
           </button>
         </Link>:<Link to="/signup">
           <button
