@@ -29,6 +29,8 @@ function App() {
           />
         ))}
         <Route path="profile" element={<UserProfile />} />
+        <Route path="*" element={<NotFound />} />
+        <Route path="write" element={<Write />} />
       </Routes>
       <Footer />
     </div>
