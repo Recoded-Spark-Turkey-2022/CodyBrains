@@ -101,7 +101,7 @@ const Blog = () => {
                         alt=""
                       />
                       <p className="text-sm font-medium text-refubookActiveNav">
-                        {(item.date.seconds * 1000).toLocaleString()}
+                        {item.date.toDate().toDateString()}
                       </p>
 
                       <p className="md:text-md  text-lg text-center mb-3 border-b font-semibold text-refubookBlack">
@@ -182,7 +182,7 @@ const Blog = () => {
                     alt=""
                   />
                   <p className="text-sm font-medium text-refubookActiveNav">
-                    {(item.date.seconds * 1000).toLocaleString()}
+                    {item.date.toDate().toDateString()}
                   </p>
 
                   <p className="md:text-md  text-lg text-center mb-3 border-b font-semibold text-refubookBlack">
