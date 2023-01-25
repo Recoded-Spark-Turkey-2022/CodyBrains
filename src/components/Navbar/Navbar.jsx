@@ -199,14 +199,14 @@ const Navbar = () => {
                 to="/signin"
                 className="bg-refubookBlue text-refubookWhite px-4 py-2 rounded-3xl font-medium"
               >
-                Sign In
+                {t('Sign_In')}
               </Link>
 
               <Link
                 to="/signup"
                 className="bg-refubookBlue text-refubookWhite px-4 py-2 rounded-3xl font-medium"
               >
-                Sign Up
+                {t('Sign_Up')}
               </Link>
             </div>
           )}

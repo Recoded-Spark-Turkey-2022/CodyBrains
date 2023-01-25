@@ -1,24 +1,25 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Stories = () => {
-  const data = [
+  const { t } = useTranslation();
+
+  const storiesData = [
     {
       id: 1,
-      title:
-        'How I learned Turkish quickly and what are the best places to learn.',
-      author: 'Rami Al-Khaldi',
-      authorRole: 'Refugee in Turkey',
-      category: 'Languages',
+      author: t('Rami_Al-Khaldi'),
+      title: t('Stories_Rami_Title'),
+      authorRole: t('Stories_Rami_Role'),
+      category: t('Stories_Rami_Category'),
       image:
         'https://images.unsplash.com/photo-1521295121783-8a321d551ad2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
     },
     {
       id: 2,
-      title:
-        'How to find job in Lebanon, and what are the obstacles in Lebanon.',
-      author: 'Ahmad Fesal',
-      authorRole: 'Refugee in Lebanon',
-      category: 'Jobs',
+      author: t('Ahmad_Fesal'),
+      title: t('Stories_Ahmad_Title'),
+      authorRole: t('Stories_Ahmad_Role'),
+      category: t('Stories_Ahmad_Category'),
       image:
         'https://images.unsplash.com/photo-1521295121783-8a321d551ad2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
     },
@@ -33,7 +34,7 @@ const Stories = () => {
         Home is behind, the world ahead and there are many <br />
         paths to tread through shadows to the edge.
       </p>
-      {data.map((item) => {
+      {storiesData.map((item) => {
         return (
           <div
             className="flex flex-col justify-start pb-10 md:flex-row md:justify-between "
@@ -49,7 +50,7 @@ const Stories = () => {
                 {item.category}
               </span>
               <h1 className="mt-5 mb-10 lg:text-4xl text-2xl text-refubookWhite font-light  ">
-                {item.title}
+                {t(item.title)}
               </h1>
               <div className="flex">
                 <div className=" rounded-full w-10 h-10 bg bg-refubookYellow  " />
