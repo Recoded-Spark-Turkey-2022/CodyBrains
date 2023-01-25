@@ -1,6 +1,15 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { About, Auth, Blog, Contact, Home, UserProfile, Write } from './pages';
+import {
+  About,
+  Auth,
+  Blog,
+  Contact,
+  Home,
+  NotFound,
+  UserProfile,
+  Write,
+} from './pages';
 import { Footer, Navbar } from './components';
 
 function App() {
@@ -20,6 +29,7 @@ function App() {
           />
         ))}
         <Route path="profile" element={<UserProfile />} />
+        <Route path="*" element={<NotFound />} />
         <Route path="write" element={<Write />} />
       </Routes>
       <Footer />
