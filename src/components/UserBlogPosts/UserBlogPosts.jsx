@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
 import { collection, getDocs } from 'firebase/firestore';
@@ -8,6 +9,9 @@ import { AiOutlinePlus } from 'react-icons/ai';
 import { db } from '../../services/firebase.config';
 
 const UserBlogPosts = ({ user }) => {
+
+  const { t } = useTranslation();
+
   const navigate = useNavigate();
   const [blogPosts, setBlogPosts] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -54,7 +58,7 @@ const UserBlogPosts = ({ user }) => {
         <div className="md:container mx-auto px-4 sm:px-6 lg:px-8 max-w-sm">
           <div className="flex justify-between items-center mb-5 px-5">
             <h2 className="md:text-2xl text-lg font-semibold text-refubookBlack">
-              Your Blog Posts
+              {t('Your_Blog_Posts')}
             </h2>
             <button
               type="button"
