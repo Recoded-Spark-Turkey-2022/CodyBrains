@@ -10,7 +10,8 @@
   "Sign_Up": "S'inscrire",
   "Sign_In": "Se connecter",
   "OR": "OR",
-  "Create_Blog_Post": "Create Blog Post",
+  "Create_Blog_Post": "Créer un article de blog",
+  "Your_Blog_Posts": "Vos articles de blog",
   "Our_Partners": "Nos Partenaires",
   "About_RefuBook_Website": "RefuBook est un site Web dédié à aider les réfugiés à naviguer dans leur nouvel environnement et à se sentir connectés à leur communauté. Nous offrons une plate-forme de partage de connaissances et d'expériences et nous nous efforçons d'être une source d'informations complète et fiable. Merci de votre visite, et nous espérons que vous trouverez les ressources ici utiles dans votre voyage en tant que réfugié.",
   "Learn_More": "Apprendre encore plus",
@@ -79,5 +80,10 @@
   "Hiba": "Hiba",
   "Hiba_Job": "Auteur chez Paroply Store",
   "Wissam": "Wissam",
-  "Wissam_Job": "Auteur chez Paroply Store"
+  "Wissam_Job": "Auteur chez Paroply Store",
+  "Get_in_Touch": "Entrer en contact",
+  "Get_in_Touch_Text": "Nous sommes toujours prêts à vous aider. Si vous avez des questions, n'hésitez pas à nous contacter.",
+  "Email": "E-mail",
+  "Message": "Message",
+  "Send": "Envoyer"
 }
