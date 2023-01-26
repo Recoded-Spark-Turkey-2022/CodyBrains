@@ -1,12 +1,78 @@
 import { useEffect, useState } from 'react';
 import { Tab } from '@headlessui/react';
 import { useTranslation } from 'react-i18next';
-import ourTeam from '../../data/ourTeamData';
+// import ourTeam from '../../data/ourTeamData';
 
 const OurTeam = () => {
   const { t } = useTranslation();
   const [selectedTab, setSelectedTab] = useState('All');
   const [countries, setCountries] = useState([]);
+
+  const ourTeam = [
+    {
+      name: t('Yasin'),
+      job: t('Yasin_Job'),
+      country: 'Turkey',
+      id: 1,
+      link: '',
+    },
+    {
+      name: t('Helin'),
+      job: t('Helin_Job'),
+      country: 'Turkey',
+      id: 2,
+      link: '',
+    },
+    {
+      name: t('Sara'),
+      job: t('Sara_Job'),
+      country: 'Turkey',
+      id: 3,
+      link: '',
+    },
+    {
+      name: t('Yusuf'),
+      job: t('Yusuf_Job'),
+      country: 'Turkey',
+      id: 4,
+      link: '',
+    },
+    {
+      name: t('Asmaa'),
+      job: t('Asmaa_Job'),
+      country: 'Turkey',
+      id: 5,
+      link: '',
+    },
+    {
+      name: t('Salah'),
+      job: t('Salah_Job'),
+      country: 'Lebanon',
+      id: 6,
+      link: '',
+    },
+    {
+      name: t('Kishi'),
+      job: t('Kishi_Job'),
+      country: 'USA',
+      id: 7,
+      link: '',
+    },
+    {
+      name: t('Hiba'),
+      job: t('Hiba_Job'),
+      country: 'Lebanon',
+      id: 8,
+      link: '',
+    },
+    {
+      name: t('Wissam'),
+      job: t('Wissam_Job'),
+      country: 'USA',
+      id: 9,
+      link: '',
+    },
+  ];
 
   useEffect(() => {
     // Extract unique countries from the team members data
@@ -59,7 +125,8 @@ const OurTeam = () => {
                     )
                   }
                 >
-                  {country}
+                  {country} 
+                  {/* {t('country')} */}
                 </Tab>
               ))}
             </Tab.List>
@@ -72,7 +139,7 @@ const OurTeam = () => {
                       className="flex flex-col items-center justify-center w-full md:ml-8"
                     >
                       <p className="font-medium w-full">{member.name}</p>
-                      <p className="font-normal  w-full">{member.job}</p>
+                      <p className="font-normal  w-full"> {t(member.job)}</p>
                     </div>
                   ))}
                 </div>
@@ -152,6 +219,7 @@ const OurTeam = () => {
                     }
                   >
                     {country}
+                    {/* {t('country')} */}
                   </Tab>
 
                   <Tab.Panel
