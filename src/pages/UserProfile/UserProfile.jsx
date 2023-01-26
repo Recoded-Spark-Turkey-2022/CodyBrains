@@ -1,5 +1,7 @@
+import { Navigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
+import Swal from 'sweetalert2';
 import avatar from '../../assets/avatar.png';
 import edit from '../../assets/edit.png';
 import { selectUser } from '../../features/userSlice';
@@ -7,6 +9,15 @@ import { EditProfile, UserBlogPosts } from '../../components';
 
 const UserProfile = () => {
   const user = useSelector(selectUser);
+
+  if (!user) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'You need to be logged in to view this page',
+    });
+    return <Navigate to="/" />;
+  }
 
   const [isEditing, setIsEditing] = useState(false);
 

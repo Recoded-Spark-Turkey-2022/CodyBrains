@@ -11,21 +11,20 @@ import translationTR from '../locales/tr/translation.json';
 
 import 'flag-icon-css/css/flag-icons.min.css';
 
-
 // the translations
 const resources = {
   en: {
-    translation: translationEN
+    translation: translationEN,
   },
   ar: {
-    translation: translationAR
+    translation: translationAR,
   },
   fr: {
-    translation: translationFR
+    translation: translationFR,
   },
   tr: {
-    translation: translationTR
-  }
+    translation: translationTR,
+  },
 };
 
 i18next
@@ -36,7 +35,7 @@ i18next
     resources,
     fallbackLng: 'en',
     interpolation: {
-      escapeValue: false // react already safes from xss
+      escapeValue: false, // react already safes from xss
     },
 
     supportedLngs: ['en', 'ar', 'fr', 'tr'],
@@ -49,7 +48,7 @@ i18next
     },
 
     // react: { useSuspense: false },
-/*     backend: {
+    /*     backend: {
       loadPath: './locales/{{lng}}/translation.json', */
   });
 

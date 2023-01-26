@@ -46,7 +46,7 @@ const OurTeam = () => {
               </Tab>
               {countries.map((country) => (
                 <Tab
-                  key={country}
+                  key={country.id}
                   selected={selectedTab === country}
                   onClick={() => setSelectedTab(country)}
                   className={({ selected }) =>

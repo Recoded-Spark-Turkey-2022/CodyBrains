@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux';
 import { selectUser } from '../../features/userSlice';
 import illustration from '../../assets/hero-illustration.svg';
 
@@ -20,21 +20,25 @@ const Hero = () => {
         <p className="text-base text-grey-800 mb-8 w-full lg:w-3/5 text-center lg:text-left">
           {t('Hero_Text')}
         </p>
-        {user?<Link to="/profile">
-          <button
-            type="button"
-            className="py-1 px-3 md:py-2 md:px-9 bg-refubookBlue text-refubookWhite font-bold text-lg md:text-xl  rounded-full shadow-lg hover:bg-refubookWhite hover:text-refubookBlack transition duration-500 ease-in-out"
-          >
-            {t('Create_Blog_Post')}
-          </button>
-        </Link>:<Link to="/signup">
-          <button
-            type="button"
-            className="py-1 px-3 md:py-2 md:px-9 bg-refubookBlue text-refubookWhite font-bold text-lg md:text-xl  rounded-full shadow-lg hover:bg-refubookWhite hover:text-refubookBlack transition duration-500 ease-in-out"
-          >
-            {t('Sign_Up')}
-          </button>
-        </Link>}
+        {user ? (
+          <Link to="/profile">
+            <button
+              type="button"
+              className="py-1 px-3 md:py-2 md:px-9 bg-refubookBlue text-refubookWhite font-bold text-lg md:text-xl  rounded-full shadow-lg hover:bg-refubookWhite hover:text-refubookBlack transition duration-500 ease-in-out"
+            >
+              {t('Create_Blog_Post')}
+            </button>
+          </Link>
+        ) : (
+          <Link to="/signup">
+            <button
+              type="button"
+              className="py-1 px-3 md:py-2 md:px-9 bg-refubookBlue text-refubookWhite font-bold text-lg md:text-xl  rounded-full shadow-lg hover:bg-refubookWhite hover:text-refubookBlack transition duration-500 ease-in-out"
+            >
+              {t('Sign_Up')}
+            </button>
+          </Link>
+        )}
       </div>
       <div className="flex justify-center lg:justify-end ">
         <img src={illustration} alt="" />

@@ -28,10 +28,34 @@ body {
   border-top-right-radius: 0.5em;
 }
 
-.ql-editor {
-  min-height: 18em;
-}
-
 .ql-editor p {
   margin: 0;
+}
+
+.single-blog-page {
+  display: grid;
+  grid-template-columns: 1.5fr 0.5fr;
+  grid-template-rows: 1fr;
+  gap: 0px 2em;
+  padding: 2em;
+  grid-template-areas: 'blog-content blog-sidebar';
+}
+
+.blog-content {
+  grid-area: blog-content;
+}
+.blog-sidebar {
+  grid-area: blog-sidebar;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#spinner {
+  animation: spin 1.3s linear infinite;
 }
