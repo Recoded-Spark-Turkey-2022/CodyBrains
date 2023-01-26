@@ -10,12 +10,12 @@ exports[`Contact renders correctly 1`] = `
     <h1
       className="text-5xl xl:text-6xl font-extrabold  pt-5 mt-5 py-1  text-refubookBlue text-center lg:text-left"
     >
-      Get in Touch
+      Get_in_Touch
     </h1>
     <p
       className="text-base  mt-5 py-1 text-refubookLightBlack font-medium  w-full lg:w-3/5 text-center lg:text-left"
     >
-      We are always ready to help you. If you have any questions, please feel free to contact us.
+      Get_in_Touch_Text
     </p>
     <form
       className="flex flex-col  items-center lg:items-start w-full  md:w-4/6"
