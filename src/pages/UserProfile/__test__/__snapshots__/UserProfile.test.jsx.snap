@@ -39,7 +39,7 @@ exports[`UserProfile should render correctly 1`] = `
         <h2
           className="md:text-2xl text-lg font-semibold text-refubookBlack"
         >
-          Your Blog Posts
+          Your_Blog_Posts
         </h2>
         <button
           className="flex items-center justify-center h-10 w-10 rounded-full bg-refubookActiveNav text-refubookWhite"
