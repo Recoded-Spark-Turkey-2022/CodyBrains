@@ -28,11 +28,10 @@ const Stories = () => {
     <section className="bg-refubookBlue w-full p-4">
       <div className="max-w-6xl mx-auto  flex flex-col lg:justify-start justify-center px-10 py-4 gap-5 mt-5 ">
         <h1 className="  lg:text-3xl text-xl text-center md:text-left text-refubookWhite ">
-          Latest Stories
+          {t('Latest_Stories')}
         </h1>
         <p className=" text-refubookWhite   md:text-left text-md lg:text-xl text-center mb-6 ">
-          Home is behind, the world ahead and there are many <br />
-          paths to tread through shadows to the edge.
+          {t('Latest_Stories_Text')}
         </p>
         {storiesData.map((item) => {
           return (
@@ -47,7 +46,7 @@ const Stories = () => {
               />
               <div className="flex flex-col pt-4 w-full mt-5 md:w-1/3">
                 <span className=" w-fit text-center p-1 rounded  bg-refubookYellow  text-refubookGray font-bold  ">
-                  {item.category}
+                  {t(item.category)}
                 </span>
                 <h1 className="mt-5 mb-10 lg:text-4xl text-2xl text-refubookWhite font-light  ">
                   {t(item.title)}
@@ -56,10 +55,10 @@ const Stories = () => {
                   <div className=" rounded-full w-10 h-10 bg bg-refubookYellow  " />
                   <div className="flex flex-col ml-10 ">
                     <p className="text-refubookWhite font-bold ">
-                      {item.author}
+                      {t(item.author)} 
                     </p>
                     <p className="text-refubookWhite font-light">
-                      {item.authorRole}
+                      {t(item.authorRole)}
                     </p>
                   </div>
                 </div>
