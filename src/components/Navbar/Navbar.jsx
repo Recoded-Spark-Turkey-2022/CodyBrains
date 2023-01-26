@@ -126,7 +126,7 @@ const Navbar = () => {
                         item.current ? 'border-b' : ''
                       } py-2 px-4   text-refubookBlue font-medium text-lg tracking-tight`}
                     >
-                      {item.name}
+                      {t(item.name)}
                     </li>
                   </Link>
                 ))
@@ -137,7 +137,7 @@ const Navbar = () => {
                         item.current ? 'border-b' : ''
                       } py-2 px-4   text-refubookBlue font-medium text-lg tracking-tight`}
                     >
-                      {item.name}
+                      {t(item.name)}
                     </li>
                   </Link>
                 ))}
@@ -184,7 +184,7 @@ const Navbar = () => {
                                 : 'text-gray-900'
                             } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
                           >
-                            {item.name}
+                            {t(item.name)}
                           </Link>
                         )}
                       </Menu.Item>
@@ -300,7 +300,7 @@ const Navbar = () => {
                                       : 'text-gray-900'
                                   } group flex rounded-md items-center w-full p-4 text-xl font-medium`}
                                 >
-                                  {item.name}
+                                  {t(item.name)}
                                 </Link>
                               )}
                             </Menu.Item>
@@ -340,7 +340,7 @@ const Navbar = () => {
                         aria-hidden="true"
                         className="py-2 text-2xl font-semibold text-refubookBlue"
                       >
-                        {item.name}
+                        {t(item.name)}
                       </li>
                     </Link>
                   ))
@@ -351,7 +351,7 @@ const Navbar = () => {
                         aria-hidden="true"
                         className="py-2 text-2xl font-semibold text-refubookBlue"
                       >
-                        {item.name}
+                        {t(item.name)}
                       </li>
                     </Link>
                   ))}
