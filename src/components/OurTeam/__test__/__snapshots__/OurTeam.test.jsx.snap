@@ -109,7 +109,8 @@ exports[`OurTeam renders correctly 1`] = `
               <p
                 className="font-normal  w-full"
               >
-                Author at Paroply Store
+                 
+                Yasin_Job
               </p>
             </div>
             <div
@@ -123,7 +124,8 @@ exports[`OurTeam renders correctly 1`] = `
               <p
                 className="font-normal  w-full"
               >
-                Author at Paroply Store
+                 
+                Helin_Job
               </p>
             </div>
             <div
@@ -137,7 +139,8 @@ exports[`OurTeam renders correctly 1`] = `
               <p
                 className="font-normal  w-full"
               >
-                Author at Paroply Store
+                 
+                Sara_Job
               </p>
             </div>
             <div
@@ -151,7 +154,8 @@ exports[`OurTeam renders correctly 1`] = `
               <p
                 className="font-normal  w-full"
               >
-                Author at Paroply Store
+                 
+                Yusuf_Job
               </p>
             </div>
             <div
@@ -165,7 +169,8 @@ exports[`OurTeam renders correctly 1`] = `
               <p
                 className="font-normal  w-full"
               >
-                Author at Paroply Store
+                 
+                Asmaa_Job
               </p>
             </div>
             <div
@@ -179,7 +184,8 @@ exports[`OurTeam renders correctly 1`] = `
               <p
                 className="font-normal  w-full"
               >
-                Author at Paroply Store
+                 
+                Salah_Job
               </p>
             </div>
             <div
@@ -193,7 +199,8 @@ exports[`OurTeam renders correctly 1`] = `
               <p
                 className="font-normal  w-full"
               >
-                Author at Paroply Store
+                 
+                Kishi_Job
               </p>
             </div>
             <div
@@ -207,7 +214,8 @@ exports[`OurTeam renders correctly 1`] = `
               <p
                 className="font-normal  w-full"
               >
-                Author at Paroply Store
+                 
+                Hiba_Job
               </p>
             </div>
             <div
@@ -221,7 +229,8 @@ exports[`OurTeam renders correctly 1`] = `
               <p
                 className="font-normal  w-full"
               >
-                Author at Paroply Store
+                 
+                Wissam_Job
               </p>
             </div>
           </div>
@@ -332,7 +341,7 @@ exports[`OurTeam renders correctly 1`] = `
               <p
                 className="font-normal  w-full"
               >
-                Author at Paroply Store
+                Yasin_Job
               </p>
             </div>
             <div
@@ -346,7 +355,7 @@ exports[`OurTeam renders correctly 1`] = `
               <p
                 className="font-normal  w-full"
               >
-                Author at Paroply Store
+                Helin_Job
               </p>
             </div>
             <div
@@ -360,7 +369,7 @@ exports[`OurTeam renders correctly 1`] = `
               <p
                 className="font-normal  w-full"
               >
-                Author at Paroply Store
+                Sara_Job
               </p>
             </div>
             <div
@@ -374,7 +383,7 @@ exports[`OurTeam renders correctly 1`] = `
               <p
                 className="font-normal  w-full"
               >
-                Author at Paroply Store
+                Yusuf_Job
               </p>
             </div>
             <div
@@ -388,7 +397,7 @@ exports[`OurTeam renders correctly 1`] = `
               <p
                 className="font-normal  w-full"
               >
-                Author at Paroply Store
+                Asmaa_Job
               </p>
             </div>
             <div
@@ -402,7 +411,7 @@ exports[`OurTeam renders correctly 1`] = `
               <p
                 className="font-normal  w-full"
               >
-                Author at Paroply Store
+                Salah_Job
               </p>
             </div>
             <div
@@ -416,7 +425,7 @@ exports[`OurTeam renders correctly 1`] = `
               <p
                 className="font-normal  w-full"
               >
-                Author at Paroply Store
+                Kishi_Job
               </p>
             </div>
             <div
@@ -430,7 +439,7 @@ exports[`OurTeam renders correctly 1`] = `
               <p
                 className="font-normal  w-full"
               >
-                Author at Paroply Store
+                Hiba_Job
               </p>
             </div>
             <div
@@ -444,7 +453,7 @@ exports[`OurTeam renders correctly 1`] = `
               <p
                 className="font-normal  w-full"
               >
-                Author at Paroply Store
+                Wissam_Job
               </p>
             </div>
           </div>
