@@ -1,11 +1,15 @@
+import { useTranslation } from 'react-i18next';
 import { FaFacebookF, FaGoogle } from 'react-icons/fa';
 import useFacebookAuth from '../../hooks/useFacebookAuth';
 import useGoogleAuth from '../../hooks/useGoogleAuth';
 
 const Providers = () => {
+
+  const { t } = useTranslation();
+  
   const { handleLoginWithGoogle } = useGoogleAuth();
   const { handleLoginWithFacebook } = useFacebookAuth();
-
+  
   return (
     <div className="flex flex-col md:flex-row  items-center justify-center gap-5   sm:px-6 lg:px-8 w-full ">
       <button
@@ -17,7 +21,7 @@ const Providers = () => {
       >
         <FaGoogle className="mr-2 text-refubookWhite text-2xl" />
       </button>
-      <h3 className="text-center text-lg font-medium text-refubookBlue">OR</h3>
+      <h3 className="text-center text-lg font-medium text-refubookBlue">{t('OR')}</h3>
       <button
         type="button"
         data-testid="facebook"
