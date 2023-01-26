@@ -50,5 +50,11 @@
   "Ahmad_Fesal": "Ahmad Fesal",
   "Stories_Ahmad_Title": "How to find job in Lebanon, and what are the obstacles in Lebanon.",
   "Stories_Ahmad_Role": "Refugee in Lebanon",
-  "Stories_Ahmad_Category": "Jobs"
+  "Stories_Ahmad_Category": "Jobs",
+  "Name": "Nom",
+  "Surname": "Nom de famille",
+  "Biography": "Biographie",
+  "Location": "Emplacement",
+  "Save": "Sauver",
+  "Cancel": "Annuler"
 }
