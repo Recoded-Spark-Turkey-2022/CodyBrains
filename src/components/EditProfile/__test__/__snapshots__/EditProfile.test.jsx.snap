@@ -62,7 +62,8 @@ exports[`EditProfile component should match snapshot 1`] = `
         className="text-refubookBlue w-full font-medium text-lg"
         htmlFor="name"
       >
-        Name:
+        Name
+        :
         <input
           className="w-full border border-refubookGray p-2 rounded-md text-refubookBlack"
           id="name"
@@ -76,7 +77,8 @@ exports[`EditProfile component should match snapshot 1`] = `
         className="text-refubookBlue w-full font-medium text-lg"
         htmlFor="surname"
       >
-        Surname:
+        Surname
+        :
         <input
           className="w-full border border-refubookGray p-2 rounded-md text-refubookBlack"
           id="surname"
@@ -91,7 +93,8 @@ exports[`EditProfile component should match snapshot 1`] = `
         className="text-refubookBlue w-full font-medium text-lg"
         htmlFor="biography"
       >
-        Biography:
+        Biography
+        :
         <textarea
           className="w-full border border-refubookGray p-1 rounded-md text-refubookBlack"
           id="biography"
@@ -106,7 +109,8 @@ exports[`EditProfile component should match snapshot 1`] = `
         className="text-refubookBlue w-full font-medium text-lg"
         htmlFor="location"
       >
-        Location:
+        Location
+        :
         <input
           className="w-full border border-refubookGray p-2 rounded-md text-refubookBlack"
           id="location"

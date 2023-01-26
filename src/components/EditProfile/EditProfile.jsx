@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import { selectUser } from '../../features/userSlice';
 import useEditProfile from '../../hooks/useUpdateProfile';
 import useAvatarUpload from '../../hooks/useAvatarUpload';
@@ -6,6 +7,9 @@ import Loading from '../Icons/Loading';
 import camera from '../../assets/camera.png';
 
 const EditProfile = ({ setIsEditing }) => {
+
+  const { t } = useTranslation();
+
   const user = useSelector(selectUser);
 
   const { file, handleFileChange, photoURL, loading, percentage } =
@@ -78,7 +82,7 @@ const EditProfile = ({ setIsEditing }) => {
             htmlFor="name"
             className="text-refubookBlue w-full font-medium text-lg"
           >
-            Name:
+            {t('Name')}:
             <input
               type="text"
               id="name"
@@ -93,7 +97,7 @@ const EditProfile = ({ setIsEditing }) => {
             htmlFor="surname"
             className="text-refubookBlue w-full font-medium text-lg"
           >
-            Surname:
+            {t('Surname')}:
             <input
               type="text"
               id="surname"
@@ -112,7 +116,7 @@ const EditProfile = ({ setIsEditing }) => {
             htmlFor="biography"
             className="text-refubookBlue w-full font-medium text-lg"
           >
-            Biography:
+            {t('Biography')}:
             <textarea
               id="biography"
               name="biography"
@@ -131,7 +135,7 @@ const EditProfile = ({ setIsEditing }) => {
             htmlFor="location"
             className="text-refubookBlue w-full font-medium text-lg"
           >
-            Location:
+            {t('Location')}:
             <input
               type="text"
               id="location"
@@ -151,14 +155,14 @@ const EditProfile = ({ setIsEditing }) => {
             type="submit"
             className=" group relative flex w-28 justify-center rounded-full border border-transparent bg-refubookBlue py-2 px-4  text-sm font-medium mt-8 text-refubookWhite hover:bg-refubookLightBlue focus:outline-none focus:ring-2 focus:ring-[#331416] focus:ring-offset-2"
           >
-            Save
+            {t('Save')}
           </button>
           <button
             type="button"
             className="group relative flex w-28 justify-center rounded-full border border-transparent bg-refubookWhite py-2 px-4 text-sm font-medium mt-8 text-refubookBlack hover:bg-refubookLightBlue focus:outline-none focus:ring-2 focus:ring-[#331416] focus:ring-offset-2"
             onClick={handleCancel}
           >
-            Cancel
+            {t('Cancel')}
           </button>
         </div>
       </form>
