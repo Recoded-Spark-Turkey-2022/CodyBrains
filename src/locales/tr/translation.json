@@ -10,8 +10,14 @@
   "Sign_Up": "Kayıt Ol",
   "Sign_In": "Giriş Yap",
   "OR": "OR",
+  "Submit": "Submit",
+  "Preview": "Preview",
   "Create_Blog_Post": "Blog Yazısı Oluştur",
   "Your_Blog_Posts": "Your Blog Posts",
+  "Blog_Posts": "Blog Posts",
+  "Write_Your_Blog_Post": "Write Your Blog Post",
+  "Upload_Your_Header_Image": "Upload Your Header Image",
+  "Read_More": "Read More",
   "Our_Partners": "Ortaklarımız",
   "About_RefuBook_Website": "RefuBook, mültecilerin yeni çevrelerinde gezinmelerine ve toplumlarına bağlı hissetmelerine yardımcı olmaya adanmış bir web sitesidir. Bilgi ve deneyimleri paylaşmak için bir platform sunuyoruz ve kapsamlı ve güvenilir bir bilgi kaynağı olmaya çalışıyoruz. Ziyaretiniz için teşekkür ederiz ve buradaki kaynakları bir mülteci olarak yolculuğunuzda faydalı bulacağınızı umarız.",
   "Learn_More": "Daha fazla bilgi edin",
@@ -84,5 +90,10 @@
   "Get_in_Touch_Text": "We are always ready to help you. If you have any questions, please feel free to contact us.",
   "Email": "Email",
   "Message": "Message",
-  "Send": "Send"
+  "Send": "Send",
+  "Workflow": "Workflow",
+  "404_Error": "404 Error",
+  "404_Error_Text": "Sorry, we couldn’t find the page you’re looking for.",
+  "404_Error_Go_Back": "Go Back Home",
+  "Read_Also": "Read Also"
 }

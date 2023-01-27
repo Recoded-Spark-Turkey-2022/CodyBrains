@@ -10,8 +10,14 @@
   "Sign_Up": "S'inscrire",
   "Sign_In": "Se connecter",
   "OR": "OR",
+  "Submit": "Soumettre",
+  "Preview": "Aperçu",
   "Create_Blog_Post": "Créer un article de blog",
   "Your_Blog_Posts": "Vos articles de blog",
+  "Blog_Posts": "Blog Posts",
+  "Write_Your_Blog_Post": "Rédigez Votre Article De Blog",
+  "Upload_Your_Header_Image": "Téléchargez votre image d'en-tête",
+  "Read_More": "Lire la suite",
   "Our_Partners": "Nos Partenaires",
   "About_RefuBook_Website": "RefuBook est un site Web dédié à aider les réfugiés à naviguer dans leur nouvel environnement et à se sentir connectés à leur communauté. Nous offrons une plate-forme de partage de connaissances et d'expériences et nous nous efforçons d'être une source d'informations complète et fiable. Merci de votre visite, et nous espérons que vous trouverez les ressources ici utiles dans votre voyage en tant que réfugié.",
   "Learn_More": "Apprendre encore plus",
@@ -85,5 +91,10 @@
   "Get_in_Touch_Text": "Nous sommes toujours prêts à vous aider. Si vous avez des questions, n'hésitez pas à nous contacter.",
   "Email": "E-mail",
   "Message": "Message",
-  "Send": "Envoyer"
+  "Send": "Envoyer",
+  "Workflow": "Workflow",
+  "404_Error": "404 Error",
+  "404_Error_Text": "Sorry, we couldn’t find the page you’re looking for.",
+  "404_Error_Go_Back": "Go Back Home",
+  "Read_Also": "Lire aussi"
 }
