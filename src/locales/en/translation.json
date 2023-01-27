@@ -86,5 +86,9 @@
   "Get_in_Touch_Text": "We are always ready to help you. If you have any questions, please feel free to contact us.",
   "Email": "Email",
   "Message": "Message",
-  "Send": "Send"
+  "Send": "Send",
+  "Workflow": "Workflow",
+  "404_Error": "404 Error",
+  "404_Error_Text": "Sorry, we couldn’t find the page you’re looking for.",
+  "404_Error_Go_Back": "Go Back Home"
 }
