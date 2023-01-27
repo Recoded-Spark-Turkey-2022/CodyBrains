@@ -10,7 +10,7 @@ exports[`renders correctly 1`] = `
     <h2
       className="sr-only"
     >
-      Blog Posts
+      Blog_Posts
     </h2>
     <div
       className="swiper w-full grid grid-cols-1 gap-5 md:grid-cols-3"
@@ -33,7 +33,7 @@ exports[`renders correctly 1`] = `
             <p
               className="text-sm font-medium text-refubookActiveNav"
             >
-              Thu Jan 26 2023
+              Fri Jan 27 2023
             </p>
             <p
               className="md:text-md  text-lg text-center mb-3 border-b font-semibold text-refubookBlack"
@@ -88,12 +88,12 @@ exports[`renders correctly 1`] = `
               <span
                 className="sr-only"
               >
-                Read more
+                Read_More
               </span>
               <p
                 className="text-sm font-medium text-refubookWhite"
               >
-                Read more
+                Read_More
               </p>
             </Link>
           </div>
@@ -113,7 +113,7 @@ exports[`renders correctly 1`] = `
             <p
               className="text-sm font-medium text-refubookActiveNav"
             >
-              Thu Jan 26 2023
+              Fri Jan 27 2023
             </p>
             <p
               className="md:text-md  text-lg text-center mb-3 border-b font-semibold text-refubookBlack"
@@ -168,12 +168,12 @@ exports[`renders correctly 1`] = `
               <span
                 className="sr-only"
               >
-                Read more
+                Read_More
               </span>
               <p
                 className="text-sm font-medium text-refubookWhite"
               >
-                Read more
+                Read_More
               </p>
             </Link>
           </div>
@@ -193,7 +193,7 @@ exports[`renders correctly 1`] = `
             <p
               className="text-sm font-medium text-refubookActiveNav"
             >
-              Thu Jan 26 2023
+              Fri Jan 27 2023
             </p>
             <p
               className="md:text-md  text-lg text-center mb-3 border-b font-semibold text-refubookBlack"
@@ -248,12 +248,12 @@ exports[`renders correctly 1`] = `
               <span
                 className="sr-only"
               >
-                Read more
+                Read_More
               </span>
               <p
                 className="text-sm font-medium text-refubookWhite"
               >
-                Read more
+                Read_More
               </p>
             </Link>
           </div>
@@ -273,7 +273,7 @@ exports[`renders correctly 1`] = `
             <p
               className="text-sm font-medium text-refubookActiveNav"
             >
-              Thu Jan 26 2023
+              Fri Jan 27 2023
             </p>
             <p
               className="md:text-md  text-lg text-center mb-3 border-b font-semibold text-refubookBlack"
@@ -328,12 +328,12 @@ exports[`renders correctly 1`] = `
               <span
                 className="sr-only"
               >
-                Read more
+                Read_More
               </span>
               <p
                 className="text-sm font-medium text-refubookWhite"
               >
-                Read more
+                Read_More
               </p>
             </Link>
           </div>
@@ -353,7 +353,7 @@ exports[`renders correctly 1`] = `
             <p
               className="text-sm font-medium text-refubookActiveNav"
             >
-              Thu Jan 26 2023
+              Fri Jan 27 2023
             </p>
             <p
               className="md:text-md  text-lg text-center mb-3 border-b font-semibold text-refubookBlack"
@@ -408,12 +408,12 @@ exports[`renders correctly 1`] = `
               <span
                 className="sr-only"
               >
-                Read more
+                Read_More
               </span>
               <p
                 className="text-sm font-medium text-refubookWhite"
               >
-                Read more
+                Read_More
               </p>
             </Link>
           </div>
@@ -433,7 +433,7 @@ exports[`renders correctly 1`] = `
             <p
               className="text-sm font-medium text-refubookActiveNav"
             >
-              Thu Jan 26 2023
+              Fri Jan 27 2023
             </p>
             <p
               className="md:text-md  text-lg text-center mb-3 border-b font-semibold text-refubookBlack"
@@ -488,12 +488,12 @@ exports[`renders correctly 1`] = `
               <span
                 className="sr-only"
               >
-                Read more
+                Read_More
               </span>
               <p
                 className="text-sm font-medium text-refubookWhite"
               >
-                Read more
+                Read_More
               </p>
             </Link>
           </div>
@@ -521,7 +521,7 @@ exports[`renders correctly 1`] = `
         <p
           className="text-sm font-medium text-refubookActiveNav"
         >
-          Thu Jan 26 2023
+          Fri Jan 27 2023
         </p>
         <p
           className="md:text-md  text-lg text-center mb-3 border-b font-semibold text-refubookBlack"
@@ -575,12 +575,12 @@ exports[`renders correctly 1`] = `
           <span
             className="sr-only"
           >
-            Read more
+            Read_More
           </span>
           <p
             className="text-sm font-medium text-refubookWhite"
           >
-            Read more
+            Read_More
           </p>
         </Link>
       </div>
@@ -599,7 +599,7 @@ exports[`renders correctly 1`] = `
         <p
           className="text-sm font-medium text-refubookActiveNav"
         >
-          Thu Jan 26 2023
+          Fri Jan 27 2023
         </p>
         <p
           className="md:text-md  text-lg text-center mb-3 border-b font-semibold text-refubookBlack"
@@ -653,12 +653,12 @@ exports[`renders correctly 1`] = `
           <span
             className="sr-only"
           >
-            Read more
+            Read_More
           </span>
           <p
             className="text-sm font-medium text-refubookWhite"
           >
-            Read more
+            Read_More
           </p>
         </Link>
       </div>
@@ -677,7 +677,7 @@ exports[`renders correctly 1`] = `
         <p
           className="text-sm font-medium text-refubookActiveNav"
         >
-          Thu Jan 26 2023
+          Fri Jan 27 2023
         </p>
         <p
           className="md:text-md  text-lg text-center mb-3 border-b font-semibold text-refubookBlack"
@@ -731,12 +731,12 @@ exports[`renders correctly 1`] = `
           <span
             className="sr-only"
           >
-            Read more
+            Read_More
           </span>
           <p
             className="text-sm font-medium text-refubookWhite"
           >
-            Read more
+            Read_More
           </p>
         </Link>
       </div>
@@ -755,7 +755,7 @@ exports[`renders correctly 1`] = `
         <p
           className="text-sm font-medium text-refubookActiveNav"
         >
-          Thu Jan 26 2023
+          Fri Jan 27 2023
         </p>
         <p
           className="md:text-md  text-lg text-center mb-3 border-b font-semibold text-refubookBlack"
@@ -809,12 +809,12 @@ exports[`renders correctly 1`] = `
           <span
             className="sr-only"
           >
-            Read more
+            Read_More
           </span>
           <p
             className="text-sm font-medium text-refubookWhite"
           >
-            Read more
+            Read_More
           </p>
         </Link>
       </div>
