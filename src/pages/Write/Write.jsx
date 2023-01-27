@@ -133,7 +133,7 @@ const Write = () => {
         <div className="flex flex-col flex-1 p-4 gap-3 h-full">
           <div className="flex flex-col items-center gap-2">
             <h1 className="text-2xl text-refubookWhite font-medium w-full bg-refubookBlue text-center p-2 border-refubookGray rounded">
-              Preview
+              {t('Preview')}
             </h1>
             {headerPhoto && (
               <img

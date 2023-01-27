@@ -8,7 +8,7 @@ exports[`Write should render correctly 1`] = `
     <h1
       class="text-3xl md:text-4xl font-bold text-center"
     >
-      Write your blog post
+      Write_Your_Blog_Post
     </h1>
     <div
       class="w-full min-h-screen gap-8 md:gap-5  grid md:grid-cols-2 mb-16 grid-cols-1 "
@@ -49,7 +49,7 @@ exports[`Write should render correctly 1`] = `
               <span
                 class="text-refubookBlue"
               >
-                Upload Your Header Image
+                Upload_Your_Header_Image
               </span>
               <input
                 accept="image/*"
