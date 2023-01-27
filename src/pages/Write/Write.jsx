@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import ReactQuill from 'react-quill';
 import parse from 'html-react-parser';
 import Swal from 'sweetalert2';
@@ -7,6 +8,9 @@ import { selectUser } from '../../features/userSlice';
 import { useCreateBlogPost } from '../../hooks/useCreateBlogPost';
 
 const Write = () => {
+
+  const { t } = useTranslation();
+
   const user = useSelector(selectUser);
   const [content, setContent] = useState('');
   const {
@@ -60,7 +64,7 @@ const Write = () => {
   return (
     <div className="min-h-screen flex flex-col gap-8 md:gap-5  items-center justify-center">
       <h1 className="text-3xl md:text-4xl font-bold text-center">
-        Write your blog post
+          {t('Write_Your_Blog_Post')}
       </h1>
 
       <div className="w-full min-h-screen gap-8 md:gap-5  grid md:grid-cols-2 mb-16 grid-cols-1 ">
@@ -93,7 +97,7 @@ const Write = () => {
                   />
                 </svg>
                 <span className="text-refubookBlue">
-                  Upload Your Header Image
+                  {t('Upload_Your_Header_Image')}
                 </span>
 
                 <input
@@ -122,7 +126,7 @@ const Write = () => {
               type="submit"
               className="z-10 flex items-center justify-center rounded-md py-4 px-8 mx-auto h-10 mt-2 bg-refubookBlue text-refubookWhite focus:outline-none focus:ring-2 focus:ring-refubookBlue focus:border-transparent"
             >
-              Submit
+              {t('Submit')}
             </button>
           </form>
         </div>
