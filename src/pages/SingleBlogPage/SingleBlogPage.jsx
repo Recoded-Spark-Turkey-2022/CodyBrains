@@ -1,6 +1,7 @@
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import parse from 'html-react-parser';
 import {
@@ -15,6 +16,9 @@ import { db } from '../../services/firebase.config';
 import blogsData from '../../data/blogsData';
 
 const SingleBlogPage = () => {
+
+  const { t } = useTranslation();
+
   const [readAlsoBlogs, setReadAlsoBlogs] = useState([]);
   const [allBlogPosts, setAllBlogPosts] = useState([]);
   const [blogPosts, setBlogPosts] = useState([]);
@@ -177,7 +181,7 @@ const SingleBlogPage = () => {
               </div>
             ))}
           <div className=" flex flex-col max-w-md gap-4 p-4 ">
-            <h1 className="text-4xl font-bold text-center">Read Also</h1>
+            <h1 className="text-4xl font-bold text-center">{t('Read_Also')}</h1>
             <div className="flex flex-col  gap-4 ">
               {readAlsoBlogs.map((item) => (
                 <div
@@ -248,9 +252,9 @@ const SingleBlogPage = () => {
                       to={`/blog/${item.id}`}
                       className=" mt-2 bg-refubookActiveNav w-fit text-refubookWhite px-4 py-2 rounded-md text-sm font-medium hover:bg-refubookActiveNavHover focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
                     >
-                      <span className="sr-only">Read more</span>
+                      <span className="sr-only">{t('Read_More')}</span>
                       <p className="text-sm font-medium text-refubookWhite">
-                        Read more
+                      {t('Read_More')}
                       </p>
                     </Link>
                   </div>
