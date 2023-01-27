@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { collection, getDocs } from 'firebase/firestore';
@@ -8,6 +9,9 @@ import { db } from '../../services/firebase.config';
 import blogsData from '../../data/blogsData';
 
 const Blog = () => {
+
+  const { t } = useTranslation();
+
   const [blogPosts, setBlogPosts] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -53,7 +57,7 @@ const Blog = () => {
       ) : (
         <>
           <div className="  py-16 px-8 mx-auto container">
-            <h2 className="sr-only">Blog Posts</h2>
+            <h2 className="sr-only">{t('Blog_Posts')}</h2>
 
             <Swiper
               spaceBetween={15}
@@ -158,9 +162,9 @@ const Blog = () => {
                         to={`/blog/${item.id}`}
                         className=" mt-2 bg-refubookActiveNav w-fit text-refubookWhite px-4 py-2 rounded-md text-sm font-medium hover:bg-refubookActiveNavHover focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
                       >
-                        <span className="sr-only">Read more</span>
+                        <span className="sr-only">{t('Read_More')}</span>
                         <p className="text-sm font-medium text-refubookWhite">
-                          Read more
+                          {t('Read_More')}
                         </p>
                       </Link>
                     </div>
@@ -214,9 +218,9 @@ const Blog = () => {
                     to={`/blog/${item.id}`}
                     className=" mt-2 bg-refubookActiveNav w-fit text-refubookWhite px-4 py-2 rounded-md text-sm font-medium hover:bg-refubookActiveNavHover focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
                   >
-                    <span className="sr-only">Read more</span>
+                    <span className="sr-only">{t('Read_More')}</span>
                     <p className="text-sm font-medium text-refubookWhite">
-                      Read more
+                    {t('Read_More')}
                     </p>
                   </Link>
                 </div>
