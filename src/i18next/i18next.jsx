@@ -1,7 +1,6 @@
 import i18next from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import HttpApi from 'i18next-http-backend';
 
 // the translations
 import translationEN from '../locales/en/translation.json';
@@ -28,7 +27,6 @@ const resources = {
 };
 
 i18next
-  .use(HttpApi)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
@@ -47,9 +45,6 @@ i18next
       caches: ['cookie'],
     },
 
-    // react: { useSuspense: false },
-    /*     backend: {
-      loadPath: './locales/{{lng}}/translation.json', */
   });
 
 export default i18next;

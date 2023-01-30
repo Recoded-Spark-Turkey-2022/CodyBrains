@@ -3,6 +3,7 @@
 exports[`Partners renders correctly 1`] = `
 <div
   className="flex flex-col items-center justify-center w-full bg-refubookWhite px-8 py-4"
+  dir="ltr"
 >
   <h1
     className="text-3xl text-refubookBlack font-bold text-center"
