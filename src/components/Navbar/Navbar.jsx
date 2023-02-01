@@ -312,10 +312,10 @@ const Navbar = () => {
                 )}
               </>
             ) : (
-              <div className="flex items-center justify-between w-full">
+              <div className="flex items-center justify-evenly">
                 <Link
                   to="/signin"
-                  className="bg-refubookBlue text-refubookWhite px-4 py-2 rounded-3xl text-sm font-medium"
+                  className="bg-refubookBlue text-refubookWhite px-4 py-2 rounded-3xl font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   {t('Sign_In')}
@@ -323,7 +323,7 @@ const Navbar = () => {
 
                 <Link
                   to="/signup"
-                  className="bg-refubookBlue text-refubookWhite px-4 py-2 rounded-3xl text-sm  font-medium"
+                  className="bg-refubookBlue text-refubookWhite px-4 py-2 rounded-3xl font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   {t('Sign_Up')}
