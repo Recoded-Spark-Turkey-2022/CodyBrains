@@ -9,7 +9,6 @@ import { db } from '../../services/firebase.config';
 import blogsData from '../../data/blogsData';
 
 const Blog = () => {
-
   const { t } = useTranslation();
 
   const [blogPosts, setBlogPosts] = useState([]);
@@ -67,7 +66,6 @@ const Blog = () => {
               }}
               modules={[Pagination]}
               className="w-full grid grid-cols-1 gap-5  md:grid-cols-3"
-              loop
               grabCursor
               breakpoints={{
                 320: {
@@ -220,7 +218,7 @@ const Blog = () => {
                   >
                     <span className="sr-only">{t('Read_More')}</span>
                     <p className="text-sm font-medium text-refubookWhite">
-                    {t('Read_More')}
+                      {t('Read_More')}
                     </p>
                   </Link>
                 </div>
