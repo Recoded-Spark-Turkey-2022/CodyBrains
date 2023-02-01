@@ -16,7 +16,6 @@ import { db } from '../../services/firebase.config';
 import blogsData from '../../data/blogsData';
 
 const SingleBlogPage = () => {
-
   const { t } = useTranslation();
 
   const [readAlsoBlogs, setReadAlsoBlogs] = useState([]);
@@ -254,7 +253,7 @@ const SingleBlogPage = () => {
                     >
                       <span className="sr-only">{t('Read_More')}</span>
                       <p className="text-sm font-medium text-refubookWhite">
-                      {t('Read_More')}
+                        {t('Read_More')}
                       </p>
                     </Link>
                   </div>

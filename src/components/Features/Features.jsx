@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
 import { useTranslation } from 'react-i18next';
 // import featuresData from '../../data/featuresData';
+import i18next from 'i18next';
 import Feature from './Feature';
 import illustration from '../../assets/features-illustration.svg';
 import star from '../../assets/star.svg';
@@ -79,10 +80,10 @@ const Features = () => {
                   <div className=" flex flex-col items-center justify-center gap-5 py-5">
                     <img src={star} alt="" />
                     <p className="text-md  text-refubookLightBlack font-medium text-center">
-                      {t('item.title')}
+                      {i18next.t(item.title)}
                     </p>
                     <p className="text-md  text-refubookLightBlack font-medium text-center mb-4">
-                      {t('item.text')}
+                      {i18next.t(item.text)}
                     </p>
                   </div>
                 </SwiperSlide>

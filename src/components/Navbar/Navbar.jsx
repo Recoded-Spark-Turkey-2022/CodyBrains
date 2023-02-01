@@ -244,37 +244,35 @@ const Navbar = () => {
           <div className="py-4 flex flex-col h-full">
             {user ? (
               <>
-                <div className="flex flex-col  mx-auto items-center justify-center relative">
+                <div className="flex flex-col max-w-sm  mx-auto items-center justify-center relative">
                   <img
                     src={user ? user.photoURL : avatar}
                     onError={(e) => {
                       e.target.onerror = avatar;
                     }}
                     alt=""
-                    className="w-40 h-40 rounded-full "
+                    className="rounded-full max-w-full h-auto align-middle border-none shadow-lg"
                   />
                   <div className="absolute bottom-0 right-0 mt-4 mr-4 bg-profileStatusRed w-8 h-8 rounded-full" />
                 </div>
                 {location.pathname === '/profile' ||
                 location.pathname === '/write' ? (
                   <div className="flex flex-col items-center justify-center mt-4">
-                    <p className="text-2xl font-bold text-center">
+                    <p className="text-md font-bold text-center">
                       {capitalize(user.displayName)}
                     </p>
                   </div>
                 ) : (
                   <Menu as="div" className=" relative inline-block text-left ">
-                    <div>
-                      <Menu.Button className="flex items-center justify-center w-full px-4 py-2 text-sm font-semibold   ">
-                        <p className="mr-2 text-xl">
-                          {capitalize(user.displayName)}
-                        </p>
-                        <BsChevronDown
-                          className="ml-2 -mr-1 text-2xl font-extrabold  text-refubookBlack"
-                          aria-hidden="true"
-                        />
-                      </Menu.Button>
-                    </div>
+                    <Menu.Button className="flex items-center justify-center w-full mt-2 text-sm font-semibold   ">
+                      <p className="mr-2 text-lg">
+                        {capitalize(user.displayName)}
+                      </p>
+                      <BsChevronDown
+                        className="ml-2 -mr-1 text-2xl font-extrabold  text-refubookBlack"
+                        aria-hidden="true"
+                      />
+                    </Menu.Button>
                     <Transition
                       as={Fragment}
                       enter="transition ease-out duration-100"
@@ -312,10 +310,10 @@ const Navbar = () => {
                 )}
               </>
             ) : (
-              <div className="flex items-center justify-evenly">
+              <div className="flex items-center justify-between w-full">
                 <Link
                   to="/signin"
-                  className="bg-refubookBlue text-refubookWhite px-4 py-2 rounded-3xl font-medium"
+                  className="bg-refubookBlue text-refubookWhite px-4 py-2 rounded-3xl text-xs font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   {t('Sign_In')}
@@ -323,7 +321,7 @@ const Navbar = () => {
 
                 <Link
                   to="/signup"
-                  className="bg-refubookBlue text-refubookWhite px-4 py-2 rounded-3xl font-medium"
+                  className="bg-refubookBlue text-refubookWhite px-4 py-2 rounded-3xl text-xs  font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   {t('Sign_Up')}

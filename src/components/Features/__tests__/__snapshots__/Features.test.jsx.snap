@@ -60,14 +60,10 @@ exports[`Features renders correctly 1`] = `
             />
             <p
               className="text-md  text-refubookLightBlack font-medium text-center"
-            >
-              item.title
-            </p>
+            />
             <p
               className="text-md  text-refubookLightBlack font-medium text-center mb-4"
-            >
-              item.text
-            </p>
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -80,14 +76,10 @@ exports[`Features renders correctly 1`] = `
             />
             <p
               className="text-md  text-refubookLightBlack font-medium text-center"
-            >
-              item.title
-            </p>
+            />
             <p
               className="text-md  text-refubookLightBlack font-medium text-center mb-4"
-            >
-              item.text
-            </p>
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -100,14 +92,10 @@ exports[`Features renders correctly 1`] = `
             />
             <p
               className="text-md  text-refubookLightBlack font-medium text-center"
-            >
-              item.title
-            </p>
+            />
             <p
               className="text-md  text-refubookLightBlack font-medium text-center mb-4"
-            >
-              item.text
-            </p>
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -120,14 +108,10 @@ exports[`Features renders correctly 1`] = `
             />
             <p
               className="text-md  text-refubookLightBlack font-medium text-center"
-            >
-              item.title
-            </p>
+            />
             <p
               className="text-md  text-refubookLightBlack font-medium text-center mb-4"
-            >
-              item.text
-            </p>
+            />
           </div>
         </SwiperSlide>
       </Swiper>

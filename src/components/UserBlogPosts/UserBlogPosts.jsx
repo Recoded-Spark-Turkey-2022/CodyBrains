@@ -9,7 +9,6 @@ import { AiOutlinePlus } from 'react-icons/ai';
 import { db } from '../../services/firebase.config';
 
 const UserBlogPosts = ({ user }) => {
-
   const { t } = useTranslation();
 
   const navigate = useNavigate();

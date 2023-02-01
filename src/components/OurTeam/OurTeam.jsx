@@ -125,7 +125,7 @@ const OurTeam = () => {
                     )
                   }
                 >
-                  {country} 
+                  {country}
                   {/* {t('country')} */}
                 </Tab>
               ))}

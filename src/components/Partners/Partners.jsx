@@ -6,7 +6,10 @@ import partners from '../../data/partnersData';
 const Partners = () => {
   const { t } = useTranslation();
   return (
-    <div className="flex flex-col items-center justify-center w-full bg-refubookWhite px-8 py-4" dir='ltr'>
+    <div
+      className="flex flex-col items-center justify-center w-full bg-refubookWhite px-8 py-4"
+      dir="ltr"
+    >
       <h1 className="text-3xl text-refubookBlack font-bold text-center">
         {t('Our_Partners')}
       </h1>

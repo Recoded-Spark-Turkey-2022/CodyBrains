@@ -7,7 +7,6 @@ import Loading from '../Icons/Loading';
 import camera from '../../assets/camera.png';
 
 const EditProfile = ({ setIsEditing }) => {
-
   const { t } = useTranslation();
 
   const user = useSelector(selectUser);

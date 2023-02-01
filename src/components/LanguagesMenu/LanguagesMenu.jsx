@@ -37,7 +37,6 @@ export default function DropdownComponent() {
   const { t } = useTranslation();
 
   useEffect(() => {
-    // console.log('Setting page stuff')
     document.body.dir = currentLanguage.dir || 'ltr';
     document.title = t('app_title');
   }, [currentLanguage, t]);
@@ -63,26 +62,28 @@ export default function DropdownComponent() {
           enterFrom="opacity-0"
           enterTo="opacity-100"
         >
-          <Listbox.Options className="absolute w-full z-10 bottom-9   bg-refubookWhite shadow-lg  rounded-tl-md rounded-tr-md  rounded-bl-lg rounded-br-lg  py-2  ring-2 ring-refubookBlue ring-opacity-25 overflow-hidden focus:outline-none sm:text-sm">
-            <Listbox.Option>
-              <span className="dropdown-item-text">{t('language')}</span>
+          <Listbox.Options className="absolute w-full z-10 bottom-9  flex flex-col px-2  bg-refubookWhite shadow-lg  rounded-tl-md rounded-tr-md  rounded-bl-lg rounded-br-lg  py-2  ring-2 ring-refubookBlue ring-opacity-25 overflow-hidden focus:outline-none sm:text-sm">
+            <Listbox.Option className="text-center w-full font-medium mb-2">
+              <span className="dropdown-item-text ">{t('language')}</span>
             </Listbox.Option>
-
+            <div className="border-b-2 mb-1 border-refubookBlue" />
             {languages.map(({ code, name, countryCode }) => (
-              <Listbox.Option key={countryCode}>
+              <Listbox.Option key={countryCode} className="w-full" value={code}>
                 <button
                   type="button"
-                  className={classNames('dropdown-item', {
-                    disabled: currentLanguageCode === code,
-                  })}
+                  className={classNames(
+                    'dropdown-item  font-medium flex items-center justify-between gap-2 mb-1',
+                    {
+                      disabled: currentLanguageCode === code,
+                    }
+                  )}
                   onClick={() => {
-          
                     i18next.changeLanguage(code);
                     window.location.reload();
                   }}
                 >
                   <span
-                    className={`flag-icon flag-icon-${countryCode} mx-2`}
+                    className={`flag-icon flag-icon-${countryCode}  text-lg`}
                     style={{ opacity: currentLanguageCode === code ? 0.5 : 1 }}
                   />
                   {name}

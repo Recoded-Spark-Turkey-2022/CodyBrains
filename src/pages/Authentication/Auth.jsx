@@ -4,7 +4,6 @@ import desktopBaloon from '../../assets/desktop-baloon.svg';
 import mobileBaloon from '../../assets/mobile-baloon.svg';
 import { Providers } from '../../components';
 
-
 const Auth = () => {
   const location = useLocation();
   const { t } = useTranslation();
@@ -14,10 +13,12 @@ const Auth = () => {
       <div className=" mx-auto w-full h-full flex items-center mt-10 md:mt-0 flex-col justify-evenly  bg-white rounded-3xl max-w-xs max-h-96 max  md:max-w-xl md:max-h-96 p-6 space-y-4 bg-refubookWhite z-10 shadow-2xl ">
         <div className="mb-4 text-center">
           <h3 className="text-refubookBlue text-2xl font-bold tracking-tight  text-center">
-            {location.pathname === '/signup' ? t('SIGN UP WITH') : t('SIGN IN WITH')}
+            {location.pathname === '/signup'
+              ? t('SIGN UP WITH')
+              : t('SIGN IN WITH')}
           </h3>
         </div>
-      
+
         <div className="flex flex-col items-center justify-center w-full ">
           <Providers />
         </div>
