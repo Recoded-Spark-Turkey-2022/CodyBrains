@@ -8,7 +8,6 @@ import { selectUser } from '../../features/userSlice';
 import { useCreateBlogPost } from '../../hooks/useCreateBlogPost';
 
 const Write = () => {
-
   const { t } = useTranslation();
 
   const user = useSelector(selectUser);
@@ -64,7 +63,7 @@ const Write = () => {
   return (
     <div className="min-h-screen flex flex-col gap-8 md:gap-5  items-center justify-center">
       <h1 className="text-3xl md:text-4xl font-bold text-center">
-          {t('Write_Your_Blog_Post')}
+        {t('Write_Your_Blog_Post')}
       </h1>
 
       <div className="w-full min-h-screen gap-8 md:gap-5  grid md:grid-cols-2 mb-16 grid-cols-1 ">

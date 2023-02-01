@@ -35,7 +35,10 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-evenly w-full bg-refubookWhite px-8 py-4" dir='ltr'>
+    <div
+      className="flex flex-col md:flex-row items-center justify-evenly w-full bg-refubookWhite px-8 py-4"
+      dir="ltr"
+    >
       <div className="flex flex-col items-center justify-center max-w-md">
         <img src={map} alt="" className="w-96 h-96" />
       </div>

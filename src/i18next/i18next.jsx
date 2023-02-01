@@ -44,7 +44,6 @@ i18next
       order: ['path', 'cookie', 'htmlTag'],
       caches: ['cookie'],
     },
-
   });
 
 export default i18next;

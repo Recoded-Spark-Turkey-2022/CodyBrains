@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import logo from '../../assets/logo.svg';
 
 const NotFound = () => {
-
   const { t } = useTranslation();
 
   return (
@@ -31,7 +30,8 @@ const NotFound = () => {
                 to="/"
                 className="text-base font-medium text-refubookBlue hover:text-refubookActiveNav"
               >
-                {t('404_Error_Go_Back')}<span aria-hidden="true"> &rarr;</span>
+                {t('404_Error_Go_Back')}
+                <span aria-hidden="true"> &rarr;</span>
               </Link>
             </div>
           </div>

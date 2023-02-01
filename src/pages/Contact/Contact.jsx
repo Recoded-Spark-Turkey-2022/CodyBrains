@@ -7,7 +7,6 @@ import SocialIcons from '../../assets/SocialMedia.svg';
 import Union from '../../assets/Union.svg';
 
 const Contact = () => {
-
   const { t } = useTranslation();
 
   const [email, setEmail] = useState('');
@@ -33,7 +32,7 @@ const Contact = () => {
           {t('Get_in_Touch')}
         </h1>
         <p className="text-base  mt-5 py-1 text-refubookLightBlack font-medium  w-full lg:w-3/5 text-center lg:text-left">
-        {t('Get_in_Touch_Text')}
+          {t('Get_in_Touch_Text')}
         </p>
         <form
           onSubmit={handleSubmit(onSubmit)}
