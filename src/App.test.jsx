@@ -1,5 +1,6 @@
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import store from './app/store';
 
@@ -31,13 +32,13 @@ jest.mock('react-i18next', () => ({
   }),
 }));
 
-describe('App', () => {
-  it('renders without crashing', () => {
-    const { container } = render(
-      <Provider store={store}>
+test('renders App', () => {
+  const { asFragment } = render(
+    <Provider store={store}>
+      <BrowserRouter>
         <App />
-      </Provider>
-    );
-    expect(container).toBeTruthy();
-  });
+      </BrowserRouter>
+    </Provider>
+  );
+  expect(asFragment()).toMatchSnapshot();
 });
