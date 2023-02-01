@@ -1,33 +1,37 @@
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import desktopBaloon from '../../assets/desktop-baloon.svg';
 import mobileBaloon from '../../assets/mobile-baloon.svg';
 import { Providers } from '../../components';
 
+
 const Auth = () => {
   const location = useLocation();
+  const { t } = useTranslation();
 
   return (
     <section className="flex flex-col md:justify-center gap-10 items-center h-screen w-full relative ">
       <div className=" mx-auto w-full h-full flex items-center mt-10 md:mt-0 flex-col justify-evenly  bg-white rounded-3xl max-w-xs max-h-96 max  md:max-w-xl md:max-h-96 p-6 space-y-4 bg-refubookWhite z-10 shadow-2xl ">
         <div className="mb-4 text-center">
           <h3 className="text-refubookBlue text-2xl font-bold tracking-tight  text-center">
-            {location.pathname === '/signup' ? 'SIGN UP WITH' : 'SIGN IN WITH'}
+            {location.pathname === '/signup' ? t('SIGN UP WITH') : t('SIGN IN WITH')}
           </h3>
         </div>
+      
         <div className="flex flex-col items-center justify-center w-full ">
           <Providers />
         </div>
         <div className=" hidden md:block mx-auto text-center mt-8">
           <p className="hidden md:flex gap-2 text-lg font-semibold items-center justify-center text-refubookAuthBlue">
             {location.pathname === '/signup'
-              ? 'Already a member?'
-              : 'Want to be a member?'}
+              ? t('Already a member?')
+              : t('Want to be a member?')}
 
             <span className="text-refubookBlue hover:text-refubookLightBlue">
               <Link
                 to={location.pathname === '/signup' ? '/signin' : '/signup'}
               >
-                {location.pathname === '/signup' ? 'Sign in' : 'Sign up'}
+                {location.pathname === '/signup' ? t('Sign in') : t('Sign up')}
               </Link>
             </span>
           </p>
