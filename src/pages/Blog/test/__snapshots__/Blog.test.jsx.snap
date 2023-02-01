@@ -19,88 +19,7 @@ exports[`renders correctly 1`] = `
         className="swiper-wrapper"
       >
         <div
-          className="swiper-slide border-2 border-refubookGray rounded-lg p-2 shadow-sm max-w-xs md:max-w-3xl flex flex-col justify-between swiper-slide-duplicate"
-          data-swiper-slide-index={3}
-        >
-          <div
-            className=" flex flex-col h-full gap-5"
-          >
-            <img
-              alt=""
-              className="h-40 w-full object-cover rounded"
-              src="blog-cover.jpg"
-            />
-            <p
-              className="text-sm font-medium text-refubookActiveNav"
-            >
-              Mon Mar 01 2021
-            </p>
-            <p
-              className="md:text-md  text-lg text-center mb-3 border-b font-semibold text-refubookBlack"
-            >
-              The best way to learn a language from locals as a refugee
-            </p>
-            <div
-              className=" max-h-36 overflow-hidden "
-            >
-              <p
-                className="text-sm  "
-              >
-                There are several ways to learn a language from locals as a refugee: Enroll in a language class: Many communities offer language classes for refugees and immigrants. These classes are usually taught by trained instructors and can 
-                ...
-              </p>
-            </div>
-          </div>
-          <div
-            className="mt-6 flex items-center justify-between "
-          >
-            <div
-              className="flex items-center"
-            >
-              <div
-                className="flex-shrink-0"
-              >
-                <span
-                  className="sr-only"
-                >
-                  ahmad
-                </span>
-                <img
-                  alt=""
-                  className="h-10 w-10 rounded-full"
-                  src="avatar.png"
-                />
-              </div>
-              <div
-                className="ml-3"
-              >
-                <p
-                  className="text-sm font-medium text-refubookLightBlack"
-                >
-                  ahmad
-                </p>
-              </div>
-            </div>
-            <Link
-              className=" mt-2 bg-refubookActiveNav w-fit text-refubookWhite px-4 py-2 rounded-md text-sm font-medium hover:bg-refubookActiveNavHover focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
-              to="/blog/4"
-            >
-              <span
-                className="sr-only"
-              >
-                Read_More
-              </span>
-              <p
-                className="text-sm font-medium text-refubookWhite"
-              >
-                Read_More
-              </p>
-            </Link>
-          </div>
-        </div>
-        <div
           className="swiper-slide border-2 border-refubookGray rounded-lg p-2 shadow-sm max-w-xs md:max-w-3xl flex flex-col justify-between"
-          data-swiper-slide-index={0}
         >
           <div
             className=" flex flex-col h-full gap-5"
@@ -180,7 +99,6 @@ exports[`renders correctly 1`] = `
         </div>
         <div
           className="swiper-slide border-2 border-refubookGray rounded-lg p-2 shadow-sm max-w-xs md:max-w-3xl flex flex-col justify-between"
-          data-swiper-slide-index={1}
         >
           <div
             className=" flex flex-col h-full gap-5"
@@ -260,7 +178,6 @@ exports[`renders correctly 1`] = `
         </div>
         <div
           className="swiper-slide border-2 border-refubookGray rounded-lg p-2 shadow-sm max-w-xs md:max-w-3xl flex flex-col justify-between"
-          data-swiper-slide-index={2}
         >
           <div
             className=" flex flex-col h-full gap-5"
@@ -340,7 +257,6 @@ exports[`renders correctly 1`] = `
         </div>
         <div
           className="swiper-slide border-2 border-refubookGray rounded-lg p-2 shadow-sm max-w-xs md:max-w-3xl flex flex-col justify-between"
-          data-swiper-slide-index={3}
         >
           <div
             className=" flex flex-col h-full gap-5"
@@ -404,86 +320,6 @@ exports[`renders correctly 1`] = `
             <Link
               className=" mt-2 bg-refubookActiveNav w-fit text-refubookWhite px-4 py-2 rounded-md text-sm font-medium hover:bg-refubookActiveNavHover focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
               to="/blog/4"
-            >
-              <span
-                className="sr-only"
-              >
-                Read_More
-              </span>
-              <p
-                className="text-sm font-medium text-refubookWhite"
-              >
-                Read_More
-              </p>
-            </Link>
-          </div>
-        </div>
-        <div
-          className="swiper-slide border-2 border-refubookGray rounded-lg p-2 shadow-sm max-w-xs md:max-w-3xl flex flex-col justify-between swiper-slide-duplicate"
-          data-swiper-slide-index={0}
-        >
-          <div
-            className=" flex flex-col h-full gap-5"
-          >
-            <img
-              alt=""
-              className="h-40 w-full object-cover rounded"
-              src="blog-cover.jpg"
-            />
-            <p
-              className="text-sm font-medium text-refubookActiveNav"
-            >
-              Mon Mar 01 2021
-            </p>
-            <p
-              className="md:text-md  text-lg text-center mb-3 border-b font-semibold text-refubookBlack"
-            >
-              Difficulties faced by immigrants
-            </p>
-            <div
-              className=" max-h-36 overflow-hidden "
-            >
-              <p
-                className="text-sm  "
-              >
-                Leaving ones home country and immigrating to a new place can be a challenging and emotional experience, especially for refugees who may be fleeing conflict, persecution, or other difficult circumstances. Lorem ipsum, dolor sit ame
-                ...
-              </p>
-            </div>
-          </div>
-          <div
-            className="mt-6 flex items-center justify-between "
-          >
-            <div
-              className="flex items-center"
-            >
-              <div
-                className="flex-shrink-0"
-              >
-                <span
-                  className="sr-only"
-                >
-                  Tahsin
-                </span>
-                <img
-                  alt=""
-                  className="h-10 w-10 rounded-full"
-                  src="avatar.png"
-                />
-              </div>
-              <div
-                className="ml-3"
-              >
-                <p
-                  className="text-sm font-medium text-refubookLightBlack"
-                >
-                  Tahsin
-                </p>
-              </div>
-            </div>
-            <Link
-              className=" mt-2 bg-refubookActiveNav w-fit text-refubookWhite px-4 py-2 rounded-md text-sm font-medium hover:bg-refubookActiveNavHover focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
-              to="/blog/1"
             >
               <span
                 className="sr-only"
