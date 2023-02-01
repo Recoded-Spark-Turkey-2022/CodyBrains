@@ -12,6 +12,7 @@ import App from './App';
 import './index.css';
 // eslint-disable-next-line
 import 'swiper/css/bundle';
+// eslint-disable-next-line import/no-unresolved
 
 const loadingMarkup = (
   <div className="py-4 text-center">
