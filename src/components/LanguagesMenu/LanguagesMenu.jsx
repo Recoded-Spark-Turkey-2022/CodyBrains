@@ -76,9 +76,7 @@ export default function DropdownComponent() {
                     disabled: currentLanguageCode === code,
                   })}
                   onClick={() => {
-          
                     i18next.changeLanguage(code);
-                    window.location.reload();
                   }}
                 >
                   <span

@@ -75,7 +75,7 @@
   "Sara": "Sara",
   "Sara_Job": "مؤلف في متجر Paroply",
   "Yusuf": "Yusuf",
-  "Yusuf_Job": "مؤلف في متجر Paroply",
+  "Yusuf_Job": "Author at Paroply Store",
   "Asmaa": "Asmaa",
   "Asmaa_Job": "مؤلف في متجر Paroply",
   "Salah": "Salah",
@@ -95,14 +95,5 @@
   "404_Error": "404 Error",
   "404_Error_Text": "معذرةً ، لم نتمكن من العثور على الصفحة التي تبحث عنها",
   "404_Error_Go_Back": "عد إلى الصفحة الرئيسية",
-  "Read_Also": "اقرأ أيضاً",
-  "Turkey": "تركيا",
-  "Lebanon": "لبنان",
-  "USA": "الولايات المتحدة الأمريكية",
-  "Already a member?": "عضوا فعلا؟",
-  "SIGN UP WITH": "سجل مع", 
-  "SIGN IN WITH": "سجل دخولك بواسطة",
-  "Want to be a member?": "تريد أن تكون عضوا؟",
-  "Sign in": "تسجيل الدخول",
-  "Sign up": "اشتراك"
+  "Read_Also": "اقرأ أيضاً"
 }
