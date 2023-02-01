@@ -41,11 +41,11 @@ const Stories = () => {
               className="flex flex-col justify-start pb-10 md:flex-row md:justify-between "
               key={item.id}
             >
-              <Link to={`/blog/${item.id}`}>
+              <Link to={`/blog/${item.id}`} className="max-w-sm">
                 <img
                   src={item.headerPhoto || defaultImageUrl}
                   alt=""
-                  className="rounded-md  object-cover max-w-md "
+                  className="rounded-md  object-cover "
                 />
               </Link>
               <div className="flex flex-col pt-4 w-full mt-5 md:w-1/3">
@@ -54,7 +54,7 @@ const Stories = () => {
                 </span>
                 <Link
                   to={`/blog/${item.id}`}
-                  className="mt-5 mb-10 lg:text-4xl text-2xl text-refubookWhite font-light  "
+                  className="mt-5 mb-10 lg:text-4xl  text-2xl text-refubookWhite font-light  "
                 >
                   {item.title}
                 </Link>

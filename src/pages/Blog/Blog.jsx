@@ -111,7 +111,7 @@ const Blog = () => {
                       </p>
 
                       {item.content && (
-                        <div className="ql-editor p-0 max-h-36 overflow-hidden truncate">
+                        <div className="ql-editor p-0 overflow-hidden max-h-32 truncate">
                           {parse(item.content, {
                             replace: (domNode) => {
                               if (domNode.name === 'img') {
@@ -171,7 +171,7 @@ const Blog = () => {
               })}
             </Swiper>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 p-5 gap-4 container mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 py-16 px-8 gap-4  container mx-auto">
             {firstFourBlogs.map((item) => (
               <div
                 key={item.title}
