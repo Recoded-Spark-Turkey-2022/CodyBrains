@@ -8,12 +8,12 @@ exports[`Stories renders correctly 1`] = `
     className="max-w-6xl mx-auto  flex flex-col lg:justify-start justify-center px-10 py-4 gap-5 mt-5 "
   >
     <h1
-      className="  lg:text-3xl text-xl text-center md:text-left text-refubookWhite "
+      className="  lg:text-3xl text-xl rtl:text-right text-center md:text-left text-refubookWhite "
     >
       Latest_Stories
     </h1>
     <p
-      className=" text-refubookWhite   md:text-left text-md lg:text-xl text-center mb-6 "
+      className=" text-refubookWhite rtl:text-right md:text-left text-md lg:text-xl text-center mb-6 "
     >
       Latest_Stories_Text
     </p>
