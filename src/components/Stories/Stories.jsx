@@ -29,10 +29,10 @@ const Stories = () => {
   return (
     <section className="bg-refubookBlue w-full p-4">
       <div className="max-w-6xl mx-auto  flex flex-col lg:justify-start justify-center px-10 py-4 gap-5 mt-5 ">
-        <h1 className="  lg:text-3xl text-xl text-center md:text-left text-refubookWhite ">
+        <h1 className="  lg:text-3xl text-xl rtl:text-right text-center md:text-left text-refubookWhite ">
           {t('Latest_Stories')}
         </h1>
-        <p className=" text-refubookWhite   md:text-left text-md lg:text-xl text-center mb-6 ">
+        <p className=" text-refubookWhite rtl:text-right md:text-left text-md lg:text-xl text-center mb-6 ">
           {t('Latest_Stories_Text')}
         </p>
         {onlyTwoStories.map((item) => {
